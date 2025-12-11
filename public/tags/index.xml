@@ -2,199 +2,199 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
-    <link>//localhost:43251/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:43251/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Async</title>
-      <link>//localhost:43251/tags/async/</link>
+      <link>/tags/async/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/async/</guid>
+      <guid>/tags/async/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>//localhost:43251/tags/javascript/</link>
+      <link>/tags/javascript/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/javascript/</guid>
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Promises</title>
-      <link>//localhost:43251/tags/promises/</link>
+      <link>/tags/promises/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/promises/</guid>
+      <guid>/tags/promises/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>//localhost:43251/tags/hugo/</link>
+      <link>/tags/hugo/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/hugo/</guid>
+      <guid>/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Static-Sites</title>
-      <link>//localhost:43251/tags/static-sites/</link>
+      <link>/tags/static-sites/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/static-sites/</guid>
+      <guid>/tags/static-sites/</guid>
       <description></description>
     </item>
     <item>
       <title>Web-Development</title>
-      <link>//localhost:43251/tags/web-development/</link>
+      <link>/tags/web-development/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/web-development/</guid>
+      <guid>/tags/web-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Remote-Work</title>
-      <link>//localhost:43251/tags/remote-work/</link>
+      <link>/tags/remote-work/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/remote-work/</guid>
+      <guid>/tags/remote-work/</guid>
       <description></description>
     </item>
     <item>
       <title>Travel</title>
-      <link>//localhost:43251/tags/travel/</link>
+      <link>/tags/travel/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/travel/</guid>
+      <guid>/tags/travel/</guid>
       <description></description>
     </item>
     <item>
       <title>Visa</title>
-      <link>//localhost:43251/tags/visa/</link>
+      <link>/tags/visa/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/visa/</guid>
+      <guid>/tags/visa/</guid>
       <description></description>
     </item>
     <item>
       <title>Bali</title>
-      <link>//localhost:43251/tags/bali/</link>
+      <link>/tags/bali/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/bali/</guid>
+      <guid>/tags/bali/</guid>
       <description></description>
     </item>
     <item>
       <title>Coworking</title>
-      <link>//localhost:43251/tags/coworking/</link>
+      <link>/tags/coworking/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/coworking/</guid>
+      <guid>/tags/coworking/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
-      <link>//localhost:43251/tags/css/</link>
+      <link>/tags/css/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/css/</guid>
+      <guid>/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Frontend</title>
-      <link>//localhost:43251/tags/frontend/</link>
+      <link>/tags/frontend/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/frontend/</guid>
+      <guid>/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>Layout</title>
-      <link>//localhost:43251/tags/layout/</link>
+      <link>/tags/layout/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/layout/</guid>
+      <guid>/tags/layout/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>//localhost:43251/tags/productivity/</link>
+      <link>/tags/productivity/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/productivity/</guid>
+      <guid>/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Thailand</title>
-      <link>//localhost:43251/tags/thailand/</link>
+      <link>/tags/thailand/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/thailand/</guid>
+      <guid>/tags/thailand/</guid>
       <description></description>
     </item>
     <item>
       <title>Development</title>
-      <link>//localhost:43251/tags/development/</link>
+      <link>/tags/development/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/development/</guid>
+      <guid>/tags/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>//localhost:43251/tags/docker/</link>
+      <link>/tags/docker/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/docker/</guid>
+      <guid>/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>//localhost:43251/tags/workflow/</link>
+      <link>/tags/workflow/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/workflow/</guid>
+      <guid>/tags/workflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Hooks</title>
-      <link>//localhost:43251/tags/hooks/</link>
+      <link>/tags/hooks/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/hooks/</guid>
+      <guid>/tags/hooks/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>//localhost:43251/tags/react/</link>
+      <link>/tags/react/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/react/</guid>
+      <guid>/tags/react/</guid>
       <description></description>
     </item>
     <item>
       <title>Budget</title>
-      <link>//localhost:43251/tags/budget/</link>
+      <link>/tags/budget/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/budget/</guid>
+      <guid>/tags/budget/</guid>
       <description></description>
     </item>
     <item>
       <title>Finance</title>
-      <link>//localhost:43251/tags/finance/</link>
+      <link>/tags/finance/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/finance/</guid>
+      <guid>/tags/finance/</guid>
       <description></description>
     </item>
     <item>
       <title>Planning</title>
-      <link>//localhost:43251/tags/planning/</link>
+      <link>/tags/planning/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/planning/</guid>
+      <guid>/tags/planning/</guid>
       <description></description>
     </item>
     <item>
       <title>Best-Practices</title>
-      <link>//localhost:43251/tags/best-practices/</link>
+      <link>/tags/best-practices/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/best-practices/</guid>
+      <guid>/tags/best-practices/</guid>
       <description></description>
     </item>
     <item>
       <title>Typescript</title>
-      <link>//localhost:43251/tags/typescript/</link>
+      <link>/tags/typescript/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/typescript/</guid>
+      <guid>/tags/typescript/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>//localhost:43251/tags/tools/</link>
+      <link>/tags/tools/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/tags/tools/</guid>
+      <guid>/tags/tools/</guid>
       <description></description>
     </item>
   </channel>

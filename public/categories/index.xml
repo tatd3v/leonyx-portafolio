@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
-    <link>//localhost:43251/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:43251/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech</title>
-      <link>//localhost:43251/categories/tech/</link>
+      <link>/categories/tech/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/categories/tech/</guid>
+      <guid>/categories/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Tutorial</title>
-      <link>//localhost:43251/categories/tutorial/</link>
+      <link>/categories/tutorial/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/categories/tutorial/</guid>
+      <guid>/categories/tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>Lifestyle</title>
-      <link>//localhost:43251/categories/lifestyle/</link>
+      <link>/categories/lifestyle/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/categories/lifestyle/</guid>
+      <guid>/categories/lifestyle/</guid>
       <description></description>
     </item>
     <item>
       <title>Nomad</title>
-      <link>//localhost:43251/categories/nomad/</link>
+      <link>/categories/nomad/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/categories/nomad/</guid>
+      <guid>/categories/nomad/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>//localhost:43251/categories/hugo/</link>
+      <link>/categories/hugo/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/categories/hugo/</guid>
+      <guid>/categories/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Themes</title>
-      <link>//localhost:43251/categories/themes/</link>
+      <link>/categories/themes/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:43251/categories/themes/</guid>
+      <guid>/categories/themes/</guid>
       <description></description>
     </item>
   </channel>

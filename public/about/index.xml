@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Biografía on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
-    <link>//localhost:43251/about/</link>
+    <link>/about/</link>
     <description>Recent content in Biografía on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <atom:link href="//localhost:43251/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

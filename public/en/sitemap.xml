@@ -2,89 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:43251/en/about/</loc>
+    <loc>/en/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="//localhost:43251/about/"
+                href="/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="//localhost:43251/fr/about/"
+                href="/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="//localhost:43251/en/about/"
+                href="/en/about/"
                 />
   </url><url>
-    <loc>//localhost:43251/en/categories/</loc>
+    <loc>/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="//localhost:43251/categories/"
+                href="/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="//localhost:43251/fr/categories/"
+                href="/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="//localhost:43251/en/categories/"
+                href="/en/categories/"
                 />
   </url><url>
-    <loc>//localhost:43251/en/</loc>
+    <loc>/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="//localhost:43251/"
+                href="/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="//localhost:43251/fr/"
+                href="/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="//localhost:43251/en/"
+                href="/en/"
                 />
   </url><url>
-    <loc>//localhost:43251/en/social/</loc>
+    <loc>/en/social/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="//localhost:43251/social/"
+                href="/social/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="//localhost:43251/fr/social/"
+                href="/fr/social/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="//localhost:43251/en/social/"
+                href="/en/social/"
                 />
   </url><url>
-    <loc>//localhost:43251/en/tags/</loc>
+    <loc>/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="//localhost:43251/tags/"
+                href="/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="//localhost:43251/fr/tags/"
+                href="/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="//localhost:43251/en/tags/"
+                href="/en/tags/"
                 />
   </url>
 </urlset>
