@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://portafolio-leonyx.netlify.app"
 defaultContentLanguage = "es"
 theme = "nomad-tech"
 

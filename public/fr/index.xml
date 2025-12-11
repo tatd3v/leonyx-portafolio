@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accueil on Le&#39;Onyx Da&#39;Vida – Artiste pluridisciplinaire, enseignant·e et chercheur·e</title>
-    <link>/fr/</link>
+    <link>https://portafolio-leonyx.netlify.app/fr/</link>
     <description>Recent content in Accueil on Le&#39;Onyx Da&#39;Vida – Artiste pluridisciplinaire, enseignant·e et chercheur·e</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language><atom:link href="/fr/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr-FR</language><atom:link href="https://portafolio-leonyx.netlify.app/fr/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

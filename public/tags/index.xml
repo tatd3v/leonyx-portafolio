@@ -2,199 +2,199 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
-    <link>/tags/</link>
+    <link>https://portafolio-leonyx.netlify.app/tags/</link>
     <description>Recent content in Tags on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://portafolio-leonyx.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Async</title>
-      <link>/tags/async/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/async/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/async/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/async/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>/tags/javascript/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/javascript/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/javascript/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Promises</title>
-      <link>/tags/promises/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/promises/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/promises/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/promises/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/hugo/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/hugo/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Static-Sites</title>
-      <link>/tags/static-sites/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/static-sites/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/static-sites/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/static-sites/</guid>
       <description></description>
     </item>
     <item>
       <title>Web-Development</title>
-      <link>/tags/web-development/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/web-development/</link>
       <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/web-development/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/web-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Remote-Work</title>
-      <link>/tags/remote-work/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/remote-work/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/remote-work/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/remote-work/</guid>
       <description></description>
     </item>
     <item>
       <title>Travel</title>
-      <link>/tags/travel/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/travel/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/travel/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/travel/</guid>
       <description></description>
     </item>
     <item>
       <title>Visa</title>
-      <link>/tags/visa/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/visa/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/visa/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/visa/</guid>
       <description></description>
     </item>
     <item>
       <title>Bali</title>
-      <link>/tags/bali/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/bali/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/bali/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/bali/</guid>
       <description></description>
     </item>
     <item>
       <title>Coworking</title>
-      <link>/tags/coworking/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/coworking/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/coworking/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/coworking/</guid>
       <description></description>
     </item>
     <item>
       <title>Css</title>
-      <link>/tags/css/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/css/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/css/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/css/</guid>
       <description></description>
     </item>
     <item>
       <title>Frontend</title>
-      <link>/tags/frontend/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/frontend/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/frontend/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/frontend/</guid>
       <description></description>
     </item>
     <item>
       <title>Layout</title>
-      <link>/tags/layout/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/layout/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/layout/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/layout/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>/tags/productivity/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/productivity/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/productivity/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Thailand</title>
-      <link>/tags/thailand/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/thailand/</link>
       <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/thailand/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/thailand/</guid>
       <description></description>
     </item>
     <item>
       <title>Development</title>
-      <link>/tags/development/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/development/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/development/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>/tags/docker/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/docker/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/docker/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Workflow</title>
-      <link>/tags/workflow/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/workflow/</link>
       <pubDate>Sun, 28 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/workflow/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/workflow/</guid>
       <description></description>
     </item>
     <item>
       <title>Hooks</title>
-      <link>/tags/hooks/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/hooks/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/hooks/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/hooks/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>/tags/react/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/react/</link>
       <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/react/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/react/</guid>
       <description></description>
     </item>
     <item>
       <title>Budget</title>
-      <link>/tags/budget/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/budget/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/budget/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/budget/</guid>
       <description></description>
     </item>
     <item>
       <title>Finance</title>
-      <link>/tags/finance/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/finance/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/finance/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/finance/</guid>
       <description></description>
     </item>
     <item>
       <title>Planning</title>
-      <link>/tags/planning/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/planning/</link>
       <pubDate>Sat, 20 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/planning/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/planning/</guid>
       <description></description>
     </item>
     <item>
       <title>Best-Practices</title>
-      <link>/tags/best-practices/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/best-practices/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/best-practices/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/best-practices/</guid>
       <description></description>
     </item>
     <item>
       <title>Typescript</title>
-      <link>/tags/typescript/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/typescript/</link>
       <pubDate>Thu, 18 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/typescript/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/typescript/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>/tags/tools/</link>
+      <link>https://portafolio-leonyx.netlify.app/tags/tools/</link>
       <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/tags/tools/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/tags/tools/</guid>
       <description></description>
     </item>
   </channel>

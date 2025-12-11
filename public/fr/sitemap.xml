@@ -2,89 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/fr/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/"
+                href="https://portafolio-leonyx.netlify.app/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/"
+                href="https://portafolio-leonyx.netlify.app/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/"
+                href="https://portafolio-leonyx.netlify.app/fr/"
                 />
   </url><url>
-    <loc>/fr/about/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/about/"
+                href="https://portafolio-leonyx.netlify.app/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/about/"
+                href="https://portafolio-leonyx.netlify.app/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/about/"
+                href="https://portafolio-leonyx.netlify.app/fr/about/"
                 />
   </url><url>
-    <loc>/fr/categories/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/categories/"
+                href="https://portafolio-leonyx.netlify.app/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/categories/"
+                href="https://portafolio-leonyx.netlify.app/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/categories/"
+                href="https://portafolio-leonyx.netlify.app/fr/categories/"
                 />
   </url><url>
-    <loc>/fr/social/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/social/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/social/"
+                href="https://portafolio-leonyx.netlify.app/social/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/social/"
+                href="https://portafolio-leonyx.netlify.app/en/social/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/social/"
+                href="https://portafolio-leonyx.netlify.app/fr/social/"
                 />
   </url><url>
-    <loc>/fr/tags/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/tags/"
+                href="https://portafolio-leonyx.netlify.app/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/tags/"
+                href="https://portafolio-leonyx.netlify.app/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/tags/"
+                href="https://portafolio-leonyx.netlify.app/fr/tags/"
                 />
   </url>
 </urlset>

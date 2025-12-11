@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redes Sociales on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
-    <link>/social/</link>
+    <link>https://portafolio-leonyx.netlify.app/social/</link>
     <description>Recent content in Redes Sociales on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
-    <atom:link href="/social/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://portafolio-leonyx.netlify.app/social/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

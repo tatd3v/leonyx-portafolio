@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
-    <link>/categories/</link>
+    <link>https://portafolio-leonyx.netlify.app/categories/</link>
     <description>Recent content in Categories on Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</description>
     <generator>Hugo</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 12 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://portafolio-leonyx.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tech</title>
-      <link>/categories/tech/</link>
+      <link>https://portafolio-leonyx.netlify.app/categories/tech/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/categories/tech/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/categories/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Tutorial</title>
-      <link>/categories/tutorial/</link>
+      <link>https://portafolio-leonyx.netlify.app/categories/tutorial/</link>
       <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/categories/tutorial/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/categories/tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>Lifestyle</title>
-      <link>/categories/lifestyle/</link>
+      <link>https://portafolio-leonyx.netlify.app/categories/lifestyle/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/categories/lifestyle/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/categories/lifestyle/</guid>
       <description></description>
     </item>
     <item>
       <title>Nomad</title>
-      <link>/categories/nomad/</link>
+      <link>https://portafolio-leonyx.netlify.app/categories/nomad/</link>
       <pubDate>Thu, 08 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>/categories/nomad/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/categories/nomad/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>/categories/hugo/</link>
+      <link>https://portafolio-leonyx.netlify.app/categories/hugo/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/categories/hugo/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/categories/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Themes</title>
-      <link>/categories/themes/</link>
+      <link>https://portafolio-leonyx.netlify.app/categories/themes/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/categories/themes/</guid>
+      <guid>https://portafolio-leonyx.netlify.app/categories/themes/</guid>
       <description></description>
     </item>
   </channel>

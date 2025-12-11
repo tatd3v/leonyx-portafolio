@@ -2,246 +2,246 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/tags/async/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/async/</loc>
     <lastmod>2024-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-FR"
-                href="/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es-ES"
-                href="/categories/"
-                />
-  </url><url>
-    <loc>/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/categories/</loc>
     <lastmod>2024-08-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/"
+                href="https://portafolio-leonyx.netlify.app/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/"
+                href="https://portafolio-leonyx.netlify.app/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/"
+                href="https://portafolio-leonyx.netlify.app/categories/"
                 />
   </url><url>
-    <loc>/tags/javascript/</loc>
-    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/javascript-async-patterns/</loc>
-    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/promises/</loc>
-    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/</loc>
     <lastmod>2024-08-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/tags/"
+                href="https://portafolio-leonyx.netlify.app/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/tags/"
+                href="https://portafolio-leonyx.netlify.app/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/tags/"
+                href="https://portafolio-leonyx.netlify.app/"
                 />
   </url><url>
-    <loc>/categories/tech/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/javascript/</loc>
     <lastmod>2024-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/tutorial/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/javascript-async-patterns/</loc>
     <lastmod>2024-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/hugo-theme-development/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/</loc>
+    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://portafolio-leonyx.netlify.app/tags/promises/</loc>
+    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://portafolio-leonyx.netlify.app/tags/</loc>
+    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://portafolio-leonyx.netlify.app/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-FR"
+                href="https://portafolio-leonyx.netlify.app/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es-ES"
+                href="https://portafolio-leonyx.netlify.app/tags/"
+                />
+  </url><url>
+    <loc>https://portafolio-leonyx.netlify.app/categories/tech/</loc>
+    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://portafolio-leonyx.netlify.app/categories/tutorial/</loc>
+    <lastmod>2024-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://portafolio-leonyx.netlify.app/posts/hugo-theme-development/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/hugo/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/hugo/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/static-sites/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/static-sites/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/web-development/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/web-development/</loc>
     <lastmod>2024-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/nomad-visa-guide/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/nomad-visa-guide/</loc>
     <lastmod>2024-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/lifestyle/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/categories/lifestyle/</loc>
     <lastmod>2024-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/nomad/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/categories/nomad/</loc>
     <lastmod>2024-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/remote-work/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/remote-work/</loc>
     <lastmod>2024-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/travel/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/travel/</loc>
     <lastmod>2024-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/visa/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/visa/</loc>
     <lastmod>2024-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/bali/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/bali/</loc>
     <lastmod>2024-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/coworking/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/coworking/</loc>
     <lastmod>2024-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/nomad-life-bali/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/nomad-life-bali/</loc>
     <lastmod>2024-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/css/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/css/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/css-grid-flexbox/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/css-grid-flexbox/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/frontend/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/frontend/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/layout/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/layout/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/thailand-coworking-spaces/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/thailand-coworking-spaces/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/productivity/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/productivity/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/thailand/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/thailand/</loc>
     <lastmod>2024-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/development/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/development/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/docker/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/docker/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/docker-development-workflow/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/docker-development-workflow/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/workflow/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/workflow/</loc>
     <lastmod>2024-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/hooks/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/hooks/</loc>
     <lastmod>2024-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/react/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/react/</loc>
     <lastmod>2024-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/react-hooks-guide/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/react-hooks-guide/</loc>
     <lastmod>2024-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/budget/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/budget/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/nomad-budget-breakdown/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/nomad-budget-breakdown/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/finance/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/finance/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/planning/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/planning/</loc>
     <lastmod>2024-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/best-practices/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/best-practices/</loc>
     <lastmod>2024-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/typescript/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/typescript/</loc>
     <lastmod>2024-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/typescript-best-practices/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/typescript-best-practices/</loc>
     <lastmod>2024-07-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/remote-work-tools-2024/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/remote-work-tools-2024/</loc>
     <lastmod>2024-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/tools/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/tags/tools/</loc>
     <lastmod>2024-07-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/hugo/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/categories/hugo/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/categories/themes/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/categories/themes/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/example-post/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/posts/example-post/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/fr/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/</loc>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/about/"
+                href="https://portafolio-leonyx.netlify.app/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/about/"
+                href="https://portafolio-leonyx.netlify.app/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/about/"
+                href="https://portafolio-leonyx.netlify.app/about/"
                 />
   </url><url>
-    <loc>/fr/about/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/about/</loc>
   </url><url>
-    <loc>/en/about/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/en/about/</loc>
   </url><url>
-    <loc>/en/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/en/</loc>
   </url><url>
-    <loc>/portfolio/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/portfolio/</loc>
   </url><url>
-    <loc>/social/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/social/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
-                href="/en/social/"
+                href="https://portafolio-leonyx.netlify.app/en/social/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-FR"
-                href="/fr/social/"
+                href="https://portafolio-leonyx.netlify.app/fr/social/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es-ES"
-                href="/social/"
+                href="https://portafolio-leonyx.netlify.app/social/"
                 />
   </url><url>
-    <loc>/fr/social/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/fr/social/</loc>
   </url><url>
-    <loc>/en/social/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/en/social/</loc>
   </url><url>
-    <loc>/travel/</loc>
+    <loc>https://portafolio-leonyx.netlify.app/travel/</loc>
   </url>
 </urlset>
