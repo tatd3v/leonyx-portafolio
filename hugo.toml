@@ -1,0 +1,81 @@
+baseURL = "/"
+defaultContentLanguage = "es"
+theme = "nomad-tech"
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[languages]
+  [languages.es]
+    languageCode = "es-ES"
+    contentDir = "content"
+    title = "Le'Onyx Da'Vida - Artista multidisciplinar, profesorx e investigadorx"
+    weight = 1
+  [languages.en]
+    languageCode = "en-US"
+    contentDir = "content/en"
+    title = "Le'Onyx Da'Vida - Multidisciplinary artist, educator, and researcher"
+    weight = 2
+  [languages.fr]
+    languageCode = "fr-FR"
+    contentDir = "content/fr"
+    title = "Le'Onyx Da'Vida – Artiste pluridisciplinaire, enseignant·e et chercheur·e"
+    weight = 3
+
+[params]
+  author = "Le’Onyx"
+  logo = "Le’Onyx Da’Vida"
+  subtitle = "Artista multidisciplinar, profesorx e investigadorx"
+  description = "Explorando el cruce entre arte, pedagogía y activismo a través de la danza, el performance y la creación comunitaria."
+
+  # Analytics (optional)
+  googleAnalytics = "G-2310RJEC91"
+
+  # Social Media Links
+  [[params.social]]
+    name = "Instagram"
+    class = "instagram"
+    icon = "📷"
+    description = "Arte, danza y creación comunitaria"
+    url = "https://www.instagram.com/leonyx.a.r.t"
+    button_text = "Seguir"
+
+  # Portfolio Items
+  [[params.portfolio]]
+    title = "Digital Nomad Community App"
+    type = "Mobile Application"
+    icon = "📱"
+    description = "A comprehensive platform for nomads to connect and collaborate"
+    tags = ["React Native", "Node.js", "MongoDB"]
+    project_url = "/projects/nomad-app/"
+
+  [[params.portfolio]]
+    title = "Another Project"
+    type = "Web Application"
+    icon = "🌐"
+    description = "Web application description"
+    tags = ["React", "Vue.js"]
+
+  # Travel Timeline
+  [[params.travels]]
+    city = "Bangkok"
+    country = "Thailand"
+    flag = "🇹🇭"
+    period = "2024.01 - 2024.03"
+    description = "Started my nomad journey in the vibrant capital of Thailand"
+    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
+
+  # Contact Information
+  [[params.contact]]
+    icon = "📧"
+    name = "email"
+    value = "leonyxdavida@gmail.com"
+  
+  [[params.contact]]
+    icon = "📱"
+    name = "whatsapp"
+    value = "+573213668876"

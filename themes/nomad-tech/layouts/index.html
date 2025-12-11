@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ i18n "hero_greeting" }} {{ .Site.Params.author | default "m03315" }}</h1>
+        <p>{{ i18n "hero_subtitle" }}</p>
+        <p>{{ i18n "hero_description" }}</p>
+
+        <div class="cta-buttons">
+            <a href="{{ .Site.BaseURL }}social/" class="btn btn-primary">{{ i18n "follow_social" }}</a>
+        </div>
+    </div>
+</section>
+
+{{ with .Site.GetPage "about" }}
+<section class="home-bio">
+    <div class="container">
+        <div class="content-section active">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ end }}

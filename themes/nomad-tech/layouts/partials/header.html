@@ -1,0 +1,32 @@
+<nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <div class="nav-container">
+            <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo | default "GP" }}</a>
+            <ul class="nav-links" id="nav-menu">
+                {{- $langPrefix := "" -}}
+                {{- if ne .Site.Language.Lang "es" -}}
+                    {{- $langPrefix = printf "/%s" .Site.Language.Lang -}}
+                {{- end -}}
+                <li><a href="{{ $langPrefix }}/" aria-current="false">{{ i18n "home" }}</a></li>
+                <li><a href="{{ $langPrefix }}/about/" aria-current="false">{{ i18n "about" }}</a></li>
+                <li><a href="{{ $langPrefix }}/social/" aria-current="false">{{ i18n "social" }}</a></li>
+            </ul>
+
+            <div class="lang-switcher" role="group" aria-label="Language selection">
+                {{ range .Site.Languages }}
+                {{- $langPrefix := "" -}}
+                {{- if ne .Lang "es" -}}
+                    {{- $langPrefix = printf "/%s" .Lang -}}
+                {{- end -}}
+                <a href="{{ $.Site.BaseURL }}{{ $langPrefix }}" 
+                   class="lang-link {{ if eq .Lang $.Site.Language.Lang }}active{{ end }}" 
+                   aria-label="Switch to {{ .LanguageName }}" 
+                   {{ if eq .Lang $.Site.Language.Lang }}aria-current="true"{{ end }}>
+                    {{- if eq .Lang "es" -}}🇪🇸{{- else if eq .Lang "en" -}}🇺🇸{{- else if eq .Lang "fr" -}}🇫🇷{{- else -}}{{ .Lang | upper }}{{- end -}}
+                </a>
+                {{ end }}
+            </div>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </div>
+</nav>

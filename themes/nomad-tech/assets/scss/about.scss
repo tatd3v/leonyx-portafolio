@@ -1,0 +1,386 @@
+// About / Biography Page - Artistic Style
+// Using palette: #262221, #A6170A, #73261F, #40211E, #F2F2F2
+
+$bio-bg: #262221;
+$bio-primary: #A6170A;
+$bio-secondary: #73261F;
+$bio-accent: #40211E;
+$bio-text: #F2F2F2;
+
+.about-container {
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    
+    // Decorative background brush stroke effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba($bio-primary, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+        filter: blur(40px);
+        z-index: 0;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 15%;
+        right: 8%;
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(circle, rgba($bio-secondary, 0.12) 0%, transparent 70%);
+        border-radius: 50%;
+        filter: blur(50px);
+        z-index: 0;
+    }
+}
+
+.about-content {
+    max-width: 900px;
+    width: 100%;
+    background: linear-gradient(145deg, rgba($bio-accent, 0.95), rgba($bio-bg, 0.98)) !important;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba($bio-text, 0.05);
+    border-left: 4px solid $bio-primary !important;
+    position: relative;
+    z-index: 1;
+    
+    // Artistic diagonal accent
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, $bio-primary 0%, transparent 60%);
+        opacity: 0.15;
+    }
+}
+
+.terminal-header {
+    display: none; // Hide the terminal header completely
+}
+
+.terminal-buttons {
+    display: none !important;
+}
+
+.terminal-title {
+    display: none !important;
+}
+
+.terminal-body {
+    padding: 3rem 2.5rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.9;
+    position: relative;
+    background: transparent !important;
+}
+
+.prompt-line {
+    display: none !important;
+}
+
+.prompt, .command {
+    display: none !important;
+}
+
+.content {
+    color: $bio-text !important;
+    margin: 0;
+    
+    h1 {
+        color: $bio-primary !important;
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        position: relative;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, $bio-primary, $bio-secondary);
+        }
+    }
+    
+    h2 {
+        color: $bio-secondary !important;
+        font-size: 1.6rem;
+        margin: 3rem 0 1.5rem 0;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-weight: 400;
+        font-style: italic;
+        padding-left: 1rem;
+        border-left: 3px solid $bio-primary !important;
+    }
+    
+    p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        text-align: justify;
+        hyphens: auto;
+        color: $bio-text !important;
+        
+        &:first-of-type {
+            font-size: 1.2rem;
+            line-height: 2;
+            
+            &::first-letter {
+                font-size: 3.5rem;
+                float: left;
+                line-height: 1;
+                margin-right: 0.5rem;
+                margin-top: 0.1rem;
+                color: $bio-primary !important;
+                font-family: 'Georgia', serif;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    strong {
+        color: $bio-primary !important;
+        font-weight: 600;
+    }
+    
+    em {
+        color: $bio-secondary !important;
+        font-style: italic;
+    }
+    
+    // Blockquote styling for artistic statements
+    blockquote {
+        margin: 2rem 0;
+        padding: 1.5rem 2rem;
+        background: rgba($bio-primary, 0.08) !important;
+        border-left: 4px solid $bio-primary !important;
+        font-style: italic;
+        font-size: 1.15rem;
+        position: relative;
+        
+        &::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            font-size: 4rem;
+            color: $bio-primary !important;
+            opacity: 0.3;
+            font-family: 'Georgia', serif;
+        }
+    }
+}
+
+.contact-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba($bio-primary, 0.4) !important;
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100px;
+        height: 1px;
+        background: $bio-primary !important;
+    }
+}
+
+.contact-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-file {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: $bio-text !important;
+    background: rgba($bio-accent, 0.4) !important;
+    border-radius: 0;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: rgba($bio-primary, 0.15) !important;
+        border-left-color: $bio-primary !important;
+        transform: translateX(5px);
+    }
+}
+
+.file-icon {
+    font-size: 1.5rem;
+    width: 35px;
+    text-align: center;
+}
+
+.file-name {
+    color: $bio-primary !important;
+    min-width: 100px;
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+    text-transform: capitalize;
+}
+
+.file-content {
+    color: $bio-text !important;
+    opacity: 0.9;
+}
+
+// Home page biography section styling
+.home-bio {
+    padding: 4rem 0;
+    position: relative;
+    background: transparent;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, $bio-primary, transparent);
+    }
+    
+    .content-section {
+        background: transparent !important;
+        border: none !important;
+        max-width: 900px;
+        margin: 0 auto;
+        
+        h1 {
+            text-align: center;
+            color: $bio-primary !important;
+            font-size: 2.5rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            
+            &::after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, $bio-primary, $bio-secondary);
+                margin: 1rem auto 0;
+            }
+        }
+        
+        h2 {
+            color: $bio-secondary !important;
+            font-size: 1.5rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-style: italic;
+            margin: 2.5rem 0 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid $bio-primary !important;
+        }
+        
+        p {
+            color: $bio-text !important;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1.5rem 1rem;
+        margin-top: 4rem;
+        
+        &::before, &::after {
+            display: none;
+        }
+    }
+    
+    .about-content {
+        border-left-width: 3px;
+        
+        &::before {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    
+    .terminal-header {
+        padding: 1rem 1.5rem;
+    }
+    
+    .terminal-title {
+        font-size: 1.1rem;
+    }
+    
+    .terminal-body {
+        padding: 2rem 1.5rem;
+    }
+    
+    .content {
+        h1 {
+            font-size: 2rem;
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+        }
+        
+        p {
+            font-size: 1rem;
+            text-align: left;
+            
+            &:first-of-type::first-letter {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+    .contact-file {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .home-bio {
+        padding: 2rem 0;
+        
+        .content-section {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                text-align: left;
+                font-size: 1rem;
+            }
+        }
+    }
+}

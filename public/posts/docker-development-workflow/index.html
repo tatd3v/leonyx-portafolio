@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=43251&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
+<title>Docker Development Workflow for Hugo Themes | Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx</title>
+<meta name="description" content="Docker Development Workflow for Hugo Themes Setting up a consistent development environment across different machines is crucial for theme development. …">
+
+
+<meta property="og:title" content="Docker Development Workflow for Hugo Themes | Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx">
+<meta property="og:description" content="Docker Development Workflow for Hugo Themes Setting up a consistent development environment across different machines is crucial for theme development. …">
+<meta property="og:type" content="article">
+<meta property="og:url" content="//localhost:43251/posts/docker-development-workflow/">
+<meta property="og:site_name" content="Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker Development Workflow for Hugo Themes | Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx">
+<meta name="twitter:description" content="Docker Development Workflow for Hugo Themes Setting up a consistent development environment across different machines is crucial for theme development. …">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "name": "Docker Development Workflow for Hugo Themes | Le\u0027Onyx Da\u0027Vida - Artista multidisciplinar, profesorx e investigadorx",
+  "url": "\/\/localhost:43251\/posts\/docker-development-workflow\/",
+  
+  "headline": "Docker Development Workflow for Hugo Themes",
+  "datePublished": "2024-07-28T00:00:00Z",
+  "author": {
+    "@type": "Person",
+    "name": "Le’Onyx"
+  }
+  
+}
+</script>
+    
+
+<link rel="stylesheet" href="/scss/main.min.a879b6d1a2d1783b9d7e52105cb1e401904247f30acc72a741d1a065fabd4071.css" integrity="sha256-qHm20aLReDudflIQXLHkAZBCR/MKzHKnQdGgZfq9QHE=">
+
+
+
+<script src="/js/main.min.c436c99a8af1db325ffe2e939d07a7e0ce496f0c7627c44377e2f9b8e445c253.js" integrity="sha256-xDbJmorx2zJf/i6TnQen4M5Jbwx2J8RDd&#43;L5uORFwlM=" defer></script>
+    
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <nav role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Le&#39;Onyx Da&#39;Vida - Artista multidisciplinar, profesorx e investigadorx - Home">Le’Onyx Da’Vida</a>
+            <ul class="nav-links" id="nav-menu"><li><a href="/" aria-current="false">Inicio</a></li>
+                <li><a href="/about/" aria-current="false">Biografía</a></li>
+                <li><a href="/social/" aria-current="false">Redes Sociales</a></li>
+            </ul>
+
+            <div class="lang-switcher" role="group" aria-label="Language selection">
+                <a href="//localhost:43251/" 
+                   class="lang-link active" 
+                   aria-label="Switch to " 
+                   aria-current="true">🇪🇸</a>
+                <a href="//localhost:43251//en" 
+                   class="lang-link " 
+                   aria-label="Switch to " 
+                   >🇺🇸</a>
+                <a href="//localhost:43251//fr" 
+                   class="lang-link " 
+                   aria-label="Switch to " 
+                   >🇫🇷</a>
+                
+            </div>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
+        </div>
+    </div>
+</nav>
+    <main id="main" role="main">
+        
+<div class="post-container">
+    <article class="post-content">
+        <div class="post-terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+        </div>
+        <div class="post-terminal-body">
+            <div class="prompt-line">
+                <span class="prompt">$</span>
+                <span class="command">cat "Docker Development Workflow for Hugo Themes.md"</span>
+            </div>
+            <div class="post-meta">
+                <time datetime="2024-07-28">2024-07-28</time>
+                
+                <div class="post-categories">
+                    
+                    <a href="//localhost:43251/categories/tech/" class="category-tag">tech</a>
+                    
+                    <a href="//localhost:43251/categories/tutorial/" class="category-tag">tutorial</a>
+                    
+                </div>
+                
+            </div>
+            <div class="content">
+                <h1 id="docker-development-workflow-for-hugo-themes">Docker Development Workflow for Hugo Themes</h1>
+<p>Setting up a consistent development environment across different machines is crucial for theme development. Here&rsquo;s my Docker-based workflow.</p>
+<h2 id="the-setup">The Setup</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> hugomods/hugo:exts-0.120.4</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /src</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . /src/themes/nomad-tech/<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;server&#34;</span>, <span style="color:#e6db74">&#34;--bind&#34;</span>, <span style="color:#e6db74">&#34;0.0.0.0&#34;</span>, <span style="color:#e6db74">&#34;--buildDrafts&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h2 id="docker-compose-configuration">Docker Compose Configuration</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hugo</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;./exampleSite:/src&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;1313:1313&#34;</span>
+</span></span></code></pre></div><h2 id="benefits">Benefits</h2>
+<ul>
+<li><strong>Consistency</strong>: Same Hugo version everywhere</li>
+<li><strong>Security</strong>: Pinned, official images only</li>
+<li><strong>Isolation</strong>: No local Hugo installation needed</li>
+<li><strong>Portability</strong>: Works on any machine with Docker</li>
+</ul>
+<h2 id="development-commands">Development Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Start development server</span>
+</span></span><span style="display:flex;"><span>docker-compose up
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build for production</span>
+</span></span><span style="display:flex;"><span>docker-compose run hugo hugo --minify
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Clean up</span>
+</span></span><span style="display:flex;"><span>docker-compose down
+</span></span></code></pre></div><p>This workflow has saved me countless hours of environment setup!</p>
+
+            </div>
+        </div>
+    </article>
+</div>
+
+    </main>
+</body>
+</html>

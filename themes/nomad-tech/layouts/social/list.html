@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="social-page">
+    <div class="social-inner container">
+        <div class="social-grid">
+            {{ range .Site.Params.social }}
+            <div class="social-card">
+                <div class="social-icon {{ .class }}">{{ .icon }}</div>
+                <h3>{{ .name }}</h3>
+                <p>{{ i18n "social_description" }}</p>
+                <a href="{{ .url }}" class="btn btn-primary social-btn">{{ i18n "follow_social" }}</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

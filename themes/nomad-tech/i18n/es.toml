@@ -1,0 +1,78 @@
+[home]
+other = "Inicio"
+
+[social]
+other = "Redes Sociales"
+
+[blog]
+other = "Blog"
+
+[portfolio]
+other = "Portafolio"
+
+[contact]
+other = "Contacto"
+
+[latest_blog]
+other = "Último Blog"
+
+[all_posts]
+other = "Todos"
+
+[read_more]
+other = "Leer más"
+
+[prev_page]
+other = "Anterior"
+
+[next_page]
+other = "Siguiente"
+
+[date_format]
+other = "enero de 2006"
+
+[date_format_full]
+other = "2 de enero de 2006"
+
+[about]
+other = "Biografía"
+
+[travel]
+other = "Viajes"
+
+[hero_greeting]
+other = "Hola, soy"
+[hero_subtitle]
+other = "Le’Onyx Da’Vida - Artista multidisciplinar, profesorx e investigadorx"
+[hero_description]
+other = "Explorando el cruce entre arte, pedagogía y activismo a través de la danza, el performance y la creación comunitaria."
+
+[follow_social]
+other = "Sigue mis redes sociales"
+
+[learn_more]
+other = "Saber más"
+
+[social_description]
+other = "Compartiendo ideas y experiencias a través de diferentes plataformas"
+
+[portfolio_title]
+other = "Portafolio"
+
+[view_details]
+other = "Ver detalles"
+
+[posts_count]
+other = "artículos"
+
+[all_categories]
+other = "Todas las categorías"
+
+[view_posts]
+other = "Ver artículos"
+
+[contact_email]
+other = "email"
+
+[contact_wechat]
+other = "whatsapp"
