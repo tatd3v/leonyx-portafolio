@@ -105,7 +105,7 @@ nav {
   border-radius: 4px;
   
   &:focus {
-    outline: 2px solid var(--primary-color);
+    outline: none;
   }
 }
 
@@ -125,7 +125,37 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+  background: none;
+  color: var(--text-primary);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/leonyx.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    filter: grayscale(10%);
+    z-index: -2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 70%);
+    z-index: -1;
+  }
   
   h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -142,6 +172,11 @@ section {
     margin-bottom: 2rem;
     opacity: 0.9;
   }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes glow {
@@ -400,7 +435,7 @@ section {
   padding: 5px 10px;
   border-radius: 15px;
   transition: var(--transition);
-  font-size: 1rem;
+  font-size: 1.2rem;
   
   &:focus {
     outline: 2px solid var(--primary-color);
@@ -448,7 +483,10 @@ section {
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(26, 26, 46, 0.98);
+    background:
+      radial-gradient(circle at top left, rgba(166, 23, 10, 0.35), transparent 55%),
+      radial-gradient(circle at bottom right, rgba(64, 33, 30, 0.9), transparent 55%),
+      linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
     flex-direction: column;
     padding: 1rem 0;
     gap: 0;
