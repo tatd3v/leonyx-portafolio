@@ -69,6 +69,27 @@ theme = "nomad-tech"
     description = "Started my nomad journey in the vibrant capital of Thailand"
     highlights = ["Co-working spaces", "Street food", "Tech meetups"]
 
+  # Portfolio Filters
+  [params.portfolio_filters]
+    performance = "Performance"
+    danza = "Danza"
+    comunidad = "Comunidad"
+    memoria = "Memoria"
+    resistencia = "Resistencia"
+    identidad = "Identidad"
+    digital = "Digital"
+    ritual = "Ritual"
+    espiritualidad = "Espiritualidad"
+    negritud = "Negritud"
+    ancestral = "Ancestral"
+    activismo = "Activismo"
+    genero = "Género"
+    tecnologia = "Tecnología"
+    infancia = "Infancia"
+
+  # Portfolio Years
+  portfolio_years = ["2024", "2023", "2022", "2021"]
+
   # Contact Information
   [[params.contact]]
     icon = "📧"
