@@ -25,11 +25,28 @@
                 </div>
                 <div class="contact-grid">
                     {{ range .Site.Params.contact }}
+                    {{/* Build appropriate link for each contact type */}}
+                    {{ $url := "" }}
+                    {{ if eq .name "email" }}
+                        {{ $url = printf "mailto:%s" .value }}
+                    {{ else if eq .name "whatsapp" }}
+                        {{ $clean := replace (replace .value " " "") "+" "" }}
+                        {{ $url = printf "https://wa.me/%s" $clean }}
+                    {{ end }}
+
+                    {{ if ne $url "" }}
+                    <a class="contact-file" href="{{ $url }}" target="_blank" rel="noopener noreferrer">
+                        <span class="file-icon">{{ .icon }}</span>
+                        <span class="file-name">{{ .name | lower }}.txt</span>
+                        <span class="file-content">{{ .value }}</span>
+                    </a>
+                    {{ else }}
                     <div class="contact-file">
                         <span class="file-icon">{{ .icon }}</span>
                         <span class="file-name">{{ .name | lower }}.txt</span>
                         <span class="file-content">{{ .value }}</span>
                     </div>
+                    {{ end }}
                     {{ end }}
                 </div>
             </div>
@@ -37,6 +54,5 @@
         </div>
     </article>
 </div>
-
 
 {{ end }}
