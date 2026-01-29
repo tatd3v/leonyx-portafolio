@@ -54,3 +54,27 @@ other = "View Posts"
 other = "email"
 [contact_wechat]
 other = "wechat."
+
+[filter_by]
+other = "Filter by"
+
+[all]
+other = "All"
+
+[year]
+other = "Year"
+
+[all_years]
+other = "All years"
+
+[search_by]
+other = "Search by"
+
+[all_works]
+other = "All works"
+
+[view_work]
+other = "View work"
+
+[view_project]
+other = "View project"

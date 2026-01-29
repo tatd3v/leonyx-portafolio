@@ -53,4 +53,28 @@ other = "Voir Articles"
 [contact_email]
 other = "email"
 [contact_wechat]
-other = "wechat.txt"
+other = "wechat"
+
+[filter_by]
+other = "Filtrer par"
+
+[all]
+other = "Tous"
+
+[year]
+other = "Année"
+
+[all_years]
+other = "Toutes les années"
+
+[search_by]
+other = "Rechercher par"
+
+[all_works]
+other = "Tous les travaux"
+
+[view_work]
+other = "Voir le travail"
+
+[view_project]
+other = "Voir le projet"

@@ -76,3 +76,24 @@ other = "email"
 
 [contact_wechat]
 other = "whatsapp"
+
+[filter_by]
+other = "Filtrar por"
+
+[all]
+other = "Todos"
+
+[year]
+other = "Año"
+
+[all_years]
+other = "Todos los años"
+
+[search_by]
+other = "Buscar por"
+
+[all_works]
+other = "Todos los trabajos"
+
+[view_work]
+other = "Ver trabajo"
