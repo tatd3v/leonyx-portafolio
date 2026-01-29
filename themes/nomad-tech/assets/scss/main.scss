@@ -1,14 +1,25 @@
-// Variables
+// Variables - Ancestral Color Palette
 :root {
-  --primary-color: #A6170A;
-  --secondary-color: #73261F;
-  --accent-color: #40211E;
-  --bg-primary: #262221;
-  --bg-secondary: #40211E;
-  --text-primary: #F2F2F2;
-  --text-secondary: #888;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  // Primary Colors
+  --ancestral-black: #0A0A0A;      // Black identity, depth, memory, body as territory
+  --pure-white: #FFFFFF;            // Clarity, light, contrast
+  
+  // Accent Colors - Spiritual & Resistance
+  --fire-ember: #C1440E;            // Resistance, spiritual invocation, transformative rage
+  --ritual-gold: #D4AF37;           // Syncretic spirituality, altars, divine connection
+  --sacred-smoke: #B8B2A3;          // Tobacco smoke, ritual haze, liminal space
+  --colonial-iron: #5A5A5A;         // Historical violence, tools of oppression, resilience
+  
+  // Applied Theme Colors
+  --primary-color: #C1440E;         // Fire Ember - main accent
+  --secondary-color: #D4AF37;       // Ritual Gold - secondary accent
+  --accent-color: #B8B2A3;          // Sacred Smoke - tertiary accent
+  --bg-primary: #0A0A0A;            // Ancestral Black - main background
+  --bg-secondary: #1A1A1A;          // Slightly lighter black for depth
+  --text-primary: #FFFFFF;          // Pure White - main text
+  --text-secondary: #B8B2A3;        // Sacred Smoke - secondary text
+  --glass-bg: rgba(184, 178, 163, 0.05);  // Sacred Smoke with transparency
+  --glass-border: rgba(212, 175, 55, 0.15); // Ritual Gold with transparency
   --transition: all 0.3s ease;
 }
 
@@ -422,7 +433,7 @@ section {
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(193, 68, 14, 0.4);
   }
 }
 
@@ -502,14 +513,15 @@ section {
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(166, 23, 10, 0.35);
+    box-shadow: 0 15px 30px rgba(193, 68, 14, 0.15);
   }
 }
 
 .social-card {
-  background: radial-gradient(circle at top left, rgba(166, 23, 10, 0.35), transparent 55%),
-              radial-gradient(circle at bottom right, rgba(64, 33, 30, 0.8), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(193, 68, 14, 0.15), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.1), transparent 55%);
   text-align: center;
+  border: 1px solid var(--glass-border);
 }
 
 .social-icon {
@@ -521,9 +533,9 @@ section {
   justify-content: center;
   margin: 0 auto 1rem;
   font-size: 1.3rem;
-  background: radial-gradient(circle at 30% 30%, var(--primary-color), var(--secondary-color));
-  color: var(--text-primary);
-  border: 2px solid rgba(242, 242, 242, 0.2);
+  background: radial-gradient(circle at 30% 30%, var(--fire-ember), var(--ritual-gold));
+  color: var(--pure-white);
+  border: 2px solid var(--ritual-gold);
 }
 
 .social-btn {
@@ -636,7 +648,8 @@ section {
 }
 
 .category-tag {
-  background: rgba(0, 212, 255, 0.2);
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--ritual-gold);
   padding: 2px 8px;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -645,8 +658,71 @@ section {
 
 // Language switcher
 .lang-switcher {
+  position: relative;
   display: flex;
   gap: 10px;
+  
+  @media (max-width: 480px) {
+    gap: 0;
+  }
+}
+
+.lang-icon-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--pure-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: var(--transition);
+  
+  @media (max-width: 480px) {
+    display: block;
+  }
+  
+  &:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+}
+
+.lang-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.lang-dropdown {
+  display: flex;
+  gap: 10px;
+  
+  @media (max-width: 480px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: var(--bg-primary);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    
+    &.active {
+      display: flex;
+    }
+  }
 }
 
 .lang-link {
@@ -656,14 +732,34 @@ section {
   border-radius: 15px;
   transition: var(--transition);
   font-size: 1.2rem;
+  white-space: nowrap;
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--glass-border);
+    }
+  }
   
   &:focus {
     outline: 2px solid var(--primary-color);
   }
   
-  &.active, &:hover {
+  &.active {
     color: var(--primary-color);
-    background: rgba(0, 212, 255, 0.1);
+    font-weight: 600;
+    
+    @media (max-width: 480px) {
+      background: rgba(193, 68, 14, 0.15);
+    }
+  }
+  
+  &:hover {
+    color: var(--primary-color);
+    background: rgba(193, 68, 14, 0.1);
   }
 }
 
