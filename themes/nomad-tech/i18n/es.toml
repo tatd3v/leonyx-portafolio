@@ -7,9 +7,6 @@ other = "Redes Sociales"
 [blog]
 other = "Blog"
 
-[portfolio]
-other = "Portafolio"
-
 [contact]
 other = "Contacto"
 
@@ -37,8 +34,11 @@ other = "2 de enero de 2006"
 [about]
 other = "Biografía"
 
-[travel]
-other = "Viajes"
+[statement]
+other = "Statement"
+
+[portfolio]
+other = "Work"
 
 [hero_greeting]
 other = "Le’Onyx Da’Vida"

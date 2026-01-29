@@ -35,11 +35,34 @@
                     {{ end }}
 
                     {{ if ne $url "" }}
+                    {{ if eq .name "email" }}
+                    <div class="contact-file" onclick="copyEmail()">
+                        <span class="file-icon">{{ .icon }}</span>
+                        <span class="file-name">{{ .name | lower }}</span>
+                        <span class="file-content">
+                            <span id="bio-email">{{ .value }}</span>
+                            <span class="copy-icon">⧉</span>
+                        </span>
+                    </div>
+                    {{ else if eq .name "whatsapp" }}
                     <a class="contact-file" href="{{ $url }}" target="_blank" rel="noopener noreferrer">
                         <span class="file-icon">{{ .icon }}</span>
                         <span class="file-name">{{ .name | lower }}</span>
-                        <span class="file-content">{{ .value }}</span>
+                        <span class="file-content">
+                            {{ .value }}
+                            <span class="external-icon">↗</span>
+                        </span>
                     </a>
+                    {{ else }}
+                    <a class="contact-file" href="{{ $url }}" target="_blank" rel="noopener noreferrer">
+                        <span class="file-icon">{{ .icon }}</span>
+                        <span class="file-name">{{ .name | lower }}</span>
+                        <span class="file-content">
+                            {{ .value }}
+                            <span class="external-icon">↗</span>
+                        </span>
+                    </a>
+                    {{ end }}
                     {{ else }}
                     <div class="contact-file">
                         <span class="file-icon">{{ .icon }}</span>
@@ -53,4 +76,18 @@
         </div>
     </article>
 </div>
+
+<script>
+function copyEmail() {
+    const email = '{{ (index .Site.Params.contact 0).value }}';
+    navigator.clipboard.writeText(email).then(function() {
+        const emailElement = document.getElementById('bio-email');
+        const originalText = emailElement.textContent;
+        emailElement.textContent = '¡Copiado!';
+        setTimeout(function() {
+            emailElement.textContent = originalText;
+        }, 2000);
+    });
+}
+</script>
 {{ end }}

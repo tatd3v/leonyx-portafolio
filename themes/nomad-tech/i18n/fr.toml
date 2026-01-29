@@ -5,7 +5,7 @@ other = "Réseaux Sociaux"
 [blog]
 other = "Blog"
 [portfolio]
-other = "Portfolio"
+other = "Work"
 [contact]
 other = "Contact"
 [latest_blog]
@@ -24,6 +24,8 @@ other = "janvier 2006"
 other = "2 janvier 2006"
 [about]
 other = "À propos"
+[statement]
+other = "Déclaration"
 [travel]
 other = "Voyage"
 [hero_greeting]

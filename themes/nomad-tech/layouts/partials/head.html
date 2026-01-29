@@ -5,3 +5,15 @@
 {{ $js := resources.Get "js/main.js" }}
 {{ $jsMin := $js | resources.Minify | resources.Fingerprint }}
 <script src="{{ $jsMin.RelPermalink }}" integrity="{{ $jsMin.Data.Integrity }}" defer></script>
+
+{{ $navJs := resources.Get "js/nav-modal.js" }}
+{{ $navJsMin := $navJs | resources.Minify | resources.Fingerprint }}
+<script src="{{ $navJsMin.RelPermalink }}" integrity="{{ $navJsMin.Data.Integrity }}" defer></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLdlo4nAQMwAn8H6Y+lg5z6CNoKYeB3Ia61jzJTOe7LNmwzyL/le/4JtvE7IomMnhIh5wDhg2TqkKq/NvTCA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Inter Font -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+</style>

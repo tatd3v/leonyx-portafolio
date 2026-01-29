@@ -1,16 +1,13 @@
 <nav role="navigation" aria-label="Main navigation">
     <div class="container">
         <div class="nav-container">
-            <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo | default "GP" }}</a>
-            <ul class="nav-links" id="nav-menu">
-                {{- $langPrefix := "" -}}
-                {{- if ne .Site.Language.Lang "es" -}}
-                    {{- $langPrefix = printf "/%s" .Site.Language.Lang -}}
-                {{- end -}}
-                <li><a href="{{ $langPrefix }}/" aria-current="false">{{ i18n "home" }}</a></li>
-                <li><a href="{{ $langPrefix }}/about/" aria-current="false">{{ i18n "about" }}</a></li>
-                <li><a href="{{ $langPrefix }}/social/" aria-current="false">{{ i18n "social" }}</a></li>
-            </ul>
+            <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo | default "Le'Onyx" }}</a>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-modal" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
 
             <div class="lang-switcher" role="group" aria-label="Language selection">
                 {{ range .Site.Languages }}
@@ -26,7 +23,29 @@
                 </a>
                 {{ end }}
             </div>
-            <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">☰</button>
         </div>
     </div>
 </nav>
+
+<!-- Navigation Modal -->
+<div class="nav-modal" id="nav-modal" aria-hidden="true">
+    <div class="nav-modal-overlay" id="nav-modal-overlay"></div>
+    <div class="nav-modal-content">
+        <button class="nav-modal-close" id="nav-modal-close" aria-label="Close menu">&times;</button>
+        
+        <div class="giant-nav">
+            {{- $langPrefix := "" -}}
+            {{- if ne .Site.Language.Lang "es" -}}
+                {{- $langPrefix = printf "/%s" .Site.Language.Lang -}}
+            {{- end -}}
+            <div class="giant-nav-left">
+                <a href="{{ $langPrefix }}/about/" class="giant-nav-link" aria-current="false">{{ i18n "about" | upper }}</a>
+                <a href="{{ $langPrefix }}/statement/" class="giant-nav-link" aria-current="false">{{ i18n "statement" | upper }}</a>
+            </div>
+            <div class="giant-nav-right">
+                <a href="{{ $langPrefix }}/portfolio/" class="giant-nav-link" aria-current="false">{{ i18n "portfolio" | upper }}</a>
+                <a href="{{ $langPrefix }}/contact/" class="giant-nav-link" aria-current="false">{{ i18n "contact" | upper }}</a>
+            </div>
+        </div>
+    </div>
+</div>
