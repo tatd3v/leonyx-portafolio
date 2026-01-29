@@ -1,31 +1,280 @@
 {{ define "main" }}
-<div style="margin-top: 5rem; padding: 2rem;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h1 style="color: #00d4ff; font-size: 3rem; margin-bottom: 1rem;">{{ .Title }}</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9;">{{ .Content }}</p>
-        </div>
-        <div class="portfolio-grid">
-            {{ range .Site.Params.portfolio }}
-            <div class="portfolio-item">
-                <div class="portfolio-image">{{ .icon }} {{ .type }}</div>
-                <div class="portfolio-content">
-                    <h3>{{ .title }}</h3>
-                    <p>{{ .description }}</p>
-                    <div style="margin-top: 1rem;">
-                        {{ range .tags }}
-                        <span style="background: rgba(0,212,255,0.2); padding: 4px 8px; border-radius: 15px; font-size: 0.8rem;">{{ . }}</span>
-                        {{ end }}
+<div class="portfolio-container">
+    <!-- Filter Section - Hidden -->
+    <div class="portfolio-filters" style="display: none;">
+        <a href="#" class="filter-link active" data-filter="all">{{ i18n "all_works" }}</a>
+        {{ range $key, $value := .Site.Params.portfolio_filters }}
+        <a href="#" class="filter-link" data-filter="{{ $key }}">{{ $value }}</a>
+        {{ end }}
+    </div>
+    
+    <!-- Portfolio Grid - Minimalist -->
+    <div class="portfolio-grid">
+        {{ range .Pages.ByParam "year" }}
+        <div class="portfolio-item" data-tags="{{ delimit .Params.tags "," }}">
+            <div class="portfolio-image-container">
+                {{ if .Params.featured_image }}
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="portfolio-image">
+                {{ else }}
+                <div class="portfolio-placeholder">
+                    <div class="placeholder-content">
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Params.year }}</p>
                     </div>
-                    {{ if .project_url }}
-                    <div style="margin-top: 1rem;">
-                        <a href="{{ .project_url }}" class="btn btn-secondary">{{ i18n "view_details" }}</a>
+                </div>
+                {{ end }}
+                <div class="portfolio-overlay">
+                    <div class="overlay-content">
+                        <h3 class="overlay-title">{{ .Title }}</h3>
+                        <p class="overlay-year">{{ .Params.year }}</p>
                     </div>
-                    {{ end }}
                 </div>
             </div>
-            {{ end }}
         </div>
+        {{ end }}
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterLinks = document.querySelectorAll('.filter-link');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    function filterPortfolio() {
+        const activeFilter = document.querySelector('.filter-link.active').dataset.filter;
+        
+        portfolioItems.forEach(item => {
+            const itemTags = item.dataset.tags.split(',');
+            
+            const matchesFilter = activeFilter === 'all' || itemTags.includes(activeFilter);
+            
+            if (matchesFilter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+    
+    filterLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            filterLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            filterPortfolio();
+        });
+    });
+});
+</script>
+
+<style>
+/* VHILS-Inspired Minimalist Portfolio */
+.portfolio-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Filter Section - Ultra Minimalist */
+.portfolio-filters {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.filter-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: var(--transition);
+    margin: 0 1rem;
+    opacity: 0.7;
+}
+
+.filter-link:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+.filter-link.active {
+    color: var(--primary-color);
+    opacity: 1;
+    font-weight: 500;
+}
+
+/* Portfolio Grid - With Gaps */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+.portfolio-image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.portfolio-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.placeholder-content {
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.placeholder-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.placeholder-content p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Overlay - Subtle and Clean */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.overlay-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.overlay-year {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.overlay-link {
+    display: inline-block;
+    background: transparent;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid white;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.overlay-link:hover {
+    background: white;
+    color: var(--bg-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-link {
+        font-size: 0.8rem;
+        margin: 0 0.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 1.5rem;
+    }
+    
+    .portfolio-image-container {
+        height: 300px;
+    }
+    
+    .overlay-content {
+        padding: 1rem;
+    }
+    
+    .overlay-title {
+        font-size: 1.1rem;
+    }
+    
+    .overlay-link {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-filters {
+        padding: 1rem 0;
+    }
+    
+    .filter-link {
+        font-size: 0.7rem;
+        margin: 0 0.3rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem;
+    }
+    
+    .portfolio-image-container {
+        height: 250px;
+    }
+}
+</style>
 {{ end }}
