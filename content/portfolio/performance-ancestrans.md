@@ -1,12 +1,23 @@
 ---
 title: "Performance ancestrans"
-date: 2024-01-01T00:00:00Z
+date: 2023-01-01T00:00:00Z
 draft: false
 type: portfolio
-year: "2024"
-external_url: "https://www.leonyxdavida.com/2024/performance-ancestrans"
-tags: ["performance", "ancestral", "danza"]
-featured_image: "/images/portfolio/performance-ancestrans.jpg"
+year: "2023"
+external_url: "https://www.leonyxdavida.com/2023/performance-ancestrans"
+tags: ["performance", "ancestral", "memoria", "ritual"]
+featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818358/ancestrans_1_p7b2xo.jpg"
+gallery: [
+  "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818358/ancestrans_1_p7b2xo.jpg",
+  "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818356/ancestrans_2_pbgn5s.jpg",
+  "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818356/ancestrans_3_myca5g.jpg"
+]
 ---
 
-Una serie de performances que conectan con las raíces ancestrales a través del movimiento contemporáneo.
+Performance que conecta con las memorias y saberes ancestrales a través del cuerpo como archivo viviente.
+
+Una exploración de las herencias culturales y espirituales que habitan en nosotros y se manifiestan a través del movimiento.
+
+**Dirección:** Le'Onyx Da'Vida
+
+---
