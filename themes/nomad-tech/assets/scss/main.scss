@@ -1,25 +1,25 @@
-// Variables - Ancestral Color Palette
+// Variables - Monochrome Color Palette
 :root {
   // Primary Colors
-  --ancestral-black: #0A0A0A;      // Black identity, depth, memory, body as territory
-  --pure-white: #FFFFFF;            // Clarity, light, contrast
+  --ancestral-black: #000000;      // Pure black
+  --pure-white: #FFFFFF;            // Pure white
   
-  // Accent Colors - Spiritual & Resistance
-  --fire-ember: #C1440E;            // Resistance, spiritual invocation, transformative rage
-  --ritual-gold: #D4AF37;           // Syncretic spirituality, altars, divine connection
-  --sacred-smoke: #B8B2A3;          // Tobacco smoke, ritual haze, liminal space
-  --colonial-iron: #5A5A5A;         // Historical violence, tools of oppression, resilience
+  // Grayscale
+  --dark-gray: #1A1A1A;            // Very dark gray
+  --medium-gray: #808080;          // Medium gray
+  --light-gray: #CCCCCC;           // Light gray
+  --off-white: #F5F5F5;            // Off white
   
   // Applied Theme Colors
-  --primary-color: #C1440E;         // Fire Ember - main accent
-  --secondary-color: #D4AF37;       // Ritual Gold - secondary accent
-  --accent-color: #B8B2A3;          // Sacred Smoke - tertiary accent
-  --bg-primary: #0A0A0A;            // Ancestral Black - main background
-  --bg-secondary: #1A1A1A;          // Slightly lighter black for depth
-  --text-primary: #FFFFFF;          // Pure White - main text
-  --text-secondary: #B8B2A3;        // Sacred Smoke - secondary text
-  --glass-bg: rgba(184, 178, 163, 0.05);  // Sacred Smoke with transparency
-  --glass-border: rgba(212, 175, 55, 0.15); // Ritual Gold with transparency
+  --primary-color: #FFFFFF;         // White - main accent
+  --secondary-color: #CCCCCC;       // Light gray - secondary accent
+  --accent-color: #808080;          // Medium gray - tertiary accent
+  --bg-primary: #000000;            // Black - main background
+  --bg-secondary: #1A1A1A;          // Dark gray for depth
+  --text-primary: #FFFFFF;          // White - main text
+  --text-secondary: #CCCCCC;        // Light gray - secondary text
+  --glass-bg: rgba(255, 255, 255, 0.05);  // White with transparency
+  --glass-border: rgba(255, 255, 255, 0.15); // White with transparency
   --transition: all 0.3s ease;
 }
 
@@ -119,22 +119,22 @@ nav {
 }
 
 .breadcrumb-link {
-  color: var(--sacred-smoke);
+  color: var(--text-secondary);
   text-decoration: none;
   transition: var(--transition);
   
   &:hover {
-    color: var(--fire-ember);
+    color: var(--primary-color);
   }
 }
 
 .breadcrumb-separator {
-  color: var(--sacred-smoke);
+  color: var(--text-secondary);
   opacity: 0.5;
 }
 
 .breadcrumb-current {
-  color: var(--fire-ember);
+  color: var(--primary-color);
   font-weight: 500;
 }
 
@@ -465,7 +465,7 @@ section {
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(193, 68, 14, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -545,13 +545,13 @@ section {
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(193, 68, 14, 0.15);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
   }
 }
 
 .social-card {
-  background: radial-gradient(circle at top left, rgba(193, 68, 14, 0.15), transparent 55%),
-              radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.1), transparent 55%);
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.03), transparent 55%);
   text-align: center;
   border: 1px solid var(--glass-border);
 }
@@ -565,9 +565,9 @@ section {
   justify-content: center;
   margin: 0 auto 1rem;
   font-size: 1.3rem;
-  background: radial-gradient(circle at 30% 30%, var(--fire-ember), var(--ritual-gold));
+  background: linear-gradient(135deg, var(--medium-gray), var(--light-gray));
   color: var(--pure-white);
-  border: 2px solid var(--ritual-gold);
+  border: 2px solid var(--light-gray);
 }
 
 .social-btn {
@@ -680,8 +680,8 @@ section {
 }
 
 .category-tag {
-  background: rgba(212, 175, 55, 0.2);
-  color: var(--ritual-gold);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--light-gray);
   padding: 2px 8px;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -785,13 +785,13 @@ section {
     font-weight: 600;
     
     @media (max-width: 480px) {
-      background: rgba(193, 68, 14, 0.15);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
   
   &:hover {
     color: var(--primary-color);
-    background: rgba(193, 68, 14, 0.1);
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -831,10 +831,7 @@ section {
     top: 100%;
     left: 0;
     width: 100%;
-    background:
-      radial-gradient(circle at top left, rgba(166, 23, 10, 0.35), transparent 55%),
-      radial-gradient(circle at bottom right, rgba(64, 33, 30, 0.9), transparent 55%),
-      linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+    background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
     flex-direction: column;
     padding: 1rem 0;
     gap: 0;
