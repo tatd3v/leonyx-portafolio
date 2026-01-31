@@ -3,6 +3,26 @@
         <div class="nav-container">
             <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo | default "Le'Onyx" }}</a>
             
+            <!-- Breadcrumb Navigation -->
+            <div class="breadcrumb-nav">
+                {{- $langPrefix := "" -}}
+                {{- if ne .Site.Language.Lang "es" -}}
+                    {{- $langPrefix = printf "/%s" .Site.Language.Lang -}}
+                {{- end -}}
+                
+                {{ if eq .Section "portfolio" }}
+                    <a href="{{ .Site.Home.RelPermalink }}" class="breadcrumb-link">{{ i18n "home" | default "Inicio" }}</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="{{ $langPrefix }}/portfolio/" class="breadcrumb-link">{{ i18n "portfolio" | default "Trabajos" }}</a>
+                    {{ if .IsPage }}
+                        {{ if not .IsHome }}
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">{{ .Title }}</span>
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            </div>
+            
             <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-modal" aria-label="Toggle navigation menu">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
