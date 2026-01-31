@@ -1,576 +1,1151 @@
 {{ define "main" }}
+
 <div class="portfolio-single">
+
     <div class="portfolio-single-container">
+
         <!-- Header -->
+
         <div class="portfolio-header">
+
             <h1 class="portfolio-title">{{ .Title }}</h1>
+
             <p class="portfolio-year">{{ .Params.year }}</p>
+
         </div>
+
+
 
         <!-- Description -->
+
         <div class="portfolio-description">
+
             {{ .Content }}
+
         </div>
+
+
 
         <!-- Gallery Slider -->
+
         {{ if .Params.gallery }}
+
         <div class="portfolio-gallery">
+
             <h2 class="gallery-title">{{ i18n "gallery" | default "Galería" }}</h2>
+
             
+
             <div class="gallery-slider">
+
                 {{ if gt (len .Params.gallery) 1 }}
+
                 <button class="slider-btn prev-btn" data-slide-dir="-1">‹</button>
+
                 {{ end }}
+
                 <div class="slider-container">
+
                     {{ range $index, $media := .Params.gallery }}
+
                     <div class="slider-item {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}">
+
                         {{ if or (hasSuffix $media ".mp4") (hasSuffix $media ".webm") (hasSuffix $media ".mov") }}
+
                         <video muted loop autoplay class="slider-video" data-slide-index="{{ $index }}">
+
                             <source src="{{ $media }}" type="video/mp4">
+
                             Tu navegador no soporta el elemento de video.
+
                         </video>
+
                         {{ else }}
+
                         <img src="{{ $media }}" alt="{{ $.Title }}" class="slider-image" data-slide-index="{{ $index }}">
+
                         {{ end }}
+
                     </div>
+
                     {{ end }}
+
                 </div>
+
                 {{ if gt (len .Params.gallery) 1 }}
+
                 <button class="slider-btn next-btn" data-slide-dir="1">›</button>
+
                 {{ end }}
+
             </div>
+
             
+
             {{ if gt (len .Params.gallery) 1 }}
+
             <div class="slider-dots">
+
                 {{ range $index, $image := .Params.gallery }}
+
                 <span class="dot {{ if eq $index 0 }}active{{ end }}" data-slide-index="{{ $index }}"></span>
+
                 {{ end }}
+
             </div>
+
             {{ end }}
+
         </div>
+
         
+
         <!-- Lightbox Modal -->
+
         <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+
             <span class="lightbox-close">&times;</span>
+
             {{ if gt (len .Params.gallery) 1 }}
+
             <button class="lightbox-btn lightbox-prev" onclick="event.stopPropagation(); changeLightboxSlide(-1)">‹</button>
+
             {{ end }}
+
             <div class="lightbox-content">
+
                 {{ range $index, $image := .Params.gallery }}
+
                 <img src="{{ $image }}" class="lightbox-image {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}" alt="{{ $.Title }}">
+
                 {{ end }}
+
             </div>
+
             {{ if gt (len .Params.gallery) 1 }}
+
             <button class="lightbox-btn lightbox-next" onclick="event.stopPropagation(); changeLightboxSlide(1)">›</button>
+
             {{ end }}
+
         </div>
+
         {{ end }}
 
+
+
         <!-- Back Button -->
+
         <div class="portfolio-back">
+
             <a href="/portfolio/" class="back-link">← {{ i18n "back_to_portfolio" | default "Volver al portafolio" }}</a>
+
         </div>
+
     </div>
+
 </div>
 
+
+
 <style>
+
 .breadcrumb-nav {
+
     position: absolute;
+
     top: 6rem;
+
     left: 2rem;
+
     font-size: 0.9rem;
+
     color: var(--text-secondary);
+
     z-index: 10;
+
 }
+
+
 
 .breadcrumb-link {
+
     color: var(--text-secondary);
+
     text-decoration: none;
+
     transition: var(--transition);
+
 }
+
+
 
 .breadcrumb-link:hover {
+
     color: var(--primary-color);
+
 }
+
+
 
 .breadcrumb-separator {
+
     margin: 0 0.5rem;
+
     color: var(--text-secondary);
+
     opacity: 0.5;
+
 }
+
+
 
 .portfolio-single {
+
     margin-top: 5rem;
+
     padding: 2rem;
+
     min-height: 100vh;
+
     position: relative;
+
 }
+
+
 
 .portfolio-single-container {
+
     max-width: 1200px;
+
     margin: 0 auto;
+
 }
+
+
 
 .portfolio-header {
+
     text-align: center;
+
     margin-bottom: 3rem;
+
 }
+
+
 
 .portfolio-title {
+
     font-size: 3rem;
+
     color: var(--primary-color);
+
     margin-bottom: 0.5rem;
+
     font-weight: 700;
+
 }
+
+
 
 .portfolio-year {
+
     font-size: 1.2rem;
+
     color: var(--text-secondary);
+
     margin-bottom: 1rem;
+
 }
+
+
 
 .portfolio-tags {
+
     display: flex;
+
     gap: 0.5rem;
+
     justify-content: center;
+
     flex-wrap: wrap;
+
 }
+
+
 
 .tag {
+
     background: rgba(212, 175, 55, 0.2);
+
     color: var(--ritual-gold);
+
     padding: 0.4rem 1rem;
+
     border-radius: 20px;
+
     font-size: 0.9rem;
+
 }
+
+
 
 .portfolio-featured {
+
     margin-bottom: 3rem;
+
     text-align: center;
+
 }
+
+
 
 .featured-image {
+
     max-width: 100%;
+
     height: auto;
+
     border-radius: 8px;
+
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
 }
+
+
 
 .portfolio-description {
+
     max-width: 800px;
+
     margin: 0 auto 4rem;
+
     font-size: 1.2rem;
+
     line-height: 1.8;
+
     color: var(--text-primary);
+
     text-align: center;
+
 }
+
+
 
 .portfolio-gallery {
+
     margin-bottom: 4rem;
+
 }
+
+
 
 .gallery-title {
+
     font-size: 2rem;
+
     color: var(--primary-color);
+
     margin-bottom: 2rem;
+
     text-align: center;
+
 }
+
+
 
 .gallery-slider {
+
     position: relative;
+
     max-width: 900px;
+
     margin: 0 auto;
+
     display: flex;
+
     align-items: center;
+
     gap: 1rem;
+
 }
+
+
 
 .slider-container {
+
     position: relative;
+
     width: 100%;
+
     overflow: hidden;
+
     border-radius: 8px;
+
     background: var(--bg-primary);
+
 }
+
+
 
 .slider-item {
+
     display: none;
+
     width: 100%;
+
 }
+
+
 
 .slider-item.active {
+
     display: block;
+
 }
+
+
 
 .slider-image {
+
     width: 100%;
+
     height: auto;
+
     max-height: 600px;
+
     object-fit: contain;
+
     display: block;
+
     cursor: pointer;
+
     transition: transform 0.3s ease;
+
 }
+
+
 
 .slider-image:hover {
+
     transform: scale(1.02);
+
 }
+
+
 
 .slider-video {
+
     width: 100%;
+
     height: auto;
+
     max-height: 600px;
+
     object-fit: contain;
+
     display: block;
+
 }
+
+
 
 .slider-btn {
+
     background: transparent;
+
     color: white;
+
     border: none;
+
     font-size: 3.5rem;
+
     padding: 2rem 0.5rem;
+
     cursor: pointer;
+
     border-radius: 4px;
+
     transition: all 0.3s ease;
+
     flex-shrink: 0;
+
     height: 100%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
+
+
 
 .slider-btn:hover {
+
     background: transparent;
+
     transform: scale(1.1);
+
 }
+
+
 
 .slider-dots {
+
     text-align: center;
+
     margin-top: 1.5rem;
+
 }
+
+
 
 .dot {
+
     display: inline-block;
+
     width: 12px;
+
     height: 12px;
+
     border-radius: 50%;
+
     background: rgba(193, 68, 14, 0.3);
+
     margin: 0 0.5rem;
+
     cursor: pointer;
+
     transition: all 0.3s ease;
+
 }
+
+
 
 .dot.active {
+
     background: var(--primary-color);
+
     transform: scale(1.3);
+
 }
+
+
 
 .dot:hover {
+
     background: rgba(193, 68, 14, 0.6);
+
 }
+
+
 
 .lightbox {
+
     display: none;
+
     position: fixed;
+
     top: 0;
+
     left: 0;
+
     width: 100%;
+
     height: 100%;
+
     background: rgba(0, 0, 0, 0.95);
+
     z-index: 9999;
+
     align-items: center;
+
     justify-content: center;
+
 }
+
+
 
 .lightbox.active {
+
     display: flex;
+
 }
+
+
 
 .lightbox-content {
+
     position: relative;
+
     max-width: 90vw;
+
     max-height: 90vh;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
+
+
 
 .lightbox-image {
+
     display: none;
+
     max-width: 100%;
+
     max-height: 90vh;
+
     object-fit: contain;
+
 }
+
+
 
 .lightbox-image.active {
+
     display: block;
+
 }
+
+
 
 .lightbox-close {
+
     position: absolute;
+
     top: 2rem;
+
     right: 3rem;
+
     font-size: 3rem;
+
     color: white;
+
     cursor: pointer;
+
     z-index: 10000;
+
     transition: color 0.3s ease;
+
 }
+
+
 
 .lightbox-close:hover {
+
     color: var(--primary-color);
+
 }
+
+
 
 .lightbox-btn {
+
     position: absolute;
+
     background: transparent;
+
     color: white;
+
     border: none;
+
     font-size: 3rem;
+
     padding: 1rem 1.5rem;
+
     cursor: pointer;
+
     border-radius: 4px;
+
     transition: all 0.3s ease;
+
     z-index: 10000;
+
 }
+
+
 
 .lightbox-prev {
+
     left: 2rem;
+
 }
+
+
 
 .lightbox-next {
+
     right: 2rem;
+
 }
+
+
 
 .lightbox-btn:hover {
+
     background: transparent;
+
     transform: scale(1.1);
+
 }
+
+
 
 .portfolio-link {
+
     text-align: center;
+
     margin-bottom: 3rem;
+
 }
+
+
 
 .external-link {
+
     display: inline-block;
+
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+
     color: var(--pure-white);
+
     padding: 1rem 2rem;
+
     border-radius: 8px;
+
     text-decoration: none;
+
     font-size: 1.1rem;
+
     font-weight: 600;
+
     transition: var(--transition);
+
     box-shadow: 0 4px 12px rgba(193, 68, 14, 0.3);
+
 }
+
+
 
 .external-link:hover {
+
     transform: translateY(-2px);
+
     box-shadow: 0 6px 16px rgba(193, 68, 14, 0.4);
+
 }
+
+
 
 .portfolio-back {
+
     text-align: center;
+
     margin-top: 4rem;
+
     padding-top: 2rem;
+
     border-top: 1px solid var(--glass-border);
+
 }
+
+
 
 .back-link {
+
     color: var(--text-secondary);
+
     text-decoration: none;
+
     font-size: 1rem;
+
     transition: var(--transition);
+
 }
+
+
 
 .back-link:hover {
+
     color: var(--primary-color);
+
 }
+
+
 
 @media (max-width: 768px) {
+
     .portfolio-title {
+
         font-size: 2rem;
+
     }
+
     
+
     .slider-btn {
+
         font-size: 2rem;
+
         padding: 0.3rem 0.7rem;
+
     }
+
     
+
     .lightbox-btn {
+
         font-size: 2rem;
+
         padding: 0.5rem 1rem;
+
     }
+
     
+
     .lightbox-close {
+
         top: 1rem;
+
         right: 1rem;
+
         font-size: 2.5rem;
+
     }
+
     
+
     .portfolio-description {
+
         font-size: 1rem;
+
     }
+
 }
+
 </style>
 
+
+
 <script>
+
 let currentSlide = 0;
+
 let currentLightboxSlide = 0;
 
+
+
 function changeSlide(direction) {
+
     const slides = document.querySelectorAll('.slider-item');
+
     const dots = document.querySelectorAll('.dot');
+
     
+
     if (slides.length === 0) return;
+
     
+
     slides[currentSlide].classList.remove('active');
+
     if (dots.length > 0) {
+
         dots[currentSlide].classList.remove('active');
+
     }
+
     
+
     currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
     
+
     slides[currentSlide].classList.add('active');
+
     if (dots.length > 0) {
+
         dots[currentSlide].classList.add('active');
+
     }
+
 }
+
+
 
 function goToSlide(index) {
+
     const slides = document.querySelectorAll('.slider-item');
+
     const dots = document.querySelectorAll('.dot');
+
     
+
     if (slides.length === 0) return;
+
     
+
     slides[currentSlide].classList.remove('active');
+
     if (dots.length > 0) {
+
         dots[currentSlide].classList.remove('active');
+
     }
+
     
+
     currentSlide = index;
+
     
+
     slides[currentSlide].classList.add('active');
+
     if (dots.length > 0) {
+
         dots[currentSlide].classList.add('active');
+
     }
+
 }
+
+
 
 function openLightbox(index) {
+
     const lightbox = document.getElementById('lightbox');
+
     const lightboxImages = document.querySelectorAll('.lightbox-image');
+
     
+
     lightboxImages.forEach(img => img.classList.remove('active'));
+
     lightboxImages[index].classList.add('active');
+
     
+
     currentLightboxSlide = index;
+
     lightbox.classList.add('active');
+
     document.body.style.overflow = 'hidden';
+
 }
+
+
 
 function closeLightbox() {
+
     const lightbox = document.getElementById('lightbox');
+
     lightbox.classList.remove('active');
+
     document.body.style.overflow = 'auto';
+
 }
+
+
 
 function changeLightboxSlide(direction) {
+
     const lightboxImages = document.querySelectorAll('.lightbox-image');
+
     
+
     lightboxImages[currentLightboxSlide].classList.remove('active');
+
     
+
     currentLightboxSlide = (currentLightboxSlide + direction + lightboxImages.length) % lightboxImages.length;
+
     
+
     lightboxImages[currentLightboxSlide].classList.add('active');
+
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
+
     const sliderImages = document.querySelectorAll('.slider-image');
+
     sliderImages.forEach(img => {
+
         if (img.tagName === 'IMG') {
+
             img.addEventListener('click', function() {
+
                 const index = parseInt(this.getAttribute('data-slide-index'));
+
                 openLightbox(index);
+
             });
+
         }
+
     });
+
     
+
     const prevBtn = document.querySelector('.prev-btn');
+
     const nextBtn = document.querySelector('.next-btn');
+
     
+
     if (prevBtn) {
+
         prevBtn.addEventListener('click', function() {
+
             changeSlide(-1);
+
         });
+
     }
+
     
+
     if (nextBtn) {
+
         nextBtn.addEventListener('click', function() {
+
             changeSlide(1);
+
         });
+
     }
+
     
+
     // Add click handlers for dots
+
     const dots = document.querySelectorAll('.dot');
+
     dots.forEach(dot => {
+
         dot.addEventListener('click', function() {
+
             const index = parseInt(this.getAttribute('data-slide-index'));
+
             goToSlide(index);
+
         });
+
     });
+
     
+
     // Pause videos when switching slides
+
     function pauseAllVideos() {
+
         const videos = document.querySelectorAll('.slider-video');
+
         videos.forEach(video => {
+
             video.pause();
+
         });
+
     }
+
     
+
     // Play videos when they become active
+
     function playActiveVideo() {
+
         const activeSlide = document.querySelector('.slider-item.active');
+
         if (activeSlide) {
+
             const video = activeSlide.querySelector('.slider-video');
+
             if (video) {
+
                 video.play().catch(e => console.log('Autoplay prevented:', e));
+
             }
+
         }
+
     }
+
     
+
     // Override changeSlide to handle videos
+
     const originalChangeSlide = changeSlide;
+
     changeSlide = function(direction) {
+
         pauseAllVideos();
+
         originalChangeSlide(direction);
+
         playActiveVideo();
+
     };
+
     
+
     // Override goToSlide to handle videos
+
     const originalGoToSlide = goToSlide;
+
     goToSlide = function(index) {
+
         pauseAllVideos();
+
         originalGoToSlide(index);
+
         playActiveVideo();
+
     };
+
     
+
     // Start playing the first video
+
     playActiveVideo();
+
 });
 
+
+
 document.addEventListener('keydown', function(e) {
+
     const lightbox = document.getElementById('lightbox');
+
     if (lightbox && lightbox.classList.contains('active')) {
+
         if (e.key === 'Escape') {
+
             closeLightbox();
+
         } else if (e.key === 'ArrowLeft') {
+
             changeLightboxSlide(-1);
+
         } else if (e.key === 'ArrowRight') {
+
             changeLightboxSlide(1);
+
         }
+
     }
+
 });
+
 </script>
+
 {{ end }}
