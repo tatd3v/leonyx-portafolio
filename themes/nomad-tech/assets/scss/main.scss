@@ -106,6 +106,38 @@ nav {
   }
 }
 
+// Breadcrumb navigation in navbar
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.breadcrumb-link {
+  color: var(--sacred-smoke);
+  text-decoration: none;
+  transition: var(--transition);
+  
+  &:hover {
+    color: var(--fire-ember);
+  }
+}
+
+.breadcrumb-separator {
+  color: var(--sacred-smoke);
+  opacity: 0.5;
+}
+
+.breadcrumb-current {
+  color: var(--fire-ember);
+  font-weight: 500;
+}
+
 .menu-toggle {
   display: flex;
   flex-direction: column;
@@ -507,7 +539,7 @@ section {
 .social-card, .blog-post, .portfolio-item {
   background: var(--glass-bg);
   border-radius: 15px;
-  padding: 2rem;
+  padding: 0;
   border: 1px solid var(--glass-border);
   transition: var(--transition);
   
