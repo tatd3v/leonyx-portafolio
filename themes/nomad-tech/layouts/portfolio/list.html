@@ -10,8 +10,8 @@
     
     <!-- Portfolio Grid - Minimalist -->
     <div class="portfolio-grid">
-        {{ range .Pages.ByParam "year" }}
-        <div class="portfolio-item" data-tags="{{ delimit .Params.tags "," }}">
+        {{ range .Pages.ByDate.Reverse }}
+        <a href="{{ .RelPermalink }}" class="portfolio-item" data-tags="{{ delimit .Params.tags "," }}">
             <div class="portfolio-image-container">
                 {{ if .Params.featured_image }}
                 <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="portfolio-image">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         {{ end }}
     </div>
 </div>
@@ -115,10 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
 .portfolio-item {
     position: relative;
     overflow: hidden;
-    background: transparent;
+    background: var(--bg-primary);
     cursor: pointer;
     border-radius: 8px;
-    border: none;
 }
 
 .portfolio-image-container {
@@ -126,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
     width: 100%;
     height: 400px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-image {
