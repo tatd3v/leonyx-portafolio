@@ -48,21 +48,26 @@ leonyx-portfolio/
 ### Instalación y Desarrollo
 
 1. **Clonar el repositorio:**
+
    ```bash
    git clone <repository-url>
    cd leonyx-portfolio
    ```
 
 2. **Iniciar servidor de desarrollo:**
+
    ```bash
    hugo server -D
    ```
+
    El sitio estará disponible en `http://localhost:1313`
 
 3. **Construir para producción:**
+
    ```bash
    hugo
    ```
+
    Los archivos generados estarán en `public/`
 
 ## 📝 Gestión de Contenido
@@ -74,6 +79,7 @@ leonyx-portfolio/
 3. Escribir contenido en Markdown
 
 **Ejemplo:**
+
 ```markdown
 ---
 title: "Título del Post"
