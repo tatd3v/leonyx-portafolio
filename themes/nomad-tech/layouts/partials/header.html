@@ -1,4 +1,4 @@
-<nav role="navigation" aria-label="Main navigation" class="{{ if and (eq .Section "portfolio") (not .IsHome) }}with-breadcrumbs{{ else }}no-breadcrumbs{{ end }}">
+<nav role="navigation" aria-label="Main navigation" class="{{ if not .IsHome }}with-breadcrumbs{{ else }}no-breadcrumbs{{ end }}">
     <div class="container nav-container">
         <!-- Top Row: Logo, Menu Toggle, and Language Switcher -->
         <div class="nav-top">
@@ -35,7 +35,7 @@
             </div>
         </div>
         
-        {{ if and (eq .Section "portfolio") (not .IsHome) }}
+        {{ if not .IsHome }}
         <!-- Bottom Row: Breadcrumbs -->
         <div class="nav-breadcrumbs">
             {{- $langPrefix := "" -}}
@@ -44,8 +44,19 @@
             {{- end -}}
             
             <a href="{{ .Site.Home.RelPermalink }}" class="breadcrumb-link">{{ i18n "home" | default "Inicio" }}</a>
-            <span class="breadcrumb-separator">/</span>
-            <a href="{{ $langPrefix }}/portfolio/" class="breadcrumb-link">{{ i18n "portfolio" | default "Trabajos" }}</a>
+            
+            {{ if .Section }}
+                <span class="breadcrumb-separator">/</span>
+                <a href="{{ $langPrefix }}/{{ .Section }}/" class="breadcrumb-link">
+                    {{ if eq .Section "about" }}{{ i18n "about" | default "Sobre mí" }}
+                    {{ else if eq .Section "statement" }}{{ i18n "statement" | default "Declaración" }}
+                    {{ else if eq .Section "portfolio" }}{{ i18n "portfolio" | default "Trabajos" }}
+                    {{ else if eq .Section "contact" }}{{ i18n "contact" | default "Contacto" }}
+                    {{ else if eq .Section "posts" }}{{ i18n "blog" | default "Blog" }}
+                    {{ else }}{{ .Section | title }}{{ end }}
+                </a>
+            {{ end }}
+            
             {{ if .IsPage }}
                 <span class="breadcrumb-separator">/</span>
                 <span class="breadcrumb-current">{{ .Title }}</span>
