@@ -1,7 +1,5 @@
 ---
-title: "Portfolio"
-description: "Showcasing my projects and achievements"
+title: "Portafolio"
+description: "Mostrando mis proyectos y logros"
 layout: "portfolio"
 ---
-
-A collection of projects I've built during my journey as a digital nomad and tech professional.
