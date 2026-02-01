@@ -24,7 +24,7 @@
                     {{- if ne .Lang "es" -}}
                         {{- $langPrefix = printf "/%s" .Lang -}}
                     {{- end -}}
-                    <a href="{{ $.Site.BaseURL }}{{ $langPrefix }}" 
+                    <a href="{{ $.Site.BaseURL }}{{ $langPrefix | strings.TrimPrefix "/" }}" 
                        class="lang-link {{ if eq .Lang $.Site.Language.Lang }}active{{ end }}" 
                        aria-label="Switch to {{ .LanguageName }}" 
                        {{ if eq .Lang $.Site.Language.Lang }}aria-current="true"{{ end }}>
@@ -47,7 +47,7 @@
             
             {{ if .Section }}
                 <span class="breadcrumb-separator">/</span>
-                <a href="{{ $langPrefix }}/{{ .Section }}/" class="breadcrumb-link">
+                <a href="{{ .Site.BaseURL }}{{ $langPrefix | strings.TrimPrefix "/" }}/{{ .Section }}/" class="breadcrumb-link">
                     {{ if eq .Section "about" }}{{ i18n "about" | default "Sobre mí" }}
                     {{ else if eq .Section "statement" }}{{ i18n "statement" | default "Declaración" }}
                     {{ else if eq .Section "portfolio" }}{{ i18n "portfolio" | default "Trabajos" }}
@@ -78,12 +78,12 @@
                 {{- $langPrefix = printf "/%s" .Site.Language.Lang -}}
             {{- end -}}
             <div class="giant-nav-left">
-                <a href="{{ $langPrefix }}/about/" class="giant-nav-link" aria-current="false">{{ i18n "about" | upper }}</a>
-                <a href="{{ $langPrefix }}/statement/" class="giant-nav-link" aria-current="false">{{ i18n "statement" | upper }}</a>
+                <a href="{{ .Site.BaseURL }}{{ $langPrefix | strings.TrimPrefix "/" }}/about/" class="giant-nav-link" aria-current="false">{{ i18n "about" | upper }}</a>
+                <a href="{{ .Site.BaseURL }}{{ $langPrefix | strings.TrimPrefix "/" }}/statement/" class="giant-nav-link" aria-current="false">{{ i18n "statement" | upper }}</a>
             </div>
             <div class="giant-nav-right">
-                <a href="{{ $langPrefix }}/portfolio/" class="giant-nav-link" aria-current="false">{{ i18n "portfolio" | upper }}</a>
-                <a href="{{ $langPrefix }}/contact/" class="giant-nav-link" aria-current="false">{{ i18n "contact" | upper }}</a>
+                <a href="{{ .Site.BaseURL }}{{ $langPrefix | strings.TrimPrefix "/" }}/portfolio/" class="giant-nav-link" aria-current="false">{{ i18n "portfolio" | upper }}</a>
+                <a href="{{ .Site.BaseURL }}{{ $langPrefix | strings.TrimPrefix "/" }}/contact/" class="giant-nav-link" aria-current="false">{{ i18n "contact" | upper }}</a>
             </div>
         </div>
     </div>
