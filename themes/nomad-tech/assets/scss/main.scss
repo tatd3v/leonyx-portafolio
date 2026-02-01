@@ -67,10 +67,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  .menu-toggle {
-    margin-right: 1rem;
-  }
 }
 
 .nav-breadcrumbs {
@@ -172,8 +168,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 24px;
+  width: 32px;
+  height: 26px;
   background: none;
   border: none;
   cursor: pointer;
@@ -408,15 +404,7 @@ main {
 
 // Portfolio section specific padding
 .portfolio-container {
-  padding-top: 5rem !important;
-  
-  @media (max-width: 768px) {
-    padding-top: 8rem !important;
-  }
-  
-  @media (max-width: 480px) {
-    padding-top: 6rem !important;
-  }
+  padding-top: 7rem !important;
 }
 
 section {
@@ -773,8 +761,8 @@ section {
 
 .lang-icon {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   stroke: currentColor;
 }
 
