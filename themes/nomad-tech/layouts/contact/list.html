@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="contact-page">
+    <div class="contact-container">
+        <h1 class="contact-title">{{ .Title }}</h1>
+        <p class="contact-tagline">{{ .Params.tagline | default (i18n "getInTouch" | default "¡Ponte en contacto!") }}</p>
+        
+        <div class="contact-list">
+            {{ range .Site.Params.contact }}
+            <div class="contact-row">
+                <span class="contact-label">{{ .name }}</span>
+                {{ if eq .name "whatsapp" }}
+                    {{ $clean := replace (replace .value " " "") "+" "" }}
+                    <a href="https://wa.me/{{ $clean }}" class="contact-link" target="_blank" rel="noopener noreferrer">{{ .value }}</a>
+                {{ else if eq .name "email" }}
+                    <span class="contact-value contact-email" data-email="{{ .value }}" onclick="copyEmail(this)" style="cursor: pointer;">{{ .value }}</span>
+                {{ else }}
+                    <span class="contact-value">{{ .value }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+
+        {{ if .Site.Params.social }}
+        <div class="contact-footer">
+            <span class="contact-label">{{ i18n "social" | default "Social" }}</span>
+            <a href="{{ (index .Site.Params.social 0).url }}" class="contact-link" target="_blank" rel="noopener noreferrer">
+                {{ (index .Site.Params.social 0).name }}
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<script>
+function copyEmail(element) {
+    const email = element.getAttribute('data-email');
+    const originalText = element.textContent;
+    
+    navigator.clipboard.writeText(email).then(() => {
+        element.textContent = '✓ Copiado!';
+        element.style.color = 'var(--primary-color)';
+        
+        setTimeout(() => {
+            element.textContent = originalText;
+            element.style.color = 'var(--text-primary)';
+        }, 2000);
+    }).catch(err => {
+        console.error('Error copying email:', err);
+    });
+}
+</script>
+{{ end }}
+
