@@ -26,8 +26,6 @@ other = "2 janvier 2006"
 other = "À propos"
 [statement]
 other = "Déclaration"
-[travel]
-other = "Voyage"
 [hero_greeting]
 other = "Le’Onyx Da’Vida"
 [hero_subtitle]
@@ -78,3 +76,9 @@ other = "Voir le travail"
 
 [view_project]
 other = "Voir le projet"
+
+[getInTouch]
+other = "Contactez-nous!"
+
+[connect]
+other = "Connecter"

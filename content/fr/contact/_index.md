@@ -1,10 +1,10 @@
 ---
-title: "Contact"
+title: "Contactez-moi"
 description: "Informations de contact pour Le'Onyx Da'Vida"
 layout: "contact"
 ---
 
-# Contact
+# Contactez-moi
 
 Connectez-vous avec Le'Onyx Da'Vida pour des collaborations artistiques, des projets communautaires, ou des consultations académiques.
 

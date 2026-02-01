@@ -1,10 +1,10 @@
 ---
-title: "Statement"
-description: "Artistic statement of Le'Onyx Da'Vida"
+title: "Declaración"
+description: "Declaración artística de Le'Onyx Da'Vida"
 type: about
 ---
 
-# Statement
+# Declaración
 
 Mi práctica artística parte de mi cuerpo como archivo vivo, en donde latidos de memorias ancestrales, grietas históricas y fuerzas espirituales sobreviven y viven, encarando el mundo desde un accionar artístico-político. Desde la danza, el performance y la experimentación multidisciplinar, asumo el cuerpo no como representación, sino como invocación: un medio de resistencia, de sanación y de construcción colectiva.
 
