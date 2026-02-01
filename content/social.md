@@ -1,12 +1,13 @@
 ---
-title: "Social Media"
-description: "Connect with me across different platforms"
+title: "Redes Sociales"
+description: "Conéctate conmigo en diferentes plataformas"
 ---
 
-# Follow My Journey
+# Sigue mi camino
 
-Stay updated with my latest adventures, tech insights, and nomad life experiences across different social media platforms.
+Mantente actualizado con mis últimas aventuras, conocimientos técnicos y experiencias de vida nómade en diferentes plataformas de redes sociales.
 
+## Dónde encontrarme
 ## Where to Find Me
 
 Connect with me on various platforms where I share different aspects of my journey - from tech tutorials to travel vlogs and daily life updates.
