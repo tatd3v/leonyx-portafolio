@@ -1,12 +1,8 @@
 ---
-title: "Réseaux Sociaux"
-description: "Suis mon travail artistique, mes processus créatifs et mes projets communautaires sur Instagram."
+title: "Redes Sociales"
+description: "Conéctate conmigo en diferentes plataformas"
 ---
 
-# Réseaux Sociaux
+# Sígueme
 
-Découvre mon parcours artistique, mes processus de création et mes projets communautaires à travers mes réseaux sociaux.
-
-Actuellement je partage mon travail sur Instagram :
-
-- @leonyx.a.r.t
+Conoce mi trabajo artístico, procesos creativos y proyectos comunitarios a través de mis redes sociales.
