@@ -1,0 +1,131 @@
+// Contact Page - Ultra Minimalistic Design
+// Inspired by Vhils contact page - text-focused, clean typography
+
+// Variables
+$contact-font-size-desktop: 2.5rem;
+$contact-font-size-mobile: 2rem;
+$contact-gap-desktop: 2rem;
+$contact-gap-mobile: 0.5rem;
+
+// Mixins
+@mixin contact-text-base {
+  color: var(--text-primary);
+  font-size: $contact-font-size-desktop;
+  
+  @media (max-width: 768px) {
+    font-size: $contact-font-size-mobile;
+  }
+}
+
+@mixin contact-row-base {
+  display: flex;
+  align-items: baseline;
+  gap: $contact-gap-desktop;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $contact-gap-mobile;
+  }
+}
+
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 8rem 2rem 4rem;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.contact-tagline {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 4rem;
+  font-weight: 300;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: $contact-gap-desktop;
+  margin-bottom: 6rem;
+}
+
+.contact-row {
+  @include contact-row-base;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-label {
+  @include contact-text-base;
+  min-width: 150px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.contact-link {
+  @include contact-text-base;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration-color: var(--text-primary);
+  }
+
+  &:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+  }
+}
+
+.contact-value {
+  @include contact-text-base;
+  font-weight: 600;
+}
+
+.contact-footer {
+  @include contact-row-base;
+  font-size: 1.1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-list {
+    gap: 1.5rem;
+  }
+}
+
+// Accessibility - Reduced Motion
+@media (prefers-reduced-motion: reduce) {
+  .contact-link {
+    transition: none;
+  }
+}

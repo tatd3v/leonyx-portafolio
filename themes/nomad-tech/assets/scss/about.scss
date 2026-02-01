@@ -52,7 +52,7 @@ $bio-text: #F2F2F2;
     box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba($bio-text, 0.05);
-    border-left: 4px solid $bio-primary !important;
+    border-left: none !important;
     position: relative;
     z-index: 1;
     
@@ -131,7 +131,7 @@ $bio-text: #F2F2F2;
         font-weight: 400;
         font-style: italic;
         padding-left: 1rem;
-        border-left: 3px solid $bio-primary !important;
+        border-left: none !important;
     }
     
     p {
@@ -173,7 +173,7 @@ $bio-text: #F2F2F2;
         margin: 2rem 0;
         padding: 1.5rem 2rem;
         background: rgba($bio-primary, 0.08) !important;
-        border-left: 4px solid $bio-primary !important;
+        border-left: none !important;
         font-style: italic;
         font-size: 1.15rem;
         position: relative;
@@ -189,107 +189,6 @@ $bio-text: #F2F2F2;
             font-family: "Inter", sans-serif;
         }
     }
-}
-
-.contact-section {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba($bio-primary, 0.4) !important;
-    position: relative;
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: -1px;
-        left: 0;
-        width: 100px;
-        height: 1px;
-        background: $bio-primary !important;
-    }
-}
-
-.contact-grid {
-    margin-top: 1.5rem;
-    display: grid;
-    gap: 1rem;
-}
-
-.contact-file {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    color: $bio-text !important;
-    background: rgba($bio-accent, 0.4) !important;
-    border-radius: 0;
-    border-left: 3px solid transparent;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    
-    &:hover {
-        background: rgba($bio-primary, 0.15) !important;
-        border-left-color: $bio-primary !important;
-        transform: translateX(5px);
-        text-decoration: none;
-    }
-    
-    &.email-contact {
-        &:hover {
-            background: rgba($bio-primary, 0.2) !important;
-        }
-    }
-    
-    a {
-        text-decoration: none;
-        color: inherit;
-        
-        &:hover {
-            text-decoration: none;
-        }
-    }
-}
-
-.file-icon {
-    font-size: 1.5rem;
-    width: 35px;
-    text-align: center;
-}
-
-.file-name {
-    color: $bio-primary !important;
-    min-width: 100px;
-    font-weight: 600;
-    font-family: sans-serif;
-    text-transform: capitalize;
-}
-
-.file-content {
-    color: $bio-text !important;
-    opacity: 0.9;
-    position: relative;
-    width: 100%;
-}
-
-.copy-icon, .external-icon {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    font-size: 1rem;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
-    background: rgba($bio-accent, 0.8);
-    padding: 3px 5px;
-    border-radius: 3px;
-    color: $bio-text;
-    z-index: 10;
-}
-
-.contact-file:hover .copy-icon,
-.contact-file:hover .external-icon {
-    opacity: 0.8;
 }
 
 // Home page biography section styling
@@ -340,7 +239,7 @@ $bio-text: #F2F2F2;
             font-style: italic;
             margin: 2.5rem 0 1rem;
             padding-left: 1rem;
-            border-left: 3px solid $bio-primary !important;
+            border-left: none !important;
         }
         
         p {
@@ -402,13 +301,6 @@ $bio-text: #F2F2F2;
                 font-size: 2.5rem;
             }
         }
-    }
-    
-    .contact-file {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        padding: 1rem;
     }
     
     .home-bio {
