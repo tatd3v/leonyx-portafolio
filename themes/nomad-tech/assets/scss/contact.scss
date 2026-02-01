@@ -32,7 +32,7 @@ $contact-gap-mobile: 0.5rem;
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
-  padding: 8rem 2rem 4rem;
+  padding: 6rem 2rem 2rem;
 }
 
 .contact-container {
@@ -111,7 +111,7 @@ $contact-gap-mobile: 0.5rem;
 // Responsive Design
 @media (max-width: 768px) {
   .contact-page {
-    padding: 6rem 1.5rem 3rem;
+    padding: 8rem 1.5rem 3rem;
   }
 
   .contact-title {
