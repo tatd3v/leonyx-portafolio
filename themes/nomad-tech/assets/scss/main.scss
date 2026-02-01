@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -53,14 +53,29 @@ nav {
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  padding: 1rem 0;
   border-bottom: 1px solid var(--glass-border);
 }
 
 .nav-container {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.nav-top {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  .menu-toggle {
+    margin-right: 1rem;
+  }
+}
+
+.nav-breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -115,6 +130,21 @@ nav {
   
   @media (max-width: 768px) {
     display: none;
+  }
+}
+
+// Mobile breadcrumb navigation (visible only on mobile)
+.mobile-breadcrumb-nav {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  @media (max-width: 768px) {
+    display: flex;
   }
 }
 
@@ -373,12 +403,25 @@ nav {
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 0;
+}
+
+// Portfolio section specific padding
+.portfolio-container {
+  padding-top: 5rem !important;
+  
+  @media (max-width: 768px) {
+    padding-top: 8rem !important;
+  }
+  
+  @media (max-width: 480px) {
+    padding-top: 6rem !important;
+  }
 }
 
 section {
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 0;
   position: relative;
 }
 
@@ -533,6 +576,10 @@ section {
 
 .portfolio-grid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+  @media (max-width: 768px) {
+    padding-top: 3rem;
+  }
 }
 
 // Cards
@@ -709,7 +756,7 @@ section {
   padding: 0.25rem;
   transition: var(--transition);
   
-  @media (max-width: 480px) {
+  @media (max-width: 900px) {
     display: block;
   }
   
@@ -735,7 +782,7 @@ section {
   display: flex;
   gap: 10px;
   
-  @media (max-width: 480px) {
+  @media (max-width: 900px) {
     display: none;
     position: absolute;
     top: 100%;
@@ -766,14 +813,10 @@ section {
   font-size: 1.2rem;
   white-space: nowrap;
   
-  @media (max-width: 480px) {
+  @media (max-width: 900px) {
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
     border-radius: 4px;
-    
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--glass-border);
-    }
   }
   
   &:focus {
@@ -784,7 +827,7 @@ section {
     color: var(--primary-color);
     font-weight: 600;
     
-    @media (max-width: 480px) {
+    @media (max-width: 900px) {
       background: rgba(255, 255, 255, 0.1);
     }
   }
