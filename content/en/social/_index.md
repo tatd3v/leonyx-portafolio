@@ -1,12 +1,8 @@
 ---
 title: "Social Media"
-description: "Connect with me on Instagram to follow my artistic work, processes, and community projects."
+description: "Connect with me on different platforms"
 ---
 
-# Social Media
+# Follow Me
 
-Follow my artistic journey, creative processes, and community-based projects through my social networks.
-
-Currently I share my work on Instagram:
-
-- @leonyx.a.r.t
+Discover my artistic work, creative processes, and community projects through my social networks.
