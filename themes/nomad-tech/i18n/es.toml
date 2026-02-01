@@ -94,3 +94,12 @@ other = "Todos los trabajos"
 
 [view_work]
 other = "Ver trabajo"
+
+[getInTouch]
+other = "¡Ponte en contacto!"
+
+[connect]
+other = "Conéctate"
+
+[view_project]
+other = "Ver proyecto"

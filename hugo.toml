@@ -60,15 +60,7 @@ theme = "nomad-tech"
     description = "Web application description"
     tags = ["React", "Vue.js"]
 
-  # Travel Timeline
-  [[params.travels]]
-    city = "Bangkok"
-    country = "Thailand"
-    flag = "🇹🇭"
-    period = "2024.01 - 2024.03"
-    description = "Started my nomad journey in the vibrant capital of Thailand"
-    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
-
+  
   # Portfolio Filters
   [params.portfolio_filters]
     performance = "Performance"
