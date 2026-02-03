@@ -34,7 +34,7 @@
 
             <h2 class="gallery-title">{{ i18n "gallery" | default "Galería" }}</h2>
 
-            
+
 
             <div class="gallery-slider">
 
@@ -62,7 +62,8 @@
 
                         {{ else }}
 
-                        <img src="{{ $media }}" alt="{{ $.Title }}" class="slider-image" data-slide-index="{{ $index }}">
+                        <img src="{{ $media }}" alt="{{ $.Title }}" class="slider-image"
+                            data-slide-index="{{ $index }}">
 
                         {{ end }}
 
@@ -80,7 +81,7 @@
 
             </div>
 
-            
+
 
             {{ if gt (len .Params.gallery) 1 }}
 
@@ -98,7 +99,7 @@
 
         </div>
 
-        
+
 
         <!-- Lightbox Modal -->
 
@@ -108,7 +109,8 @@
 
             {{ if gt (len .Params.gallery) 1 }}
 
-            <button class="lightbox-btn lightbox-prev" onclick="event.stopPropagation(); changeLightboxSlide(-1)">‹</button>
+            <button class="lightbox-btn lightbox-prev"
+                onclick="event.stopPropagation(); changeLightboxSlide(-1)">‹</button>
 
             {{ end }}
 
@@ -116,7 +118,8 @@
 
                 {{ range $index, $image := .Params.gallery }}
 
-                <img src="{{ $image }}" class="lightbox-image {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}" alt="{{ $.Title }}">
+                <img src="{{ $image }}" class="lightbox-image {{ if eq $index 0 }}active{{ end }}"
+                    data-index="{{ $index }}" alt="{{ $.Title }}">
 
                 {{ end }}
 
@@ -124,7 +127,8 @@
 
             {{ if gt (len .Params.gallery) 1 }}
 
-            <button class="lightbox-btn lightbox-next" onclick="event.stopPropagation(); changeLightboxSlide(1)">›</button>
+            <button class="lightbox-btn lightbox-next"
+                onclick="event.stopPropagation(); changeLightboxSlide(1)">›</button>
 
             {{ end }}
 
@@ -138,7 +142,8 @@
 
         <div class="portfolio-back">
 
-            <a href="/portfolio/" class="back-link">← {{ i18n "back_to_portfolio" | default "Volver al portafolio" }}</a>
+            <a href="/portfolio/" class="back-link">← {{ i18n "back_to_portfolio" | default "Volver al portafolio"
+                }}</a>
 
         </div>
 
@@ -149,1000 +154,999 @@
 
 
 <style>
+    .breadcrumb-nav {
 
-.breadcrumb-nav {
+        position: absolute;
 
-    position: absolute;
+        top: 6rem;
 
-    top: 6rem;
+        left: 2rem;
 
-    left: 2rem;
+        font-size: 0.9rem;
 
-    font-size: 0.9rem;
+        color: var(--text-secondary);
 
-    color: var(--text-secondary);
+        z-index: 10;
 
-    z-index: 10;
+    }
 
-}
 
 
+    .breadcrumb-link {
 
-.breadcrumb-link {
+        color: var(--text-secondary);
 
-    color: var(--text-secondary);
+        text-decoration: none;
 
-    text-decoration: none;
+        transition: var(--transition);
 
-    transition: var(--transition);
+    }
 
-}
 
 
+    .breadcrumb-link:hover {
 
-.breadcrumb-link:hover {
+        color: var(--primary-color);
 
-    color: var(--primary-color);
+    }
 
-}
 
 
+    .breadcrumb-separator {
 
-.breadcrumb-separator {
+        color: var(--text-secondary);
 
-    color: var(--text-secondary);
+        opacity: 0.5;
 
-    opacity: 0.5;
+    }
 
-}
 
 
+    .portfolio-single {
 
-.portfolio-single {
+        padding: 7rem 2rem 2rem;
+        ;
 
-    margin-top: 5rem;
+        min-height: 100vh;
 
-    padding: 2rem;
+        position: relative;
 
-    min-height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
 
-    position: relative;
+    }
 
-}
 
 
+    .portfolio-single-container {
 
-.portfolio-single-container {
+        max-width: 1200px;
 
-    max-width: 1200px;
+        margin: 0 auto;
 
-    margin: 0 auto;
+    }
 
-}
 
 
+    .portfolio-header {
 
-.portfolio-header {
+        text-align: center;
 
-    text-align: center;
+        margin-bottom: 3rem;
 
-    margin-bottom: 3rem;
+    }
 
-}
 
-
-
-.portfolio-title {
-
-    font-size: 3rem;
-
-    color: var(--primary-color);
-
-    margin-bottom: 0.5rem;
-
-    font-weight: 700;
-
-}
-
-
-
-.portfolio-year {
-
-    font-size: 1.2rem;
-
-    color: var(--text-secondary);
-
-    margin-bottom: 1rem;
-
-}
-
-
-
-.portfolio-tags {
-
-    display: flex;
-
-    gap: 0.5rem;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-}
-
-
-
-.tag {
-
-    background: rgba(212, 175, 55, 0.2);
-
-    color: var(--ritual-gold);
-
-    padding: 0.4rem 1rem;
-
-    border-radius: 20px;
-
-    font-size: 0.9rem;
-
-}
-
-
-
-.portfolio-featured {
-
-    margin-bottom: 3rem;
-
-    text-align: center;
-
-}
-
-
-
-.featured-image {
-
-    max-width: 100%;
-
-    height: auto;
-
-    border-radius: 8px;
-
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-
-}
-
-
-
-.portfolio-description {
-
-    max-width: 800px;
-
-    margin: 0 auto 4rem;
-
-    font-size: 1.2rem;
-
-    line-height: 1.8;
-
-    color: var(--text-primary);
-
-    text-align: center;
-
-}
-
-
-
-.portfolio-gallery {
-
-    margin-bottom: 4rem;
-
-}
-
-
-
-.gallery-title {
-
-    font-size: 2rem;
-
-    color: var(--primary-color);
-
-    margin-bottom: 2rem;
-
-    text-align: center;
-
-}
-
-
-
-.gallery-slider {
-
-    position: relative;
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 1rem;
-
-}
-
-
-
-.slider-container {
-
-    position: relative;
-
-    width: 100%;
-
-    overflow: hidden;
-
-    border-radius: 8px;
-
-    background: var(--bg-primary);
-
-}
-
-
-
-.slider-item {
-
-    display: none;
-
-    width: 100%;
-
-}
-
-
-
-.slider-item.active {
-
-    display: block;
-
-}
-
-
-
-.slider-image {
-
-    width: 100%;
-
-    height: auto;
-
-    max-height: 600px;
-
-    object-fit: contain;
-
-    display: block;
-
-    cursor: pointer;
-
-    transition: transform 0.3s ease;
-
-}
-
-
-
-.slider-image:hover {
-
-    transform: scale(1.02);
-
-}
-
-
-
-.slider-video {
-
-    width: 100%;
-
-    height: auto;
-
-    max-height: 600px;
-
-    object-fit: contain;
-
-    display: block;
-
-}
-
-
-
-.slider-btn {
-
-    background: transparent;
-
-    color: white;
-
-    border: none;
-
-    font-size: 3.5rem;
-
-    padding: 2rem 0.5rem;
-
-    cursor: pointer;
-
-    border-radius: 4px;
-
-    transition: all 0.3s ease;
-
-    flex-shrink: 0;
-
-    height: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-
-.slider-btn:hover {
-
-    background: transparent;
-
-    transform: scale(1.1);
-
-}
-
-
-
-.slider-dots {
-
-    text-align: center;
-
-    margin-top: 1.5rem;
-
-}
-
-
-
-.dot {
-
-    display: inline-block;
-
-    width: 12px;
-
-    height: 12px;
-
-    border-radius: 50%;
-
-    background: rgba(193, 68, 14, 0.3);
-
-    margin: 0 0.5rem;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-
-}
-
-
-
-.dot.active {
-
-    background: var(--primary-color);
-
-    transform: scale(1.3);
-
-}
-
-
-
-.dot:hover {
-
-    background: rgba(193, 68, 14, 0.6);
-
-}
-
-
-
-.lightbox {
-
-    display: none;
-
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.95);
-
-    z-index: 9999;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-
-.lightbox.active {
-
-    display: flex;
-
-}
-
-
-
-.lightbox-content {
-
-    position: relative;
-
-    max-width: 90vw;
-
-    max-height: 90vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-
-
-.lightbox-image {
-
-    display: none;
-
-    max-width: 100%;
-
-    max-height: 90vh;
-
-    object-fit: contain;
-
-}
-
-
-
-.lightbox-image.active {
-
-    display: block;
-
-}
-
-
-
-.lightbox-close {
-
-    position: absolute;
-
-    top: 2rem;
-
-    right: 3rem;
-
-    font-size: 3rem;
-
-    color: white;
-
-    cursor: pointer;
-
-    z-index: 10000;
-
-    transition: color 0.3s ease;
-
-}
-
-
-
-.lightbox-close:hover {
-
-    color: var(--primary-color);
-
-}
-
-
-
-.lightbox-btn {
-
-    position: absolute;
-
-    background: transparent;
-
-    color: white;
-
-    border: none;
-
-    font-size: 3rem;
-
-    padding: 1rem 1.5rem;
-
-    cursor: pointer;
-
-    border-radius: 4px;
-
-    transition: all 0.3s ease;
-
-    z-index: 10000;
-
-}
-
-
-
-.lightbox-prev {
-
-    left: 2rem;
-
-}
-
-
-
-.lightbox-next {
-
-    right: 2rem;
-
-}
-
-
-
-.lightbox-btn:hover {
-
-    background: transparent;
-
-    transform: scale(1.1);
-
-}
-
-
-
-.portfolio-link {
-
-    text-align: center;
-
-    margin-bottom: 3rem;
-
-}
-
-
-
-.external-link {
-
-    display: inline-block;
-
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-
-    color: var(--pure-white);
-
-    padding: 1rem 2rem;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-size: 1.1rem;
-
-    font-weight: 600;
-
-    transition: var(--transition);
-
-    box-shadow: 0 4px 12px rgba(193, 68, 14, 0.3);
-
-}
-
-
-
-.external-link:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 6px 16px rgba(193, 68, 14, 0.4);
-
-}
-
-
-
-.portfolio-back {
-
-    text-align: center;
-
-    margin-top: 4rem;
-
-    padding-top: 2rem;
-
-    border-top: 1px solid var(--glass-border);
-
-}
-
-
-
-.back-link {
-
-    color: var(--text-secondary);
-
-    text-decoration: none;
-
-    font-size: 1rem;
-
-    transition: var(--transition);
-
-}
-
-
-
-.back-link:hover {
-
-    color: var(--primary-color);
-
-}
-
-
-
-@media (max-width: 768px) {
 
     .portfolio-title {
 
-        font-size: 2rem;
+        font-size: 3rem;
+
+        color: var(--primary-color);
+
+        margin-bottom: 0.5rem;
+
+        font-weight: 700;
 
     }
 
-    
 
-    .slider-btn {
 
-        font-size: 2rem;
+    .portfolio-year {
 
-        padding: 0.3rem 0.7rem;
+        font-size: 1.2rem;
 
-    }
+        color: var(--text-secondary);
 
-    
-
-    .lightbox-btn {
-
-        font-size: 2rem;
-
-        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
 
     }
 
-    
 
-    .lightbox-close {
 
-        top: 1rem;
+    .portfolio-tags {
 
-        right: 1rem;
+        display: flex;
 
-        font-size: 2.5rem;
+        gap: 0.5rem;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
 
     }
 
-    
+
+
+    .tag {
+
+        background: rgba(212, 175, 55, 0.2);
+
+        color: var(--ritual-gold);
+
+        padding: 0.4rem 1rem;
+
+        border-radius: 20px;
+
+        font-size: 0.9rem;
+
+    }
+
+
+
+    .portfolio-featured {
+
+        margin-bottom: 3rem;
+
+        text-align: center;
+
+    }
+
+
+
+    .featured-image {
+
+        max-width: 100%;
+
+        height: auto;
+
+        border-radius: 8px;
+
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+    }
+
+
 
     .portfolio-description {
 
-        font-size: 1rem;
+        max-width: 800px;
+
+        margin: 0 auto 4rem;
+
+        font-size: 1.2rem;
+
+        line-height: 1.8;
+
+        color: var(--text-primary);
+
+        text-align: center;
 
     }
 
-}
 
+
+    .portfolio-gallery {
+
+        margin-bottom: 4rem;
+
+    }
+
+
+
+    .gallery-title {
+
+        font-size: 2rem;
+
+        color: var(--primary-color);
+
+        margin-bottom: 2rem;
+
+        text-align: center;
+
+    }
+
+
+
+    .gallery-slider {
+
+        position: relative;
+
+        max-width: 900px;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 1rem;
+
+    }
+
+
+
+    .slider-container {
+
+        position: relative;
+
+        width: 100%;
+
+        overflow: hidden;
+
+        border-radius: 8px;
+
+        background: var(--bg-primary);
+
+    }
+
+
+
+    .slider-item {
+
+        display: none;
+
+        width: 100%;
+
+    }
+
+
+
+    .slider-item.active {
+
+        display: block;
+
+    }
+
+
+
+    .slider-image {
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 600px;
+
+        object-fit: contain;
+
+        display: block;
+
+        cursor: pointer;
+
+        transition: transform 0.3s ease;
+
+    }
+
+
+
+    .slider-image:hover {
+
+        transform: scale(1.02);
+
+    }
+
+
+
+    .slider-video {
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 600px;
+
+        object-fit: contain;
+
+        display: block;
+
+    }
+
+
+
+    .slider-btn {
+
+        background: transparent;
+
+        color: white;
+
+        border: none;
+
+        font-size: 3.5rem;
+
+        padding: 2rem 0.5rem;
+
+        cursor: pointer;
+
+        border-radius: 4px;
+
+        transition: all 0.3s ease;
+
+        flex-shrink: 0;
+
+        height: 100%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+
+    .slider-btn:hover {
+
+        background: transparent;
+
+        transform: scale(1.1);
+
+    }
+
+
+
+    .slider-dots {
+
+        text-align: center;
+
+        margin-top: 1.5rem;
+
+    }
+
+
+
+    .dot {
+
+        display: inline-block;
+
+        width: 12px;
+
+        height: 12px;
+
+        border-radius: 50%;
+
+        background: rgba(193, 68, 14, 0.3);
+
+        margin: 0 0.5rem;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+
+    }
+
+
+
+    .dot.active {
+
+        background: var(--primary-color);
+
+        transform: scale(1.3);
+
+    }
+
+
+
+    .dot:hover {
+
+        background: rgba(193, 68, 14, 0.6);
+
+    }
+
+
+
+    .lightbox {
+
+        display: none;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.95);
+
+        z-index: 9999;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+
+    .lightbox.active {
+
+        display: flex;
+
+    }
+
+
+
+    .lightbox-content {
+
+        position: relative;
+
+        max-width: 90vw;
+
+        max-height: 90vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+
+    .lightbox-image {
+
+        display: none;
+
+        max-width: 100%;
+
+        max-height: 90vh;
+
+        object-fit: contain;
+
+    }
+
+
+
+    .lightbox-image.active {
+
+        display: block;
+
+    }
+
+
+
+    .lightbox-close {
+
+        position: absolute;
+
+        top: 2rem;
+
+        right: 3rem;
+
+        font-size: 3rem;
+
+        color: white;
+
+        cursor: pointer;
+
+        z-index: 10000;
+
+        transition: color 0.3s ease;
+
+    }
+
+
+
+    .lightbox-close:hover {
+
+        color: var(--primary-color);
+
+    }
+
+
+
+    .lightbox-btn {
+
+        position: absolute;
+
+        background: transparent;
+
+        color: white;
+
+        border: none;
+
+        font-size: 3rem;
+
+        padding: 1rem 1.5rem;
+
+        cursor: pointer;
+
+        border-radius: 4px;
+
+        transition: all 0.3s ease;
+
+        z-index: 10000;
+
+    }
+
+
+
+    .lightbox-prev {
+
+        left: 2rem;
+
+    }
+
+
+
+    .lightbox-next {
+
+        right: 2rem;
+
+    }
+
+
+
+    .lightbox-btn:hover {
+
+        background: transparent;
+
+        transform: scale(1.1);
+
+    }
+
+
+
+    .portfolio-link {
+
+        text-align: center;
+
+        margin-bottom: 3rem;
+
+    }
+
+
+
+    .external-link {
+
+        display: inline-block;
+
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+
+        color: var(--pure-white);
+
+        padding: 1rem 2rem;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+
+        font-size: 1.1rem;
+
+        font-weight: 600;
+
+        transition: var(--transition);
+
+        box-shadow: 0 4px 12px rgba(193, 68, 14, 0.3);
+
+    }
+
+
+
+    .external-link:hover {
+
+        transform: translateY(-2px);
+
+        box-shadow: 0 6px 16px rgba(193, 68, 14, 0.4);
+
+    }
+
+
+
+    .portfolio-back {
+
+        text-align: center;
+
+        margin-top: 4rem;
+
+        padding-top: 2rem;
+
+        border-top: 1px solid var(--glass-border);
+
+    }
+
+
+
+    .back-link {
+
+        color: var(--text-secondary);
+
+        text-decoration: none;
+
+        font-size: 1rem;
+
+        transition: var(--transition);
+
+    }
+
+
+
+    .back-link:hover {
+
+        color: var(--primary-color);
+
+    }
+
+
+
+    @media (max-width: 768px) {
+
+        .portfolio-title {
+
+            font-size: 2rem;
+
+        }
+
+
+
+        .slider-btn {
+
+            font-size: 2rem;
+
+            padding: 0.3rem 0.7rem;
+
+        }
+
+
+
+        .lightbox-btn {
+
+            font-size: 2rem;
+
+            padding: 0.5rem 1rem;
+
+        }
+
+
+
+        .lightbox-close {
+
+            top: 1rem;
+
+            right: 1rem;
+
+            font-size: 2.5rem;
+
+        }
+
+
+
+        .portfolio-description {
+
+            font-size: 1rem;
+
+        }
+
+    }
 </style>
 
 
 
 <script>
 
-let currentSlide = 0;
+    let currentSlide = 0;
 
-let currentLightboxSlide = 0;
-
-
-
-function changeSlide(direction) {
-
-    const slides = document.querySelectorAll('.slider-item');
-
-    const dots = document.querySelectorAll('.dot');
-
-    
-
-    if (slides.length === 0) return;
-
-    
-
-    slides[currentSlide].classList.remove('active');
-
-    if (dots.length > 0) {
-
-        dots[currentSlide].classList.remove('active');
-
-    }
-
-    
-
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-
-    
-
-    slides[currentSlide].classList.add('active');
-
-    if (dots.length > 0) {
-
-        dots[currentSlide].classList.add('active');
-
-    }
-
-}
+    let currentLightboxSlide = 0;
 
 
 
-function goToSlide(index) {
+    function changeSlide(direction) {
 
-    const slides = document.querySelectorAll('.slider-item');
+        const slides = document.querySelectorAll('.slider-item');
 
-    const dots = document.querySelectorAll('.dot');
+        const dots = document.querySelectorAll('.dot');
 
-    
 
-    if (slides.length === 0) return;
 
-    
+        if (slides.length === 0) return;
 
-    slides[currentSlide].classList.remove('active');
 
-    if (dots.length > 0) {
 
-        dots[currentSlide].classList.remove('active');
+        slides[currentSlide].classList.remove('active');
+
+        if (dots.length > 0) {
+
+            dots[currentSlide].classList.remove('active');
+
+        }
+
+
+
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+
+
+        slides[currentSlide].classList.add('active');
+
+        if (dots.length > 0) {
+
+            dots[currentSlide].classList.add('active');
+
+        }
 
     }
 
-    
 
-    currentSlide = index;
 
-    
+    function goToSlide(index) {
 
-    slides[currentSlide].classList.add('active');
+        const slides = document.querySelectorAll('.slider-item');
 
-    if (dots.length > 0) {
+        const dots = document.querySelectorAll('.dot');
 
-        dots[currentSlide].classList.add('active');
+
+
+        if (slides.length === 0) return;
+
+
+
+        slides[currentSlide].classList.remove('active');
+
+        if (dots.length > 0) {
+
+            dots[currentSlide].classList.remove('active');
+
+        }
+
+
+
+        currentSlide = index;
+
+
+
+        slides[currentSlide].classList.add('active');
+
+        if (dots.length > 0) {
+
+            dots[currentSlide].classList.add('active');
+
+        }
 
     }
 
-}
+
+
+    function openLightbox(index) {
+
+        const lightbox = document.getElementById('lightbox');
+
+        const lightboxImages = document.querySelectorAll('.lightbox-image');
 
 
 
-function openLightbox(index) {
+        lightboxImages.forEach(img => img.classList.remove('active'));
 
-    const lightbox = document.getElementById('lightbox');
-
-    const lightboxImages = document.querySelectorAll('.lightbox-image');
-
-    
-
-    lightboxImages.forEach(img => img.classList.remove('active'));
-
-    lightboxImages[index].classList.add('active');
-
-    
-
-    currentLightboxSlide = index;
-
-    lightbox.classList.add('active');
-
-    document.body.style.overflow = 'hidden';
-
-}
+        lightboxImages[index].classList.add('active');
 
 
 
-function closeLightbox() {
+        currentLightboxSlide = index;
 
-    const lightbox = document.getElementById('lightbox');
+        lightbox.classList.add('active');
 
-    lightbox.classList.remove('active');
+        document.body.style.overflow = 'hidden';
 
-    document.body.style.overflow = 'auto';
-
-}
+    }
 
 
 
-function changeLightboxSlide(direction) {
+    function closeLightbox() {
 
-    const lightboxImages = document.querySelectorAll('.lightbox-image');
+        const lightbox = document.getElementById('lightbox');
 
-    
+        lightbox.classList.remove('active');
 
-    lightboxImages[currentLightboxSlide].classList.remove('active');
+        document.body.style.overflow = 'auto';
 
-    
-
-    currentLightboxSlide = (currentLightboxSlide + direction + lightboxImages.length) % lightboxImages.length;
-
-    
-
-    lightboxImages[currentLightboxSlide].classList.add('active');
-
-}
+    }
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+    function changeLightboxSlide(direction) {
 
-    const sliderImages = document.querySelectorAll('.slider-image');
+        const lightboxImages = document.querySelectorAll('.lightbox-image');
 
-    sliderImages.forEach(img => {
 
-        if (img.tagName === 'IMG') {
 
-            img.addEventListener('click', function() {
+        lightboxImages[currentLightboxSlide].classList.remove('active');
 
-                const index = parseInt(this.getAttribute('data-slide-index'));
 
-                openLightbox(index);
+
+        currentLightboxSlide = (currentLightboxSlide + direction + lightboxImages.length) % lightboxImages.length;
+
+
+
+        lightboxImages[currentLightboxSlide].classList.add('active');
+
+    }
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const sliderImages = document.querySelectorAll('.slider-image');
+
+        sliderImages.forEach(img => {
+
+            if (img.tagName === 'IMG') {
+
+                img.addEventListener('click', function () {
+
+                    const index = parseInt(this.getAttribute('data-slide-index'));
+
+                    openLightbox(index);
+
+                });
+
+            }
+
+        });
+
+
+
+        const prevBtn = document.querySelector('.prev-btn');
+
+        const nextBtn = document.querySelector('.next-btn');
+
+
+
+        if (prevBtn) {
+
+            prevBtn.addEventListener('click', function () {
+
+                changeSlide(-1);
 
             });
 
         }
 
-    });
 
-    
 
-    const prevBtn = document.querySelector('.prev-btn');
+        if (nextBtn) {
 
-    const nextBtn = document.querySelector('.next-btn');
+            nextBtn.addEventListener('click', function () {
 
-    
+                changeSlide(1);
 
-    if (prevBtn) {
+            });
 
-        prevBtn.addEventListener('click', function() {
+        }
 
-            changeSlide(-1);
 
-        });
 
-    }
+        // Add click handlers for dots
 
-    
+        const dots = document.querySelectorAll('.dot');
 
-    if (nextBtn) {
+        dots.forEach(dot => {
 
-        nextBtn.addEventListener('click', function() {
+            dot.addEventListener('click', function () {
 
-            changeSlide(1);
+                const index = parseInt(this.getAttribute('data-slide-index'));
 
-        });
+                goToSlide(index);
 
-    }
-
-    
-
-    // Add click handlers for dots
-
-    const dots = document.querySelectorAll('.dot');
-
-    dots.forEach(dot => {
-
-        dot.addEventListener('click', function() {
-
-            const index = parseInt(this.getAttribute('data-slide-index'));
-
-            goToSlide(index);
+            });
 
         });
 
-    });
 
-    
 
-    // Pause videos when switching slides
+        // Pause videos when switching slides
 
-    function pauseAllVideos() {
+        function pauseAllVideos() {
 
-        const videos = document.querySelectorAll('.slider-video');
+            const videos = document.querySelectorAll('.slider-video');
 
-        videos.forEach(video => {
+            videos.forEach(video => {
 
-            video.pause();
+                video.pause();
 
-        });
+            });
 
-    }
+        }
 
-    
 
-    // Play videos when they become active
 
-    function playActiveVideo() {
+        // Play videos when they become active
 
-        const activeSlide = document.querySelector('.slider-item.active');
+        function playActiveVideo() {
 
-        if (activeSlide) {
+            const activeSlide = document.querySelector('.slider-item.active');
 
-            const video = activeSlide.querySelector('.slider-video');
+            if (activeSlide) {
 
-            if (video) {
+                const video = activeSlide.querySelector('.slider-video');
 
-                video.play().catch(e => console.log('Autoplay prevented:', e));
+                if (video) {
+
+                    video.play().catch(e => console.log('Autoplay prevented:', e));
+
+                }
 
             }
 
         }
 
-    }
 
-    
 
-    // Override changeSlide to handle videos
+        // Override changeSlide to handle videos
 
-    const originalChangeSlide = changeSlide;
+        const originalChangeSlide = changeSlide;
 
-    changeSlide = function(direction) {
+        changeSlide = function (direction) {
 
-        pauseAllVideos();
+            pauseAllVideos();
 
-        originalChangeSlide(direction);
+            originalChangeSlide(direction);
+
+            playActiveVideo();
+
+        };
+
+
+
+        // Override goToSlide to handle videos
+
+        const originalGoToSlide = goToSlide;
+
+        goToSlide = function (index) {
+
+            pauseAllVideos();
+
+            originalGoToSlide(index);
+
+            playActiveVideo();
+
+        };
+
+
+
+        // Start playing the first video
 
         playActiveVideo();
 
-    };
-
-    
-
-    // Override goToSlide to handle videos
-
-    const originalGoToSlide = goToSlide;
-
-    goToSlide = function(index) {
-
-        pauseAllVideos();
-
-        originalGoToSlide(index);
-
-        playActiveVideo();
-
-    };
-
-    
-
-    // Start playing the first video
-
-    playActiveVideo();
-
-});
+    });
 
 
 
-document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
 
-    const lightbox = document.getElementById('lightbox');
+        const lightbox = document.getElementById('lightbox');
 
-    if (lightbox && lightbox.classList.contains('active')) {
+        if (lightbox && lightbox.classList.contains('active')) {
 
-        if (e.key === 'Escape') {
+            if (e.key === 'Escape') {
 
-            closeLightbox();
+                closeLightbox();
 
-        } else if (e.key === 'ArrowLeft') {
+            } else if (e.key === 'ArrowLeft') {
 
-            changeLightboxSlide(-1);
+                changeLightboxSlide(-1);
 
-        } else if (e.key === 'ArrowRight') {
+            } else if (e.key === 'ArrowRight') {
 
-            changeLightboxSlide(1);
+                changeLightboxSlide(1);
+
+            }
 
         }
 
-    }
-
-});
+    });
 
 </script>
 
