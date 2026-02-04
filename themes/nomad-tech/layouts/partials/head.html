@@ -1,3 +1,7 @@
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/images/l.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/images/l.ico">
+
 {{ $scss := resources.Get "scss/main.scss" }}
 {{ $css := $scss | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
