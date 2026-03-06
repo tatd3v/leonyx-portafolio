@@ -7,6 +7,7 @@ year: "2022"
 external_url: "https://www.leonyxdavida.com/2022/abrazo-ancestral"
 tags: ["performance", "ancestral", "comunidad"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809564/abrazo_ancestral_1_lmyioh.jpg"
+summary: "Performance de sanación colectiva que explora el abrazo como gesto político y espiritual de resistencia ancestral."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809564/abrazo_ancestral_1_lmyioh.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809564/abrazo_ancestral_4_jtgwar.jpg"

@@ -7,6 +7,7 @@ year: '2021'
 external_url: 'https://www.leonyxdavida.com/2021/bocas-del-tiempo'
 tags: ['performance', 'danza', 'coreografía']
 featured_image: 'https://res.cloudinary.com/dpdq565fr/image/upload/w_1000,c_scale,q_auto,f_auto/bocas_del_tieempo_2_xecy1d.jpg'
+summary: 'Adaptación coreográfica del libro de Eduardo Galeano que explora la circularidad del tiempo y las violencias vividas en Latinoamérica.'
 gallery:
   - 'https://res.cloudinary.com/dpdq565fr/image/upload/w_1000,c_scale,q_auto,f_auto/bocas_del_tieempo_1_sm5fmk.jpg'
   - 'https://res.cloudinary.com/dpdq565fr/image/upload/w_1000,c_scale,q_auto,f_auto/bocas_del_tieempo_2_xecy1d.jpg'

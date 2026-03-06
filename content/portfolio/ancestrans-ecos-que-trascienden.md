@@ -7,6 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/ancestrans-ecos-que-trascienden"
 tags: ["performance", "ancestral", "memoria", "espiritualidad"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821063/ecos_que_transcienden_1_ubs8eh.jpg"
+summary: "Performance ritual que conecta con las memorias ancestrales a través de ecos vibracionales que trascienden el tiempo y el espacio."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821063/ecos_que_transcienden_1_ubs8eh.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821062/ecos_que_transcienden_2_obbams.jpg",

@@ -7,6 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/aint-got-no"
 tags: ["performance", "resistencia", "activismo"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811918/aint_got_no_1_maeceu.jpg"
+summary: "Performance activista que transforma la falta de recursos en potencia creativa, explorando la resistencia desde la precariedad y la ausencia."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811918/aint_got_no_1_maeceu.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811918/aint_got_no_2_xlbrie.jpg"

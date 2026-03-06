@@ -7,6 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/maldito-muchacho"
 tags: ["performance", "identidad", "genero"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/video/upload/v1769816260/mldtomchacho_hl1pux.jpg"
+summary: "Performance que deconstruye la masculinidad hegemónica y cuestiona los mandatos patriarcales sobre los cuerpos disidentes de género."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/video/upload/v1769816260/mldtomchacho_hl1pux.mp4"
 ]
