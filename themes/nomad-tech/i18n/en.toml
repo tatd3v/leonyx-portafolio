@@ -77,6 +77,21 @@ other = "View work"
 [view_project]
 other = "View project"
 
+[projects_count]
+other = "projects"
+
+[filter_projects]
+other = "Filter projects"
+
+[search_projects]
+other = "Search projects"
+
+[no_projects_found]
+other = "No projects found"
+
+[clear_search]
+other = "Clear search"
+
 [getInTouch]
 other = "Get in touch!"
 

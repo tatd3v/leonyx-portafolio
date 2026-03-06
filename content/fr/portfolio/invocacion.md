@@ -1,12 +1,13 @@
 ---
-title: "Invocación"
+title: "Invocation"
 date: 2024-01-01T00:00:00Z
 draft: false
 type: portfolio
 year: "2024"
 external_url: "https://www.leonyxdavida.com/2024/invocaci%C3%B3n"
-tags: ["performance", "ritual", "espiritualidad"]
+tags: ["performance", "rituel", "spiritualité"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769817108/innovacion_1_fyx7g8.jpg"
+summary: "Performance rituel qui invoque les forces spirituelles ancestrales à travers le mouvement, la voix et la présence corporelle."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769817108/innovacion_1_fyx7g8.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769816405/innovacion_2_x2vepj.jpg",
@@ -15,10 +16,10 @@ gallery: [
 ]
 ---
 
-Performance ritual que invoca presencias ancestrales y espirituales a través del movimiento y la danza.
+Performance rituel qui invoque les présences ancestrales et spirituelles à travers le mouvement et la danse.
 
-Un acto ceremonial que convoca memorias y energías del pasado para sanar el presente.
+Un acte cérémoniel qui convoque les mémoires et énergies du passé pour guérir le présent.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

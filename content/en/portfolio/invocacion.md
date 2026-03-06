@@ -7,6 +7,7 @@ year: "2024"
 external_url: "https://www.leonyxdavida.com/2024/invocaci%C3%B3n"
 tags: ["performance", "ritual", "spirituality"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769817108/innovacion_1_fyx7g8.jpg"
+summary: "Ritual performance that invokes ancestral spiritual forces through movement, voice, and bodily presence."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769817108/innovacion_1_fyx7g8.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769816405/innovacion_2_x2vepj.jpg",

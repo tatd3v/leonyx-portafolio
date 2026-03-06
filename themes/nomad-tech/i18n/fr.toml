@@ -77,6 +77,21 @@ other = "Voir le travail"
 [view_project]
 other = "Voir le projet"
 
+[projects_count]
+other = "projets"
+
+[filter_projects]
+other = "Filtrer les projets"
+
+[search_projects]
+other = "Rechercher des projets"
+
+[no_projects_found]
+other = "Aucun projet trouvé"
+
+[clear_search]
+other = "Effacer la recherche"
+
 [getInTouch]
 other = "Contactez-nous!"
 

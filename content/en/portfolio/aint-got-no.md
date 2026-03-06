@@ -5,18 +5,19 @@ draft: false
 type: portfolio
 year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/aint-got-no"
-tags: ["performance", "resistencia", "activismo"]
+tags: ["performance", "resistance", "activism"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811918/aint_got_no_1_maeceu.jpg"
+summary: "Activist performance that transforms lack of resources into creative power, exploring resistance from precariousness and absence."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811918/aint_got_no_1_maeceu.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811918/aint_got_no_2_xlbrie.jpg"
 ]
 ---
 
-Obra de performance que explora la resistencia y la falta de recursos como forma de activismo artístico.
+Performance work that explores resistance and lack of resources as a form of artistic activism.
 
-Una reflexión sobre la precariedad y la potencia creativa que emerge desde la ausencia.
+A reflection on precariousness and creative power that emerges from absence.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

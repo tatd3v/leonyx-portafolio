@@ -5,8 +5,9 @@ draft: false
 type: portfolio
 year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/ancestrans-ecos-que-trascienden"
-tags: ["performance", "ancestral", "memoria", "espiritualidad"]
+tags: ["performance", "ancestral", "memory", "spirituality"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821063/ecos_que_transcienden_1_ubs8eh.jpg"
+summary: "Ritual performance that connects with ancestral memories through vibrational echoes that transcend time and space."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821063/ecos_que_transcienden_1_ubs8eh.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821062/ecos_que_transcienden_2_obbams.jpg",

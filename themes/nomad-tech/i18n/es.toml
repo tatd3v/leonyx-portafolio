@@ -103,3 +103,18 @@ other = "Conéctate"
 
 [view_project]
 other = "Ver proyecto"
+
+[projects_count]
+other = "proyectos"
+
+[filter_projects]
+other = "Filtrar proyectos"
+
+[search_projects]
+other = "Buscar proyectos"
+
+[no_projects_found]
+other = "No se encontraron proyectos"
+
+[clear_search]
+other = "Limpiar búsqueda"

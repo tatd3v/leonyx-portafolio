@@ -5,8 +5,9 @@ draft: false
 type: portfolio
 year: "2022"
 external_url: "https://www.leonyxdavida.com/2022/abrazo-ancestral"
-tags: ["performance", "ancestral", "comunidad"]
+tags: ["performance", "ancestral", "communauté"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809564/abrazo_ancestral_1_lmyioh.jpg"
+summary: "Performance de guérison collective explorant l'étreinte comme geste politique et spirituel de résistance ancestrale."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809564/abrazo_ancestral_1_lmyioh.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809564/abrazo_ancestral_4_jtgwar.jpg"
@@ -14,10 +15,10 @@ gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1769809565/abrazo_ancestral_3_pjessx.jpg"
 ---
 
-Performance que conecta con las memorias ancestrales a través del abrazo como acto de sanación colectiva.
+Performance qui connecte avec les mémoires ancestrales à travers l'étreinte comme acte de guérison collective.
 
-Un trabajo de creación comunitaria que explora el abrazo como gesto político y espiritual de resistencia.
+Un travail de création communautaire qui explore l'étreinte comme geste politique et spirituel de résistance.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

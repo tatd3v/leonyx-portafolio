@@ -5,17 +5,18 @@ draft: false
 type: portfolio
 year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/maldito-muchacho"
-tags: ["performance", "identidad", "genero"]
+tags: ["performance", "identité", "genre"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/video/upload/v1769816260/mldtomchacho_hl1pux.jpg"
+summary: "Performance qui déconstruit la masculinité hégémonique et questionne les mandats patriarcaux sur les corps dissidents de genre."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/video/upload/v1769816260/mldtomchacho_hl1pux.mp4"
 ]
 ---
 
-Exploración de la identidad de género y la construcción social de la masculinidad a través del performance.
+Exploration de l'identité de genre et de la construction sociale de la masculinité à travers la performance.
 
-Un cuestionamiento de los mandatos patriarcales y las violencias que se ejercen sobre los cuerpos disidentes.
+Un questionnement des mandats patriarcaux et des violences exercées sur les corps dissidents.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---
