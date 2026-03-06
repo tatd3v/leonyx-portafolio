@@ -3,14 +3,20 @@
 
 // Variables
 $contact-font-size-desktop: 2.5rem;
-$contact-font-size-mobile: 2rem;
+$contact-font-size-tablet: 2.2rem;
+$contact-font-size-mobile: 1.8rem;
 $contact-gap-desktop: 2rem;
-$contact-gap-mobile: 0.5rem;
+$contact-gap-tablet: 1.5rem;
+$contact-gap-mobile: 1rem;
 
 // Mixins
 @mixin contact-text-base {
   color: var(--text-primary);
   font-size: $contact-font-size-desktop;
+  
+  @media (max-width: 1024px) {
+    font-size: $contact-font-size-tablet;
+  }
   
   @media (max-width: 768px) {
     font-size: $contact-font-size-mobile;
@@ -22,6 +28,10 @@ $contact-gap-mobile: 0.5rem;
   align-items: baseline;
   gap: $contact-gap-desktop;
   
+  @media (max-width: 1024px) {
+    gap: $contact-gap-tablet;
+  }
+  
   @media (max-width: 768px) {
     flex-direction: column;
     gap: $contact-gap-mobile;
@@ -32,13 +42,22 @@ $contact-gap-mobile: 0.5rem;
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
-  padding: 6rem 2rem 2rem;
+  padding: 7rem 2rem 2rem;
 }
 
 .contact-container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .contact-title {
@@ -54,8 +73,18 @@ $contact-gap-mobile: 0.5rem;
   margin-bottom: 4rem;
   font-weight: 300;
 
+  @media (max-width: 1024px) {
+    font-size: 1.8rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -77,6 +106,9 @@ $contact-gap-mobile: 0.5rem;
   min-width: 150px;
   font-weight: 300;
   text-transform: capitalize;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-link {
@@ -85,6 +117,9 @@ $contact-gap-mobile: 0.5rem;
   text-decoration-color: transparent;
   transition: text-decoration-color 0.3s ease;
   font-weight: 600;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 
   &:hover {
     text-decoration-color: var(--text-primary);
@@ -99,6 +134,9 @@ $contact-gap-mobile: 0.5rem;
 .contact-value {
   @include contact-text-base;
   font-weight: 600;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .contact-footer {
@@ -109,9 +147,23 @@ $contact-gap-mobile: 0.5rem;
 }
 
 // Responsive Design
+@media (max-width: 1024px) {
+  .contact-page {
+    padding: 7rem 1.5rem 2rem;
+  }
+
+  .contact-container {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-page {
     padding: 8rem 1.5rem 3rem;
+  }
+
+  .contact-container {
+    padding: 2rem 1.5rem;
   }
 
   .contact-title {
@@ -120,6 +172,70 @@ $contact-gap-mobile: 0.5rem;
 
   .contact-list {
     gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .contact-footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 7rem 1rem 2rem;
+  }
+
+  .contact-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-list {
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-footer {
+    font-size: 0.9rem;
+  }
+
+  .contact-label {
+    min-width: auto;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact-page {
+    padding: 6rem 0.5rem 1rem;
+  }
+
+  .contact-container {
+    padding: 1rem 0.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-tagline {
+    font-size: 1.1rem;
+  }
+
+  .contact-label,
+  .contact-link,
+  .contact-value {
+    font-size: 1rem;
   }
 }
 
