@@ -27,6 +27,13 @@
                     <div class="overlay-content">
                         <h3 class="overlay-title">{{ .Title }}</h3>
                         <p class="overlay-year">{{ .Params.year }}</p>
+                        <p class="overlay-description">
+                            {{ if .Params.summary }}
+                                {{ .Params.summary }}
+                            {{ else }}
+                                {{ .Summary | truncate 100 "" }}
+                            {{ end }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -75,6 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
     padding: 0;
     background: #000000;
     min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    left: 0;
+    top: 0;
 }
 
 /* Filter Section - Ultra Minimalist */
@@ -111,7 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin: 2rem;
+    margin: 0;
+    padding: 2rem;
     padding-top: 0;
 }
 
@@ -207,7 +219,16 @@ document.addEventListener('DOMContentLoaded', function() {
 .overlay-year {
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    opacity: 0.9;
+    max-width: 90%;
+    margin: 0 auto;
+    font-weight: 300;
 }
 
 .overlay-link {
@@ -240,7 +261,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .portfolio-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
-        margin: 1.5rem;
+        margin: 0;
+        padding: 1.5rem;
     }
     
     .portfolio-image-container {
@@ -253,6 +275,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     .overlay-title {
         font-size: 1.1rem;
+    }
+    
+    .overlay-description {
+        font-size: 0.85rem;
+        max-width: 95%;
     }
     
     .overlay-link {
@@ -274,7 +301,8 @@ document.addEventListener('DOMContentLoaded', function() {
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin: 1rem;
+        margin: 0;
+        padding: 1rem;
     }
     
     .portfolio-image-container {
