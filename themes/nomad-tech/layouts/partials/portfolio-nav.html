@@ -1,0 +1,22 @@
+<aside class="portfolio-nav">
+    <div class="nav-timeline">
+        <div class="nav-line"></div>
+        {{ $yearGroups := .yearGroups }}
+        {{ $activeYear := .activeYear }}
+        {{ range $index, $group := $yearGroups }}
+        {{ $projects := $group.Pages.ByDate.Reverse }}
+        {{ $isActive := or (and (not $activeYear) (eq $index 0)) (and $activeYear (eq $group.Key $activeYear)) }}
+        <div class="nav-item {{ if $isActive }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
+            <span class="nav-dot"></span>
+            <div class="nav-copy">
+                <span class="nav-year">{{ $group.Key }}</span>
+                <div class="nav-projects">
+                    {{ range $i, $project := $projects }}
+                    <a href="{{ $project.RelPermalink }}" class="nav-project" data-project-year="{{ $project.Params.year }}" style="--index: {{ add $i 1 }}">{{ $project.Title }}</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</aside>

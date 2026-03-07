@@ -1,26 +1,7 @@
 {{ define "main" }}
 {{ $yearGroups := sort (.Pages.GroupByParam "year") "Key" "desc" }}
 <div class="portfolio-page">
-    <aside class="portfolio-nav">
-        <div class="nav-timeline">
-            <div class="nav-line"></div>
-            {{ range $index, $group := $yearGroups }}
-            {{ $projects := $group.Pages.ByDate.Reverse }}
-            {{ $totalProjects := len $projects }}
-            <div class="nav-item {{ if eq $index 0 }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
-                <span class="nav-dot"></span>
-                <div class="nav-copy">
-                    <span class="nav-year">{{ $group.Key }}</span>
-                    <div class="nav-projects">
-                        {{ range $i, $project := $projects }}
-                        <a href="{{ $project.RelPermalink }}" class="nav-project" data-project-year="{{ $project.Params.year }}" style="--index: {{ add $i 1 }}">{{ $project.Title }}</a>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-    </aside>
+    {{ partial "portfolio-nav.html" (dict "yearGroups" $yearGroups "activeYear" nil) }}
 
     <section class="portfolio-content">
         <div class="portfolio-background-display"></div>

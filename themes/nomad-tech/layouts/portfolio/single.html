@@ -5,25 +5,7 @@
 {{ $currentYear := .Params.year }}
 
 <div class="portfolio-detail-page">
-    <aside class="portfolio-nav">
-        <div class="nav-timeline">
-            <div class="nav-line"></div>
-            {{ range $index, $group := $yearGroups }}
-            {{ $projects := $group.Pages.ByDate.Reverse }}
-            <div class="nav-item {{ if or (and $currentYear (eq $group.Key $currentYear)) (and (not $currentYear) (eq $index 0)) }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
-                <span class="nav-dot"></span>
-                <div class="nav-copy">
-                    <span class="nav-year">{{ $group.Key }}</span>
-                    <div class="nav-projects">
-                        {{ range $i, $project := $projects }}
-                        <a href="{{ $project.RelPermalink }}" class="nav-project" style="--index: {{ add $i 1 }}" data-project-year="{{ $project.Params.year }}">{{ $project.Title }}</a>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-            {{ end }}
-        </div>
-    </aside>
+    {{ partial "portfolio-nav.html" (dict "yearGroups" $yearGroups "activeYear" $currentYear) }}
 
     <div class="portfolio-single">
 
@@ -145,7 +127,6 @@
                 <button class="lightbox-btn lightbox-next"
                     onclick="event.stopPropagation(); changeLightboxSlide(1)">›</button>
 
-
                 {{ end }}
 
 
@@ -190,6 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
         detailPage.classList.toggle('timeline-open', isOpen);
         if (timelineOverlay) {
             timelineOverlay.classList.toggle('active', isOpen);
+        }
+        if (timelineToggle) {
+            timelineToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (!isOpen) {
+                timelineToggle.classList.remove('hidden');
+            }
         }
         document.body.style.overflow = isOpen ? 'hidden' : '';
     };
@@ -237,10 +224,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     navProjectLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            e.stopPropagation();
             if (detailPage.classList.contains('timeline-open')) {
                 setTimelineState(false);
             }
+
         });
 
         if (terminalLink && link === terminalLink) {
