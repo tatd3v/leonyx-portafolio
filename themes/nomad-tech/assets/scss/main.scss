@@ -4,6 +4,16 @@ html {
   opacity: 1 !important;
 }
 
+* {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus,
+:focus-visible {
+  outline: none !important;
+}
+
 // Variables - Monochrome Color Palette
 :root {
   // Primary Colors
