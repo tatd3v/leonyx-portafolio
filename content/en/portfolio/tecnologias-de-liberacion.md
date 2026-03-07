@@ -7,6 +7,7 @@ year: "2025"
 location: "Paris"
 tags: ["performance", "video", "ritual", "syncretism", "colombia", "paris"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126073/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_1_a9pwis.jpg"
+summary: "Video performance that explores religious syncretism as a spiritual technology of resistance and survival for Black communities in Colombia."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126073/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_1_a9pwis.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126072/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_2_zzblea.jpg"

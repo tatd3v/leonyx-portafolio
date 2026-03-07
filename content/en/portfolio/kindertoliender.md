@@ -7,6 +7,7 @@ year: "2022"
 external_url: "https://www.leonyxdavida.com/2022/kindertoliender"
 tags: ["performance", "infancia", "memoria"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811390/kindertoliender_1_f3hl1q.jpg"
+summary: "Experimental performance that explores how childhood memories shape our present identity through a journey across memory."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811390/kindertoliender_1_f3hl1q.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811389/kindertoliender_2_niq1ys.jpg",

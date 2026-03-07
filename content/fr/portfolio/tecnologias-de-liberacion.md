@@ -7,6 +7,7 @@ location: "Paris"
 type: "portfolio"
 tags: ["performance", "vidéo", "rituel", "syncrétisme", "colombie", "paris"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126073/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_1_a9pwis.jpg"
+summary: "Vidéo-performance qui explore le syncrétisme religieux comme technologie spirituelle de résistance et de survie pour les communautés noires en Colombie."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126073/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_1_a9pwis.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126072/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_2_zzblea.jpg"
@@ -25,4 +26,3 @@ Elle révèle comment les spiritualités africaines ont été dissimulées et r�
 **Direction:** Le'Onyx Da'Vida
 
 ---
-

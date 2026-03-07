@@ -11,10 +11,13 @@
     <!-- Portfolio Grid - Minimalist -->
     <div class="portfolio-grid">
         {{ range .Pages.ByDate.Reverse }}
-        <a href="{{ .RelPermalink }}" class="portfolio-item" data-tags="{{ delimit .Params.tags "," }}">
+        <a href="{{ .RelPermalink }}" class="portfolio-item loading" data-tags="{{ delimit .Params.tags "," }}">
+            <div class="skeleton-loader">
+                <div class="skeleton-image"></div>
+            </div>
             <div class="portfolio-image-container">
                 {{ if .Params.featured_image }}
-                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="portfolio-image">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="portfolio-image" loading="lazy">
                 {{ else }}
                 <div class="portfolio-placeholder">
                     <div class="placeholder-content">
@@ -46,6 +49,41 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterLinks = document.querySelectorAll('.filter-link');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    // Handle skeleton loader transitions
+    portfolioItems.forEach(item => {
+        const img = item.querySelector('.portfolio-image');
+        const placeholder = item.querySelector('.portfolio-placeholder');
+        
+        // If there's an image, wait for it to load
+        if (img) {
+            if (img.complete) {
+                // Image already loaded
+                item.classList.remove('loading');
+                item.classList.add('loaded');
+            } else {
+                // Wait for image to load
+                img.addEventListener('load', function() {
+                    setTimeout(() => {
+                        item.classList.remove('loading');
+                        item.classList.add('loaded');
+                    }, 200); // Small delay for smoother transition
+                });
+                
+                // Handle error case
+                img.addEventListener('error', function() {
+                    item.classList.remove('loading');
+                    item.classList.add('loaded');
+                });
+            }
+        } else if (placeholder) {
+            // If there's only a placeholder, show it immediately
+            setTimeout(() => {
+                item.classList.remove('loading');
+                item.classList.add('loaded');
+            }, 300);
+        }
+    });
     
     function filterPortfolio() {
         const activeFilter = document.querySelector('.filter-link.active').dataset.filter;
@@ -133,6 +171,68 @@ document.addEventListener('DOMContentLoaded', function() {
     background: var(--bg-primary);
     cursor: pointer;
     border-radius: 8px;
+}
+
+/* Skeleton Loader */
+.skeleton-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.portfolio-item.loaded .skeleton-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #1a1a1a 0%,
+        #2a2a2a 20%,
+        #2a2a2a 40%,
+        #1a1a1a 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Hide content while loading */
+.portfolio-item.loading .portfolio-image-container {
+    opacity: 0;
+}
+
+.portfolio-item.loaded .portfolio-image-container {
+    opacity: 1;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .portfolio-image-container {

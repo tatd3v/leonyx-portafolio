@@ -7,6 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/juju-rituales-negrxsmariks"
 tags: ["performance", "ritual", "negritud", "ancestral"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818175/juju_rituales_negrxsmariks_1_zlbqi3.jpg"
+summary: "Contemporary rituals that celebrate and reclaim the spiritual practices of Black communities, connecting African roots with the diaspora."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818175/juju_rituales_negrxsmariks_1_zlbqi3.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818172/juju_rituales_negrxsmariks_2_bamui8.jpg",

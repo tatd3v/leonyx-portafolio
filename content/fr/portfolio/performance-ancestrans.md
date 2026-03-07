@@ -7,6 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/performance-ancestrans"
 tags: ["performance", "ancestral", "memoria", "ritual"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818358/ancestrans_1_p7b2xo.jpg"
+summary: "Performance rituelle qui active le corps comme archive vivante pour connecter avec des mémoires et savoirs ancestraux manifestés par le mouvement."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818358/ancestrans_1_p7b2xo.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818356/ancestrans_2_pbgn5s.jpg",
