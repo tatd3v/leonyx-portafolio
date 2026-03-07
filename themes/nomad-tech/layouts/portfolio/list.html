@@ -5,13 +5,15 @@
         <div class="nav-timeline">
             <div class="nav-line"></div>
             {{ range $index, $group := $yearGroups }}
+            {{ $projects := $group.Pages.ByDate.Reverse }}
+            {{ $totalProjects := len $projects }}
             <div class="nav-item {{ if eq $index 0 }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
                 <span class="nav-dot"></span>
                 <div class="nav-copy">
                     <span class="nav-year">{{ $group.Key }}</span>
                     <div class="nav-projects">
-                        {{ range $index, $project := $group.Pages.ByDate.Reverse }}
-                        <a href="{{ $project.RelPermalink }}" class="nav-project" data-project-year="{{ $project.Params.year }}" style="--index: {{ add $index 1 }}">{{ $project.Title }}</a>
+                        {{ range $i, $project := $projects }}
+                        <a href="{{ $project.RelPermalink }}" class="nav-project" data-project-year="{{ $project.Params.year }}" style="--index: {{ add $i 1 }}">{{ $project.Title }}</a>
                         {{ end }}
                     </div>
                 </div>
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const navItems = document.querySelectorAll('.nav-item');
     const navProjectLinks = document.querySelectorAll('.nav-project');
+    const terminalLink = navProjectLinks.length ? navProjectLinks[navProjectLinks.length - 1] : null;
     const yearSections = document.querySelectorAll('.portfolio-year-section');
     const portfolioPage = document.querySelector('.portfolio-page');
     const timelineToggle = document.querySelector('.mobile-timeline-toggle');
@@ -96,6 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
         timelineOverlay.classList.toggle('active', isOpen);
         timelineToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         document.body.style.overflow = isOpen ? 'hidden' : '';
+        if (!isOpen) {
+            timelineToggle.classList.remove('hidden');
+        }
+    };
+
+    const setToggleVisibility = (shouldHide) => {
+        if (!timelineToggle) return;
+        if (!portfolioPage?.classList.contains('timeline-open')) return;
+        timelineToggle.classList.toggle('hidden', shouldHide);
     };
 
     const toggleTimeline = () => {
@@ -130,6 +142,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimelineState(false);
             }
         });
+
+        if (terminalLink && link === terminalLink) {
+            link.addEventListener('mouseenter', () => setToggleVisibility(true));
+            link.addEventListener('mouseleave', () => setToggleVisibility(false));
+            link.addEventListener('focus', () => setToggleVisibility(true));
+            link.addEventListener('blur', () => setToggleVisibility(false));
+        }
     });
 
     if (timelineToggle) {
@@ -462,6 +481,12 @@ document.addEventListener('DOMContentLoaded', function() {
     gap: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+}
+
+.mobile-timeline-toggle.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
 }
 
 .mobile-timeline-toggle:hover {

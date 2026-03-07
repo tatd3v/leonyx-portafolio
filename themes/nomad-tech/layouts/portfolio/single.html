@@ -9,12 +9,13 @@
         <div class="nav-timeline">
             <div class="nav-line"></div>
             {{ range $index, $group := $yearGroups }}
+            {{ $projects := $group.Pages.ByDate.Reverse }}
             <div class="nav-item {{ if or (and $currentYear (eq $group.Key $currentYear)) (and (not $currentYear) (eq $index 0)) }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
                 <span class="nav-dot"></span>
                 <div class="nav-copy">
                     <span class="nav-year">{{ $group.Key }}</span>
                     <div class="nav-projects">
-                        {{ range $i, $project := $group.Pages.ByDate.Reverse }}
+                        {{ range $i, $project := $projects }}
                         <a href="{{ $project.RelPermalink }}" class="nav-project" style="--index: {{ add $i 1 }}" data-project-year="{{ $project.Params.year }}">{{ $project.Title }}</a>
                         {{ end }}
                     </div>
@@ -182,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const timelineOverlay = detailPage.querySelector('.mobile-timeline-overlay');
     const navItems = detailPage.querySelectorAll('.portfolio-nav .nav-item');
     const navProjectLinks = detailPage.querySelectorAll('.portfolio-nav .nav-project');
+    const terminalLink = navProjectLinks.length ? navProjectLinks[navProjectLinks.length - 1] : null;
 
     const setTimelineState = (isOpen) => {
         detailPage.classList.toggle('timeline-open', isOpen);
@@ -190,8 +192,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (timelineToggle) {
             timelineToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (!isOpen) {
+                timelineToggle.classList.remove('hidden');
+            }
         }
         document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    const setToggleVisibility = (shouldHide) => {
+        if (!timelineToggle) return;
+        if (!detailPage.classList.contains('timeline-open')) return;
+        timelineToggle.classList.toggle('hidden', shouldHide);
     };
 
     if (timelineToggle) {
@@ -227,6 +238,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimelineState(false);
             }
         });
+
+        if (terminalLink && link === terminalLink) {
+            link.addEventListener('mouseenter', () => setToggleVisibility(true));
+            link.addEventListener('mouseleave', () => setToggleVisibility(false));
+            link.addEventListener('focus', () => setToggleVisibility(true));
+            link.addEventListener('blur', () => setToggleVisibility(false));
+        }
     });
 });
 </script>
