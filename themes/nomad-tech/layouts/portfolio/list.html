@@ -49,7 +49,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterLinks = document.querySelectorAll('.filter-link');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
+    const portraitFallback = 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849794/fallback_portrait_u0x6bs.jpg';
+
+    const markLoaded = (item, delay = 200) => {
+        setTimeout(() => {
+            item.classList.remove('loading');
+            item.classList.add('loaded');
+        }, delay);
+    };
+
+    const handleImageReady = (img, item) => {
+        const isPortrait = img.naturalHeight > img.naturalWidth;
+
+        if (!img.dataset.orientationFinalized) {
+            if (isPortrait && !img.dataset.usingFallback) {
+                img.dataset.usingFallback = 'true';
+                img.src = portraitFallback;
+                return;
+            }
+            img.dataset.orientationFinalized = 'true';
+        }
+
+        markLoaded(item);
+    };
+
     // Handle skeleton loader transitions
     portfolioItems.forEach(item => {
         const img = item.querySelector('.portfolio-image');
@@ -58,30 +81,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // If there's an image, wait for it to load
         if (img) {
             if (img.complete) {
-                // Image already loaded
-                item.classList.remove('loading');
-                item.classList.add('loaded');
+                handleImageReady(img, item);
             } else {
                 // Wait for image to load
                 img.addEventListener('load', function() {
-                    setTimeout(() => {
-                        item.classList.remove('loading');
-                        item.classList.add('loaded');
-                    }, 200); // Small delay for smoother transition
+                    handleImageReady(img, item);
                 });
                 
                 // Handle error case
                 img.addEventListener('error', function() {
-                    item.classList.remove('loading');
-                    item.classList.add('loaded');
+                    markLoaded(item, 0);
                 });
             }
         } else if (placeholder) {
             // If there's only a placeholder, show it immediately
-            setTimeout(() => {
-                item.classList.remove('loading');
-                item.classList.add('loaded');
-            }, 300);
+            markLoaded(item, 300);
         }
     });
     
