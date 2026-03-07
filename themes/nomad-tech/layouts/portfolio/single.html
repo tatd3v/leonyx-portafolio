@@ -433,6 +433,12 @@ document.addEventListener('DOMContentLoaded', () => {
         letter-spacing: 0.2em;
     }
 
+    .mobile-timeline-toggle.hidden {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
     .mobile-timeline-toggle:hover {
         transform: translateX(-50%) translateY(-2px);
         box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
