@@ -160,9 +160,9 @@ document.addEventListener('DOMContentLoaded', function() {
     position: fixed;
     top: 0;
     left: 0;
-    width: min(420px, 88vw);
+    width: 100%;
     height: 100vh;
-    padding: 6rem 2.5rem 3rem;
+    padding: 6rem clamp(1.5rem, 5vw, 4rem) 3rem;
     background: linear-gradient(180deg, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.9) 100%);
     border-right: 1px solid rgba(255,255,255,0.08);
     display: flex;
@@ -601,7 +601,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 @media (max-width: 768px) {
     .portfolio-nav {
-        width: 90%;
+        width: 100%;
+        max-width: none;
         padding: 5rem 1.5rem 2rem;
     }
 
