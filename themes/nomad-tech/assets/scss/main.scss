@@ -1,3 +1,9 @@
+// Prevent FOUC (Flash of Unstyled Content)
+html {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 // Variables - Monochrome Color Palette
 :root {
   // Primary Colors
@@ -165,7 +171,7 @@ nav {
     height: 3px;
     background: var(--text-primary);
     border-radius: 2px;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
   }
 
@@ -195,11 +201,12 @@ nav {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
 
   &.active {
     opacity: 1;
     visibility: visible;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0s;
 
     .nav-modal-overlay {
       opacity: 1;
@@ -220,7 +227,7 @@ nav {
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-modal-content {
@@ -231,12 +238,13 @@ nav {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   transform: translateX(100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
+  will-change: transform;
 }
 
 .nav-modal-close {
