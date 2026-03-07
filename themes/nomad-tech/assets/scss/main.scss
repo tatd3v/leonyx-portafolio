@@ -721,15 +721,14 @@ section {
 .lang-switcher {
   position: relative;
   display: flex;
-  gap: 10px;
-
-  @media (max-width: 480px) {
-    gap: 0;
-  }
+  align-items: center;
+  gap: 0;
 }
 
 .lang-icon-toggle {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   color: var(--pure-white);
@@ -737,10 +736,6 @@ section {
   cursor: pointer;
   padding: 0.25rem;
   transition: var(--transition);
-
-  @media (max-width: 900px) {
-    display: block;
-  }
 
   &:hover {
     color: var(--primary-color);
@@ -761,28 +756,23 @@ section {
 }
 
 .lang-dropdown {
-  display: flex;
-  gap: 10px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 0;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
 
-  @media (max-width: 900px) {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 0.5rem;
-    background: var(--bg-primary);
-    border: 1px solid var(--glass-border);
-    border-radius: 8px;
-    padding: 0.5rem;
-    flex-direction: column;
-    gap: 0;
-    min-width: 150px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    z-index: 1001;
-
-    &.active {
-      display: flex;
-    }
+  &.active {
+    display: flex;
   }
 }
 
@@ -795,11 +785,9 @@ section {
   font-size: 1.2rem;
   white-space: nowrap;
 
-  @media (max-width: 900px) {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-    border-radius: 4px;
-  }
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
 
   &:focus {
     outline: 2px solid var(--primary-color);
