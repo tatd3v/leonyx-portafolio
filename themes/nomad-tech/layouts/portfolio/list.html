@@ -5,12 +5,17 @@
         <div class="nav-timeline">
             <div class="nav-line"></div>
             {{ range $index, $group := $yearGroups }}
-            <a href="#year-{{ $group.Key }}" class="nav-item {{ if eq $index 0 }}active{{ end }}" data-year="{{ $group.Key }}">
+            <div class="nav-item {{ if eq $index 0 }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
                 <span class="nav-dot"></span>
                 <div class="nav-copy">
                     <span class="nav-year">{{ $group.Key }}</span>
+                    <div class="nav-projects">
+                        {{ range $group.Pages.ByDate.Reverse }}
+                        <a href="{{ .RelPermalink }}" class="nav-project" data-project-year="{{ .Params.year }}">{{ .Title }}</a>
+                        {{ end }}
+                    </div>
                 </div>
-            </a>
+            </div>
             {{ end }}
         </div>
     </aside>
@@ -62,6 +67,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     const navItems = document.querySelectorAll('.nav-item');
+    const navProjectLinks = document.querySelectorAll('.nav-project');
     const yearSections = document.querySelectorAll('.portfolio-year-section');
     let activeYear = null;
 
@@ -115,9 +121,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Click handling
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
+        item.addEventListener('click', function() {
             showYear(this.dataset.year);
+        });
+
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                showYear(this.dataset.year);
+            }
+        });
+    });
+
+    navProjectLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
     });
 });
@@ -136,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     position: sticky;
     top: 0;
     height: 100vh;
-    padding: 4rem 2rem;
+    padding: 6.5rem 2rem 3rem;
     background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 100%);
     border-right: 1px solid rgba(255,255,255,0.08);
     display: flex;
@@ -211,8 +229,31 @@ document.addEventListener('DOMContentLoaded', function() {
     letter-spacing: 0.1em;
 }
 
+.nav-projects {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+    padding-left: 0.2rem;
+}
+
+.nav-project {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+}
+
+.nav-item.active .nav-projects {
+    display: flex;
+}
+
+.nav-item.active .nav-project {
+    color: rgba(255,255,255,0.85);
+}
+
 .portfolio-content {
-    padding: 4rem 3rem 4rem 3rem;
+    padding: 7rem 3rem 4rem 3rem;
 }
 
 .portfolio-year-section {
@@ -368,20 +409,25 @@ document.addEventListener('DOMContentLoaded', function() {
         height: auto;
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.08);
+        padding: 6.5rem 1.5rem 2.5rem;
     }
 
     .portfolio-content {
-        padding: 3rem 1.5rem;
+        padding: 6.5rem 1.5rem 3rem;
     }
 }
 
 @media (max-width: 640px) {
     .portfolio-nav {
-        padding: 2rem 1.25rem;
+        padding: 6.5rem 1.25rem 2rem;
     }
 
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-content {
+        padding: 6.5rem 1.25rem 3rem;
     }
 
     .portfolio-image-container {
