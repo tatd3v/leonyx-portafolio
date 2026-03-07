@@ -1,73 +1,99 @@
 {{ define "main" }}
+{{ $allPortfolioPages := where .Site.RegularPages "Section" "portfolio" }}
+{{ $localizedPages := where $allPortfolioPages "Lang" .Lang }}
+{{ $yearGroups := sort ($localizedPages.GroupByParam "year") "Key" "desc" }}
+{{ $currentYear := .Params.year }}
 
-<div class="portfolio-single">
-
-    <div class="portfolio-single-container">
-
-        <!-- Header -->
-
-        <div class="portfolio-header">
-
-            <h1 class="portfolio-title">{{ .Title }}</h1>
-
-            <p class="portfolio-year">{{ .Params.year }}</p>
-
+<div class="portfolio-detail-page">
+    <aside class="portfolio-nav">
+        <div class="nav-timeline">
+            <div class="nav-line"></div>
+            {{ range $index, $group := $yearGroups }}
+            <div class="nav-item {{ if or (and $currentYear (eq $group.Key $currentYear)) (and (not $currentYear) (eq $index 0)) }}active{{ end }}" data-year="{{ $group.Key }}" role="button" tabindex="0">
+                <span class="nav-dot"></span>
+                <div class="nav-copy">
+                    <span class="nav-year">{{ $group.Key }}</span>
+                    <div class="nav-projects">
+                        {{ range $i, $project := $group.Pages.ByDate.Reverse }}
+                        <a href="{{ $project.RelPermalink }}" class="nav-project" style="--index: {{ add $i 1 }}" data-project-year="{{ $project.Params.year }}">{{ $project.Title }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
         </div>
+    </aside>
 
+    <div class="portfolio-single">
 
+        <div class="portfolio-single-container">
 
-        <!-- Description -->
+            <!-- Header -->
 
-        <div class="portfolio-description">
+            <div class="portfolio-header">
 
-            {{ .Content }}
+                <h1 class="portfolio-title">{{ .Title }}</h1>
 
-        </div>
+                <p class="portfolio-year">{{ .Params.year }}</p>
 
+            </div>
 
+            <!-- Description -->
 
-        <!-- Gallery Slider -->
+            <div class="portfolio-description">
 
-        {{ if .Params.gallery }}
+                {{ .Content }}
 
-        <div class="portfolio-gallery">
+            </div>
 
-            <h2 class="gallery-title">{{ i18n "gallery" | default "Galería" }}</h2>
+            <!-- Gallery Slider -->
 
+            {{ if .Params.gallery }}
 
+            <div class="portfolio-gallery">
 
-            <div class="gallery-slider">
+                <h2 class="gallery-title">{{ i18n "gallery" | default "Galería" }}</h2>
 
-                {{ if gt (len .Params.gallery) 1 }}
+                <div class="gallery-slider">
 
-                <button class="slider-btn prev-btn" data-slide-dir="-1">‹</button>
+                    {{ if gt (len .Params.gallery) 1 }}
 
-                {{ end }}
+                    <button class="slider-btn prev-btn" data-slide-dir="-1">‹</button>
 
-                <div class="slider-container">
+                    {{ end }}
 
-                    {{ range $index, $media := .Params.gallery }}
+                    <div class="slider-container">
 
-                    <div class="slider-item {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}">
+                        {{ range $index, $media := .Params.gallery }}
 
-                        {{ if or (hasSuffix $media ".mp4") (hasSuffix $media ".webm") (hasSuffix $media ".mov") }}
+                        <div class="slider-item {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}">
 
-                        <video muted loop autoplay class="slider-video" data-slide-index="{{ $index }}">
+                            {{ if or (hasSuffix $media ".mp4") (hasSuffix $media ".webm") (hasSuffix $media ".mov") }}
 
-                            <source src="{{ $media }}" type="video/mp4">
+                            <video muted loop autoplay class="slider-video" data-slide-index="{{ $index }}">
 
-                            Tu navegador no soporta el elemento de video.
+                                <source src="{{ $media }}" type="video/mp4">
 
-                        </video>
+                                Tu navegador no soporta el elemento de video.
 
-                        {{ else }}
+                            </video>
 
-                        <img src="{{ $media }}" alt="{{ $.Title }}" class="slider-image"
-                            data-slide-index="{{ $index }}">
+                            {{ else }}
+
+                            <img src="{{ $media }}" alt="{{ $.Title }}" class="slider-image"
+                                data-slide-index="{{ $index }}">
+
+                            {{ end }}
+
+                        </div>
 
                         {{ end }}
 
                     </div>
+
+                    {{ if gt (len .Params.gallery) 1 }}
+
+                    <button class="slider-btn next-btn" data-slide-dir="1">›</button>
 
                     {{ end }}
 
@@ -75,722 +101,652 @@
 
                 {{ if gt (len .Params.gallery) 1 }}
 
-                <button class="slider-btn next-btn" data-slide-dir="1">›</button>
+                <div class="slider-dots">
+
+                    {{ range $index, $image := .Params.gallery }}
+
+                    <span class="dot {{ if eq $index 0 }}active{{ end }}" data-slide-index="{{ $index }}"></span>
+
+                    {{ end }}
+
+                </div>
 
                 {{ end }}
 
             </div>
 
+            <!-- Lightbox Modal -->
 
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
 
-            {{ if gt (len .Params.gallery) 1 }}
+                <span class="lightbox-close">&times;</span>
 
-            <div class="slider-dots">
+                {{ if gt (len .Params.gallery) 1 }}
 
-                {{ range $index, $image := .Params.gallery }}
-
-                <span class="dot {{ if eq $index 0 }}active{{ end }}" data-slide-index="{{ $index }}"></span>
-
-                {{ end }}
-
-            </div>
-
-            {{ end }}
-
-        </div>
-
-
-
-        <!-- Lightbox Modal -->
-
-        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-
-            <span class="lightbox-close">&times;</span>
-
-            {{ if gt (len .Params.gallery) 1 }}
-
-            <button class="lightbox-btn lightbox-prev"
-                onclick="event.stopPropagation(); changeLightboxSlide(-1)">‹</button>
-
-            {{ end }}
-
-            <div class="lightbox-content">
-
-                {{ range $index, $image := .Params.gallery }}
-
-                <img src="{{ $image }}" class="lightbox-image {{ if eq $index 0 }}active{{ end }}"
-                    data-index="{{ $index }}" alt="{{ $.Title }}">
+                <button class="lightbox-btn lightbox-prev"
+                    onclick="event.stopPropagation(); changeLightboxSlide(-1)">‹</button>
 
                 {{ end }}
 
+                <div class="lightbox-content">
+
+                    {{ range $index, $image := .Params.gallery }}
+
+                    <img src="{{ $image }}" class="lightbox-image {{ if eq $index 0 }}active{{ end }}"
+                        data-index="{{ $index }}" alt="{{ $.Title }}">
+
+                    {{ end }}
+
+                </div>
+
+                {{ if gt (len .Params.gallery) 1 }}
+
+                <button class="lightbox-btn lightbox-next"
+                    onclick="event.stopPropagation(); changeLightboxSlide(1)">›</button>
+
+
+                {{ end }}
+
+
             </div>
 
-            {{ if gt (len .Params.gallery) 1 }}
-
-            <button class="lightbox-btn lightbox-next"
-                onclick="event.stopPropagation(); changeLightboxSlide(1)">›</button>
 
             {{ end }}
 
-        </div>
-
-        {{ end }}
-
-
-
-        <!-- Back Button -->
-
-        <div class="portfolio-back">
-
-            <a href="/portfolio/" class="back-link">← {{ i18n "back_to_portfolio" | default "Volver al portafolio"
-                }}</a>
 
         </div>
+
 
     </div>
 
+
+    <button class="mobile-timeline-toggle" aria-label="{{ i18n "open_timeline" | default "Open timeline" }}">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+        </svg>
+        <span class="toggle-text">Timeline</span>
+    </button>
+
+
+    <div class="mobile-timeline-overlay"></div>
 </div>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const detailPage = document.querySelector('.portfolio-detail-page');
+    if (!detailPage) return;
+
+    const timelineToggle = detailPage.querySelector('.mobile-timeline-toggle');
+    const timelineOverlay = detailPage.querySelector('.mobile-timeline-overlay');
+    const navItems = detailPage.querySelectorAll('.portfolio-nav .nav-item');
+    const navProjectLinks = detailPage.querySelectorAll('.portfolio-nav .nav-project');
+
+    const setTimelineState = (isOpen) => {
+        detailPage.classList.toggle('timeline-open', isOpen);
+        if (timelineOverlay) {
+            timelineOverlay.classList.toggle('active', isOpen);
+        }
+        if (timelineToggle) {
+            timelineToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        }
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    if (timelineToggle) {
+        timelineToggle.addEventListener('click', () => {
+            const isOpen = detailPage.classList.contains('timeline-open');
+            setTimelineState(!isOpen);
+        });
+    }
+
+    if (timelineOverlay) {
+        timelineOverlay.addEventListener('click', () => setTimelineState(false));
+    }
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const targetYear = item.dataset.year;
+            navItems.forEach(navItem => {
+                navItem.classList.toggle('active', navItem.dataset.year === targetYear);
+            });
+        });
+
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                item.click();
+            }
+        });
+    });
+
+    navProjectLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (detailPage.classList.contains('timeline-open')) {
+                setTimelineState(false);
+            }
+        });
+    });
+});
+</script>
+
 
 <style>
-    .breadcrumb-nav {
-
-        position: absolute;
-
-        top: 6rem;
-
-        left: 2rem;
-
-        font-size: 0.9rem;
-
-        color: var(--text-secondary);
-
-        z-index: 10;
-
+    .portfolio-detail-page {
+        position: relative;
+        min-height: 100vh;
+        background: #010101 url('https://res.cloudinary.com/dpdq565fr/image/upload/v1772896387/portfolio_page_bg_2_pcxy8m.jpg') center/cover fixed;
     }
 
+    .portfolio-detail-page .portfolio-single {
+        position: relative;
+        z-index: 1;
+    }
 
+    .portfolio-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 6rem clamp(1.5rem, 5vw, 4rem) 3rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.97) 0%, rgba(0, 0, 0, 0.9) 100%);
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        transform: translateX(-100%);
+        transition: transform 0.35s ease;
+        z-index: 999;
+    }
+
+    .portfolio-detail-page.timeline-open .portfolio-nav {
+        transform: translateX(0);
+    }
+
+    .nav-timeline {
+        position: relative;
+        flex: 1;
+    }
+
+    .nav-line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 18px;
+        width: 1px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .nav-item {
+        position: relative;
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.25rem 0 1.25rem 2.5rem;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.3s ease, opacity 0.3s ease;
+        cursor: pointer;
+    }
+
+    .nav-item:not(.active) {
+        opacity: 0.4;
+    }
+
+    .nav-item:hover {
+        color: #fff;
+        opacity: 1;
+    }
+
+    .nav-item.active {
+        color: #fff;
+    }
+
+    .nav-dot {
+        position: absolute;
+        left: 10px;
+        top: calc(50% - 6px);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 3px solid rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.6);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .nav-item.active .nav-dot,
+    .nav-item:hover .nav-dot {
+        transform: scale(1.3);
+        background: #fff;
+    }
+
+    .nav-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .nav-year {
+        font-size: clamp(2.4rem, 3vw, 3rem);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+    }
+
+    .nav-projects {
+        display: none;
+        flex-direction: column;
+        gap: 0.55rem;
+        margin-top: 0.6rem;
+        padding-left: 0.2rem;
+    }
+
+    .nav-project {
+        --index: 1;
+        display: inline-flex;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.45);
+        text-decoration: none;
+        opacity: 0;
+        transform: translateX(-12px);
+        position: relative;
+        transition: opacity 0.35s ease, transform 0.35s ease, color 0.3s ease;
+    }
+
+    .nav-project::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.25);
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .nav-item.active .nav-projects {
+        display: flex;
+    }
+
+    .nav-item.active .nav-project {
+        color: rgba(255, 255, 255, 0.85);
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: calc(var(--index) * 70ms);
+    }
+
+    .nav-project:hover,
+    .nav-project:focus-visible {
+        color: #fff;
+    }
+
+    .nav-project:hover::after,
+    .nav-project:focus-visible::after {
+        transform: scaleX(1);
+        background: #fff;
+    }
+
+    .nav-item:not(.active) .nav-project {
+        transition-delay: 0ms;
+    }
+
+    .mobile-timeline-toggle {
+        position: fixed;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        padding: 0.85rem 2.5rem;
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        z-index: 1000;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    .mobile-timeline-toggle:hover {
+        transform: translateX(-50%) translateY(-2px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-timeline-toggle svg {
+        width: 24px;
+        height: 24px;
+        stroke-width: 2.2;
+    }
+
+    .mobile-timeline-toggle .toggle-text {
+        font-size: 0.85rem;
+    }
+
+    .mobile-timeline-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
+        z-index: 998;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .mobile-timeline-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .breadcrumb-nav {
+        position: absolute;
+        top: 6rem;
+        left: 2rem;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        z-index: 10;
+    }
 
     .breadcrumb-link {
-
         color: var(--text-secondary);
-
         text-decoration: none;
-
         transition: var(--transition);
-
     }
-
-
 
     .breadcrumb-link:hover {
-
         color: var(--primary-color);
-
     }
-
-
 
     .breadcrumb-separator {
-
         color: var(--text-secondary);
-
         opacity: 0.5;
-
     }
-
-
 
     .portfolio-single {
-
         padding: 7rem 2rem 2rem;
-        ;
-
         min-height: 100vh;
-
         position: relative;
-
         background: rgba(0, 0, 0, 0.8);
-
     }
-
-
 
     .portfolio-single-container {
-
         max-width: 1200px;
-
         margin: 0 auto;
-
     }
-
-
 
     .portfolio-header {
-
         text-align: center;
-
         margin-bottom: 3rem;
-
     }
-
-
 
     .portfolio-title {
-
         font-size: 3rem;
-
         color: var(--primary-color);
-
         margin-bottom: 0.5rem;
-
         font-weight: 700;
-
     }
-
-
 
     .portfolio-year {
-
         font-size: 1.2rem;
-
         color: var(--text-secondary);
-
         margin-bottom: 1rem;
-
     }
-
-
 
     .portfolio-tags {
-
         display: flex;
-
         gap: 0.5rem;
-
         justify-content: center;
-
         flex-wrap: wrap;
-
     }
-
-
 
     .tag {
-
         background: rgba(212, 175, 55, 0.2);
-
         color: var(--ritual-gold);
-
         padding: 0.4rem 1rem;
-
         border-radius: 20px;
-
         font-size: 0.9rem;
-
     }
-
-
 
     .portfolio-featured {
-
         margin-bottom: 3rem;
-
         text-align: center;
-
     }
-
-
 
     .featured-image {
-
         max-width: 100%;
-
         height: auto;
-
         border-radius: 8px;
-
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-
     }
-
-
 
     .portfolio-description {
-
         max-width: 800px;
-
         margin: 0 auto 4rem;
-
         font-size: 1.2rem;
-
         line-height: 1.8;
-
         color: var(--text-primary);
-
         text-align: center;
-
     }
-
-
 
     .portfolio-gallery {
-
         margin-bottom: 4rem;
-
     }
-
-
 
     .gallery-title {
-
         font-size: 2rem;
-
         color: var(--primary-color);
-
         margin-bottom: 2rem;
-
         text-align: center;
-
     }
-
-
 
     .gallery-slider {
-
         position: relative;
-
         max-width: 900px;
-
         margin: 0 auto;
-
         display: flex;
-
         align-items: center;
-
         gap: 1rem;
-
     }
-
-
 
     .slider-container {
-
         position: relative;
-
         width: 100%;
-
         overflow: hidden;
-
         border-radius: 8px;
-
         background: var(--bg-primary);
-
     }
-
-
 
     .slider-item {
-
         display: none;
-
         width: 100%;
-
     }
-
-
 
     .slider-item.active {
-
         display: block;
-
     }
-
-
 
     .slider-image {
-
         width: 100%;
-
         height: auto;
-
         max-height: 600px;
-
         object-fit: contain;
-
         display: block;
-
         cursor: pointer;
-
         transition: transform 0.3s ease;
-
     }
-
-
 
     .slider-image:hover {
-
         transform: scale(1.02);
-
     }
-
-
 
     .slider-video {
-
         width: 100%;
-
         height: auto;
-
         max-height: 600px;
-
         object-fit: contain;
-
         display: block;
-
     }
-
-
 
     .slider-btn {
-
         background: transparent;
-
         color: white;
-
         border: none;
-
         font-size: 3.5rem;
-
         padding: 2rem 0.5rem;
-
         cursor: pointer;
-
         border-radius: 4px;
-
         transition: all 0.3s ease;
-
         flex-shrink: 0;
-
         height: 100%;
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
     }
-
-
 
     .slider-btn:hover {
-
         background: transparent;
-
         transform: scale(1.1);
-
     }
-
-
 
     .slider-dots {
-
         text-align: center;
-
         margin-top: 1.5rem;
-
     }
-
-
 
     .dot {
-
         display: inline-block;
-
         width: 12px;
-
         height: 12px;
-
         border-radius: 50%;
-
         background: rgba(193, 68, 14, 0.3);
-
         margin: 0 0.5rem;
-
         cursor: pointer;
-
         transition: all 0.3s ease;
-
     }
-
-
 
     .dot.active {
-
         background: var(--primary-color);
-
         transform: scale(1.3);
-
     }
-
-
 
     .dot:hover {
-
         background: rgba(193, 68, 14, 0.6);
-
     }
-
-
 
     .lightbox {
-
         display: none;
-
         position: fixed;
-
         top: 0;
-
         left: 0;
-
         width: 100%;
-
         height: 100%;
-
         background: rgba(0, 0, 0, 0.95);
-
         z-index: 9999;
-
         align-items: center;
-
         justify-content: center;
-
     }
-
-
 
     .lightbox.active {
-
         display: flex;
-
     }
-
-
 
     .lightbox-content {
-
         position: relative;
-
         max-width: 90vw;
-
         max-height: 90vh;
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
     }
-
-
 
     .lightbox-image {
-
         display: none;
-
         max-width: 100%;
-
         max-height: 90vh;
-
         object-fit: contain;
-
     }
-
-
 
     .lightbox-image.active {
-
         display: block;
-
     }
-
-
 
     .lightbox-close {
-
         position: absolute;
-
         top: 2rem;
-
         right: 3rem;
-
         font-size: 3rem;
-
         color: white;
-
         cursor: pointer;
-
         z-index: 10000;
-
         transition: color 0.3s ease;
-
     }
-
-
 
     .lightbox-close:hover {
-
         color: var(--primary-color);
-
     }
-
-
 
     .lightbox-btn {
-
         position: absolute;
-
         background: transparent;
-
         color: white;
-
         border: none;
-
         font-size: 3rem;
-
         padding: 1rem 1.5rem;
-
         cursor: pointer;
-
         border-radius: 4px;
-
         transition: all 0.3s ease;
-
         z-index: 10000;
-
     }
-
-
 
     .lightbox-prev {
-
         left: 2rem;
-
     }
-
-
 
     .lightbox-next {
-
         right: 2rem;
-
     }
-
-
 
     .lightbox-btn:hover {
-
         background: transparent;
-
         transform: scale(1.1);
-
     }
-
-
-
-    .portfolio-link {
-
-        text-align: center;
-
-        margin-bottom: 3rem;
-
-    }
-
-
 
     .external-link {
-
         display: inline-block;
-
         background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-
         color: var(--pure-white);
-
         padding: 1rem 2rem;
-
         border-radius: 8px;
-
         text-decoration: none;
-
         font-size: 1.1rem;
-
         font-weight: 600;
-
         transition: var(--transition);
-
         box-shadow: 0 4px 12px rgba(193, 68, 14, 0.3);
-
     }
-
-
 
     .external-link:hover {
-
         transform: translateY(-2px);
-
         box-shadow: 0 6px 16px rgba(193, 68, 14, 0.4);
-
     }
-
-
-
-    .portfolio-back {
-
-        text-align: center;
-
-        margin-top: 4rem;
-
-        padding-top: 2rem;
-
-        border-top: 1px solid var(--glass-border);
-
-    }
-
-
-
-    .back-link {
-
-        color: var(--text-secondary);
-
-        text-decoration: none;
-
-        font-size: 1rem;
-
-        transition: var(--transition);
-
-    }
-
-
-
-    .back-link:hover {
-
-        color: var(--primary-color);
-
-    }
-
-
 
     @media (max-width: 768px) {
-
         .portfolio-title {
-
             font-size: 2rem;
-
         }
-
 
 
         .slider-btn {
