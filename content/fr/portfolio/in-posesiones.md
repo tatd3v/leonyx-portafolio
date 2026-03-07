@@ -6,9 +6,12 @@ type: portfolio
 year: "2025"
 external_url: "https://www.leonyxdavida.com/2025/in-posesiones"
 tags: ["performance", "vidéo", "urbain", "mémoire coloniale", "résistance"]
-featured_image: ""
+featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849414/IN-Posesiones_1_vszvex.jpg"
 summary: "Une série d'actions vidéo urbaines où le corps noir dialogue avec et perturbe des espaces emblématiques chargés de symboles racistes et de mémoires coloniales, se transformant en multiples présences."
-gallery: []
+gallery:
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849414/IN-Posesiones_1_vszvex.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849414/IN-Posesiones_2_gnsjtq.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849553/IN-Posesiones_3_ks39t9.jpg"
 ---
 
 IN-Possessions est une série d'actions vidéo urbaines dans lesquelles le corps noir dialogue avec et perturbe des sites emblématiques de la ville, des espaces chargés de symboles racistes et de mémoires coloniales.
