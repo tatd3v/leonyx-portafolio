@@ -184,17 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navItems = detailPage.querySelectorAll('.portfolio-nav .nav-item');
     const navProjectLinks = detailPage.querySelectorAll('.portfolio-nav .nav-project');
     const terminalLink = navProjectLinks.length ? navProjectLinks[navProjectLinks.length - 1] : null;
+    let activeYear = detailPage.querySelector('.portfolio-nav .nav-item.active')?.dataset.year || null;
 
     const setTimelineState = (isOpen) => {
         detailPage.classList.toggle('timeline-open', isOpen);
         if (timelineOverlay) {
             timelineOverlay.classList.toggle('active', isOpen);
-        }
-        if (timelineToggle) {
-            timelineToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            if (!isOpen) {
-                timelineToggle.classList.remove('hidden');
-            }
         }
         document.body.style.overflow = isOpen ? 'hidden' : '';
     };
@@ -216,18 +211,27 @@ document.addEventListener('DOMContentLoaded', () => {
         timelineOverlay.addEventListener('click', () => setTimelineState(false));
     }
 
+    const setActiveYear = (year) => {
+        activeYear = year;
+        navItems.forEach(navItem => {
+            const shouldActivate = !!year && navItem.dataset.year === year;
+            navItem.classList.toggle('active', shouldActivate);
+        });
+    };
+
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             const targetYear = item.dataset.year;
-            navItems.forEach(navItem => {
-                navItem.classList.toggle('active', navItem.dataset.year === targetYear);
-            });
+            const shouldCollapse = activeYear === targetYear;
+            setActiveYear(shouldCollapse ? null : targetYear);
         });
 
         item.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
-                item.click();
+                const targetYear = item.dataset.year;
+                const shouldCollapse = activeYear === targetYear;
+                setActiveYear(shouldCollapse ? null : targetYear);
             }
         });
     });
@@ -289,13 +293,14 @@ document.addEventListener('DOMContentLoaded', () => {
         max-width: 600px;
         margin: 0 auto;
         width: 100%;
+        --timeline-x: 22px;
     }
 
     .nav-line {
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 18px;
+        left: var(--timeline-x);
         width: 1px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 20%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0) 100%);
     }
@@ -326,8 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     .nav-dot {
         position: absolute;
-        left: 10px;
-        top: calc(50% - 6px);
+        left: calc(var(--timeline-x) - 9px);
+        top: calc(50% - 9px);
         width: 12px;
         height: 12px;
         border-radius: 50%;

@@ -80,16 +80,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const showYear = (year) => {
-        if (activeYear === year) return;
+    const setActiveYear = (year) => {
         activeYear = year;
 
         yearSections.forEach(section => {
-            section.classList.toggle('active', section.dataset.year === year);
+            const shouldActivate = !!year && section.dataset.year === year;
+            section.classList.toggle('active', shouldActivate);
         });
 
         navItems.forEach(item => {
-            item.classList.toggle('active', item.dataset.year === year);
+            const shouldActivate = !!year && item.dataset.year === year;
+            item.classList.toggle('active', shouldActivate);
         });
     };
 
@@ -118,19 +119,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Activate first year by default
     if (navItems.length && yearSections.length) {
         const defaultYear = navItems[0].dataset.year;
-        showYear(defaultYear);
+        setActiveYear(defaultYear);
     }
 
     // Click handling
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            showYear(this.dataset.year);
+            const targetYear = this.dataset.year;
+            const shouldCollapse = activeYear === targetYear;
+            setActiveYear(shouldCollapse ? null : targetYear);
         });
 
         item.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                showYear(this.dataset.year);
+                const targetYear = this.dataset.year;
+                const shouldCollapse = activeYear === targetYear;
+                setActiveYear(shouldCollapse ? null : targetYear);
             }
         });
     });
@@ -196,13 +201,14 @@ document.addEventListener('DOMContentLoaded', function() {
     max-width: 600px;
     margin: 0 auto;
     width: 100%;
+    --timeline-x: 22px;
 }
 
 .nav-line {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 18px;
+    left: var(--timeline-x);
     width: 1px;
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,255,0.4) 80%, rgba(255,255,255,0) 100%);
 }
@@ -233,8 +239,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .nav-dot {
     position: absolute;
-    left: 10px;
-    top: calc(50% - 6px);
+    left: calc(var(--timeline-x) - 9px);
+    top: calc(50% - 9px);
     width: 12px;
     height: 12px;
     border-radius: 50%;
