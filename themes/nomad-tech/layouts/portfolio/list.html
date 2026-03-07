@@ -123,10 +123,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navProjectLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
+            
+            const targetUrl = this.href;
+            const mainContent = document.querySelector('main');
+            
+            // Close timeline first
             if (portfolioPage.classList.contains('timeline-open')) {
                 setTimelineState(false);
             }
+            
+            // Add fade-out transition to main content only
+            if (mainContent) {
+                mainContent.style.transition = 'opacity 0.3s ease-out';
+                mainContent.style.opacity = '0';
+            }
+            
+            // Navigate after transition
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 300);
         });
 
         if (terminalLink && link === terminalLink) {
