@@ -21,45 +21,20 @@
     </aside>
 
     <section class="portfolio-content">
-        {{ $fallbackImage := "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849794/fallback_portrait_u0x6bs.jpg" }}
-        {{ range $group := $yearGroups }}
-        <div id="year-{{ $group.Key }}" class="portfolio-year-section" data-year="{{ $group.Key }}">
-            <div class="portfolio-grid">
-                {{ range $group.Pages.ByDate.Reverse }}
-                {{ $image := .Params.featured_image }}
-                {{ if and (not $image) (.Params.gallery) }}
-                    {{ if gt (len .Params.gallery) 0 }}
-                        {{ $image = index .Params.gallery 0 }}
-                    {{ end }}
-                {{ end }}
-                {{ if not $image }}
-                    {{ $image = $fallbackImage }}
-                {{ end }}
-                <a href="{{ .RelPermalink }}" class="portfolio-item loading" data-tags="{{ delimit .Params.tags "," }}" data-year="{{ .Params.year }}">
-                    <div class="skeleton-loader">
-                        <div class="skeleton-image"></div>
-                    </div>
-                    <div class="portfolio-image-container">
-                        <img src="{{ $image }}" alt="{{ .Title }}" class="portfolio-image" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3 class="overlay-title">{{ .Title }}</h3>
-                                <p class="overlay-description">
-                                    {{ if .Params.summary }}
-                                        {{ .Params.summary }}
-                                    {{ else }}
-                                        {{ .Summary | truncate 100 "" }}
-                                    {{ end }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                {{ end }}
-            </div>
-        </div>
-        {{ end }}
+        <div class="portfolio-background-display"></div>
     </section>
+
+    <!-- Mobile Timeline Toggle Button -->
+    <button class="mobile-timeline-toggle" aria-label="Open timeline navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="toggle-text">Timeline</span>
+    </button>
+
+    <!-- Mobile Timeline Overlay -->
+    <div class="mobile-timeline-overlay"></div>
 </div>
 
 <script>
@@ -121,13 +96,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Click handling
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            showYear(this.dataset.year);
+            // On mobile, just toggle the active state to show/hide project titles
+            if (window.innerWidth <= 768) {
+                const wasActive = this.classList.contains('active');
+                navItems.forEach(i => i.classList.remove('active'));
+                if (!wasActive) {
+                    this.classList.add('active');
+                }
+            } else {
+                // On desktop, show the year's projects
+                showYear(this.dataset.year);
+            }
         });
 
         item.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                showYear(this.dataset.year);
+                if (window.innerWidth <= 768) {
+                    const wasActive = this.classList.contains('active');
+                    navItems.forEach(i => i.classList.remove('active'));
+                    if (!wasActive) {
+                        this.classList.add('active');
+                    }
+                } else {
+                    showYear(this.dataset.year);
+                }
             }
         });
     });
@@ -135,6 +128,40 @@ document.addEventListener('DOMContentLoaded', function() {
     navProjectLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.stopPropagation();
+        });
+    });
+
+    // Mobile timeline toggle functionality
+    const mobileToggle = document.querySelector('.mobile-timeline-toggle');
+    const mobileOverlay = document.querySelector('.mobile-timeline-overlay');
+    const portfolioNav = document.querySelector('.portfolio-nav');
+    
+    function openMobileTimeline() {
+        portfolioNav.classList.add('mobile-open');
+        mobileOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileTimeline() {
+        portfolioNav.classList.remove('mobile-open');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', openMobileTimeline);
+    }
+    
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeMobileTimeline);
+    }
+    
+    // Close timeline when clicking on a project link on mobile
+    navProjectLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                closeMobileTimeline();
+            }
         });
     });
 });
@@ -291,22 +318,23 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .portfolio-content {
-    padding: 7rem 3rem 4rem 3rem;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
-.portfolio-year-section {
-    margin-bottom: 2rem;
-    display: none;
-}
-
-.portfolio-year-section.active {
-    display: block;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+.portfolio-background-display {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('https://res.cloudinary.com/dpdq565fr/image/upload/v1772896388/portfolio_page_bg_3_rygqoo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .portfolio-item {
@@ -428,6 +456,146 @@ document.addEventListener('DOMContentLoaded', function() {
     color: var(--bg-primary);
 }
 
+/* Mobile Timeline Toggle Button */
+.mobile-timeline-toggle {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobile-timeline-toggle:hover {
+    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+.mobile-timeline-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.mobile-timeline-toggle .toggle-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+/* Mobile Timeline Overlay */
+.mobile-timeline-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.mobile-timeline-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Skeleton Loader Styles */
+.skeleton-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.portfolio-item.loaded .skeleton-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #1a1a1a 0%,
+        #2a2a2a 20%,
+        #2a2a2a 40%,
+        #1a1a1a 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.portfolio-item.loading .portfolio-image-container {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.portfolio-item.loading .portfolio-overlay {
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.portfolio-item.loading .overlay-content {
+    display: none;
+}
+
+.portfolio-item.loaded .portfolio-image-container {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 0.4s ease;
+}
+
+.portfolio-item.loaded .portfolio-overlay {
+    visibility: visible;
+}
+
+.portfolio-item.loaded .overlay-content {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .portfolio-page {
@@ -443,25 +611,79 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .portfolio-content {
-        padding: 6.5rem 1.5rem 3rem;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .portfolio-background-display {
+        min-height: 60vh;
+    }
+}
+
+/* Mobile Timeline Behavior */
+@media (max-width: 768px) {
+    .mobile-timeline-toggle {
+        display: flex;
+    }
+
+    .mobile-timeline-overlay {
+        display: block;
+    }
+
+    .portfolio-page {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .portfolio-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        padding: 5rem 1.5rem 2rem;
+        border-right: 1px solid rgba(255,255,255,0.08);
+        border-bottom: none;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .portfolio-nav.mobile-open {
+        transform: translateX(0);
+    }
+
+    .portfolio-content {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .portfolio-background-display {
+        min-height: 100vh;
+        background-position: right center;
+    }
+
+    .nav-year {
+        font-size: clamp(2rem, 5vw, 2.5rem);
     }
 }
 
 @media (max-width: 640px) {
-    .portfolio-nav {
-        padding: 6.5rem 1.25rem 2rem;
+    .mobile-timeline-toggle {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.65rem 1.25rem;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    .portfolio-nav {
+        width: 90%;
+        padding: 5rem 1.25rem 2rem;
     }
 
     .portfolio-content {
-        padding: 6.5rem 1.25rem 3rem;
-    }
-
-    .portfolio-image-container {
-        height: 280px;
+        padding: 0;
     }
 }
 </style>
