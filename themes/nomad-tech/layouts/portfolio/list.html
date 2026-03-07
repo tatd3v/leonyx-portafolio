@@ -9,22 +9,24 @@
     </div>
     
     <!-- Portfolio Grid - Minimalist -->
+    {{ $fallbackImage := "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849794/fallback_portrait_u0x6bs.jpg" }}
     <div class="portfolio-grid">
         {{ range .Pages.ByDate.Reverse }}
+        {{ $image := .Params.featured_image }}
+        {{ if and (not $image) (.Params.gallery) }}
+            {{ if gt (len .Params.gallery) 0 }}
+                {{ $image = index .Params.gallery 0 }}
+            {{ end }}
+        {{ end }}
         <a href="{{ .RelPermalink }}" class="portfolio-item loading" data-tags="{{ delimit .Params.tags "," }}">
             <div class="skeleton-loader">
                 <div class="skeleton-image"></div>
             </div>
             <div class="portfolio-image-container">
-                {{ if .Params.featured_image }}
-                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="portfolio-image" loading="lazy">
+                {{ if $image }}
+                <img src="{{ $image }}" alt="{{ .Title }}" class="portfolio-image" loading="lazy">
                 {{ else }}
-                <div class="portfolio-placeholder">
-                    <div class="placeholder-content">
-                        <h3>{{ .Title }}</h3>
-                        <p>{{ .Params.year }}</p>
-                    </div>
-                </div>
+                <img src="{{ $fallbackImage }}" alt="{{ .Title }}" class="portfolio-image fallback" loading="lazy">
                 {{ end }}
                 <div class="portfolio-overlay">
                     <div class="overlay-content">
@@ -49,53 +51,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterLinks = document.querySelectorAll('.filter-link');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
-    const portraitFallback = 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849794/fallback_portrait_u0x6bs.jpg';
-
-    const markLoaded = (item, delay = 200) => {
-        setTimeout(() => {
-            item.classList.remove('loading');
-            item.classList.add('loaded');
-        }, delay);
-    };
-
-    const handleImageReady = (img, item) => {
-        const isPortrait = img.naturalHeight > img.naturalWidth;
-
-        if (!img.dataset.orientationFinalized) {
-            if (isPortrait && !img.dataset.usingFallback) {
-                img.dataset.usingFallback = 'true';
-                img.src = portraitFallback;
-                return;
-            }
-            img.dataset.orientationFinalized = 'true';
-        }
-
-        markLoaded(item);
-    };
-
+    
     // Handle skeleton loader transitions
     portfolioItems.forEach(item => {
         const img = item.querySelector('.portfolio-image');
-        const placeholder = item.querySelector('.portfolio-placeholder');
         
-        // If there's an image, wait for it to load
         if (img) {
             if (img.complete) {
-                handleImageReady(img, item);
+                item.classList.remove('loading');
+                item.classList.add('loaded');
             } else {
-                // Wait for image to load
                 img.addEventListener('load', function() {
-                    handleImageReady(img, item);
+                    setTimeout(() => {
+                        item.classList.remove('loading');
+                        item.classList.add('loaded');
+                    }, 200);
                 });
                 
-                // Handle error case
                 img.addEventListener('error', function() {
-                    markLoaded(item, 0);
+                    item.classList.remove('loading');
+                    item.classList.add('loaded');
                 });
             }
-        } else if (placeholder) {
-            // If there's only a placeholder, show it immediately
-            markLoaded(item, 300);
+        } else {
+            setTimeout(() => {
+                item.classList.remove('loading');
+                item.classList.add('loaded');
+            }, 300);
         }
     });
     
