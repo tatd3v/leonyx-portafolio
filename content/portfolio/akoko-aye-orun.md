@@ -1,20 +1,30 @@
 ---
-title: "Àkókò / Ayé-Òrún"
+title: 'Àkókò / Ayé-Òrún'
 date: 2025-01-01T00:00:00Z
 draft: false
 type: portfolio
-year: "2025"
-location: "París - Bogotá"
-external_url: "https://www.leonyxdavida.com/2025/akoko-aye-orun"
-tags: ["performance", "ritual", "intergeneracional", "transatlántico", "espiritualidad"]
-featured_image: ""
-summary: "Performance ritual que conecta París y Bogotá en un presente infinito, donde el cuerpo negro danza entre el fuego y el humo mientras mujeres mayoras entonan alabaos que cruzan el mar."
-gallery: []
+year: '2025'
+location: 'París - Bogotá'
+external_url: 'https://www.leonyxdavida.com/2025/akoko-aye-orun'
+tags:
+  [
+    'performance',
+    'ritual',
+    'intergeneracional',
+    'transatlántico',
+    'espiritualidad',
+  ]
+featured_image: 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg'
+summary: 'Performance ritual que conecta París y Bogotá en un presente infinito, donde el cuerpo negro danza entre el fuego y el humo mientras mujeres mayoras entonan alabaos que cruzan el mar.'
+gallery:
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_2_ikf2aw.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_3_xsnhvm.jpg'
 ---
 
-**Àkókò / Ayé-Òrún**
+## Àkókò / Ayé-Òrún
 
-*"Todo ocurre al mismo tiempo."*  
+_"Todo ocurre al mismo tiempo."_  
 — Denise Ferreira da Silva —
 
 No hay pasado ni futuro: solo cuerpos que se mueven en un constante presente.

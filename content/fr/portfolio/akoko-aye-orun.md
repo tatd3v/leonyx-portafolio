@@ -7,9 +7,12 @@ year: "2025"
 location: "Paris - Bogotá"
 external_url: "https://www.leonyxdavida.com/2025/akoko-aye-orun"
 tags: ["performance", "rituel", "intergénérationnel", "transatlantique", "spiritualité"]
-featured_image: ""
+featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg"
 summary: "Performance rituelle reliant Paris et Bogotá dans un présent infini, où le corps noir danse entre le feu et la fumée tandis que des femmes aînées chantent des alabaos qui traversent la mer."
-gallery: []
+gallery:
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_2_ikf2aw.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_3_xsnhvm.jpg"
 ---
 
 **Àkókò / Ayé-Òrún**
