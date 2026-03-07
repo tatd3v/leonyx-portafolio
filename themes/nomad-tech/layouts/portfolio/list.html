@@ -10,8 +10,8 @@
                 <div class="nav-copy">
                     <span class="nav-year">{{ $group.Key }}</span>
                     <div class="nav-projects">
-                        {{ range $group.Pages.ByDate.Reverse }}
-                        <a href="{{ .RelPermalink }}" class="nav-project" data-project-year="{{ .Params.year }}">{{ .Title }}</a>
+                        {{ range $index, $project := $group.Pages.ByDate.Reverse }}
+                        <a href="{{ $project.RelPermalink }}" class="nav-project" data-project-year="{{ $project.Params.year }}" style="--index: {{ add $index 1 }}">{{ $project.Title }}</a>
                         {{ end }}
                     </div>
                 </div>
@@ -51,7 +51,6 @@
                                         {{ .Summary | truncate 100 "" }}
                                     {{ end }}
                                 </p>
-                                <p class="overlay-tags">{{ delimit .Params.tags " • " }}</p>
                             </div>
                         </div>
                     </div>
@@ -232,16 +231,36 @@ document.addEventListener('DOMContentLoaded', function() {
 .nav-projects {
     display: none;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.55rem;
     margin-top: 0.6rem;
     padding-left: 0.2rem;
 }
 
 .nav-project {
+    --index: 1;
+    display: inline-flex;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(-12px);
+    position: relative;
+    transition: opacity 0.35s ease, transform 0.35s ease, color 0.3s ease;
+}
+
+.nav-project::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.25);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .nav-item.active .nav-projects {
@@ -250,6 +269,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .nav-item.active .nav-project {
     color: rgba(255,255,255,0.85);
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(var(--index) * 70ms);
+}
+
+.nav-project:hover,
+.nav-project:focus-visible {
+    color: #fff;
+}
+
+.nav-project:hover::after,
+.nav-project:focus-visible::after {
+    transform: scaleX(1);
+    background: #fff;
+}
+
+.nav-item:not(.active) .nav-project {
+    transition-delay: 0ms;
 }
 
 .portfolio-content {
@@ -368,14 +405,6 @@ document.addEventListener('DOMContentLoaded', function() {
     max-width: 90%;
     margin: 0 auto;
     font-weight: 300;
-}
-
-.overlay-tags {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.7;
-    margin-top: 1rem;
 }
 
 .overlay-link {
