@@ -113,18 +113,12 @@ document.addEventListener('DOMContentLoaded', function() {
     navItems.forEach(item => {
         item.addEventListener('click', function() {
             showYear(this.dataset.year);
-            if (portfolioPage.classList.contains('timeline-open')) {
-                setTimelineState(false);
-            }
         });
 
         item.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 showYear(this.dataset.year);
-                if (portfolioPage.classList.contains('timeline-open')) {
-                    setTimelineState(false);
-                }
             }
         });
     });
