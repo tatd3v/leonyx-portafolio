@@ -26,7 +26,12 @@
                 {{ if $image }}
                 <img src="{{ $image }}" alt="{{ .Title }}" class="portfolio-image" loading="lazy">
                 {{ else }}
-                <img src="{{ $fallbackImage }}" alt="{{ .Title }}" class="portfolio-image fallback" loading="lazy">
+                <div class="portfolio-placeholder">
+                    <div class="placeholder-content">
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Params.year }}</p>
+                    </div>
+                </div>
                 {{ end }}
                 <div class="portfolio-overlay">
                     <div class="overlay-content">
@@ -215,11 +220,31 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Hide content while loading */
 .portfolio-item.loading .portfolio-image-container {
     opacity: 0;
+    visibility: hidden;
+}
+
+.portfolio-item.loading .portfolio-overlay {
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.portfolio-item.loading .overlay-content {
+    display: none;
 }
 
 .portfolio-item.loaded .portfolio-image-container {
     opacity: 1;
+    visibility: visible;
     animation: fadeIn 0.4s ease;
+}
+
+.portfolio-item.loaded .portfolio-overlay {
+    visibility: visible;
+}
+
+.portfolio-item.loaded .overlay-content {
+    display: block;
 }
 
 @keyframes fadeIn {
