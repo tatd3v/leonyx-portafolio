@@ -43,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navItems = document.querySelectorAll('.nav-item');
     const navProjectLinks = document.querySelectorAll('.nav-project');
     const yearSections = document.querySelectorAll('.portfolio-year-section');
+    const portfolioPage = document.querySelector('.portfolio-page');
+    const timelineToggle = document.querySelector('.mobile-timeline-toggle');
+    const timelineOverlay = document.querySelector('.mobile-timeline-overlay');
     let activeYear = null;
 
     // Handle skeleton loader transitions
@@ -87,6 +90,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    const setTimelineState = (isOpen) => {
+        if (!timelineToggle || !timelineOverlay || !portfolioPage) return;
+        portfolioPage.classList.toggle('timeline-open', isOpen);
+        timelineOverlay.classList.toggle('active', isOpen);
+        timelineToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    const toggleTimeline = () => {
+        const currentlyOpen = portfolioPage.classList.contains('timeline-open');
+        setTimelineState(!currentlyOpen);
+    };
+
     // Activate first year by default
     if (navItems.length && yearSections.length) {
         const defaultYear = navItems[0].dataset.year;
@@ -96,30 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Click handling
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            // On mobile, just toggle the active state to show/hide project titles
-            if (window.innerWidth <= 768) {
-                const wasActive = this.classList.contains('active');
-                navItems.forEach(i => i.classList.remove('active'));
-                if (!wasActive) {
-                    this.classList.add('active');
-                }
-            } else {
-                // On desktop, show the year's projects
-                showYear(this.dataset.year);
+            showYear(this.dataset.year);
+            if (portfolioPage.classList.contains('timeline-open')) {
+                setTimelineState(false);
             }
         });
 
         item.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                if (window.innerWidth <= 768) {
-                    const wasActive = this.classList.contains('active');
-                    navItems.forEach(i => i.classList.remove('active'));
-                    if (!wasActive) {
-                        this.classList.add('active');
-                    }
-                } else {
-                    showYear(this.dataset.year);
+                showYear(this.dataset.year);
+                if (portfolioPage.classList.contains('timeline-open')) {
+                    setTimelineState(false);
                 }
             }
         });
@@ -128,64 +132,49 @@ document.addEventListener('DOMContentLoaded', function() {
     navProjectLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.stopPropagation();
-        });
-    });
-
-    // Mobile timeline toggle functionality
-    const mobileToggle = document.querySelector('.mobile-timeline-toggle');
-    const mobileOverlay = document.querySelector('.mobile-timeline-overlay');
-    const portfolioNav = document.querySelector('.portfolio-nav');
-    
-    function openMobileTimeline() {
-        portfolioNav.classList.add('mobile-open');
-        mobileOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeMobileTimeline() {
-        portfolioNav.classList.remove('mobile-open');
-        mobileOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', openMobileTimeline);
-    }
-    
-    if (mobileOverlay) {
-        mobileOverlay.addEventListener('click', closeMobileTimeline);
-    }
-    
-    // Close timeline when clicking on a project link on mobile
-    navProjectLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
-                closeMobileTimeline();
+            if (portfolioPage.classList.contains('timeline-open')) {
+                setTimelineState(false);
             }
         });
     });
+
+    if (timelineToggle) {
+        timelineToggle.addEventListener('click', toggleTimeline);
+    }
+
+    if (timelineOverlay) {
+        timelineOverlay.addEventListener('click', () => setTimelineState(false));
+    }
 });
 </script>
 
 <style>
 /* Portfolio Layout */
 .portfolio-page {
-    display: grid;
-    grid-template-columns: 320px 1fr;
+    position: relative;
     min-height: 100vh;
-    background: #010101;
+    background: #010101 url('https://res.cloudinary.com/dpdq565fr/image/upload/v1772896387/portfolio_page_bg_2_pcxy8m.jpg') center/cover fixed;
 }
 
 .portfolio-nav {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: min(420px, 88vw);
     height: 100vh;
-    padding: 6.5rem 2rem 3rem;
-    background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 100%);
+    padding: 6rem 2.5rem 3rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.9) 100%);
     border-right: 1px solid rgba(255,255,255,0.08);
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    z-index: 999;
+}
+
+.portfolio-page.timeline-open .portfolio-nav {
+    transform: translateX(0);
 }
 
 .nav-timeline {
@@ -325,13 +314,10 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .portfolio-background-display {
+    display: none;
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-image: url('https://res.cloudinary.com/dpdq565fr/image/upload/v1772896388/portfolio_page_bg_3_rygqoo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     left: 0;
@@ -458,45 +444,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Mobile Timeline Toggle Button */
 .mobile-timeline-toggle {
-    display: none;
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-    backdrop-filter: blur(10px);
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50px;
-    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    padding: 0.85rem 2.5rem;
     color: #fff;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
-    z-index: 100;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
 .mobile-timeline-toggle:hover {
-    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15));
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
 }
 
 .mobile-timeline-toggle svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.2;
 }
 
 .mobile-timeline-toggle .toggle-text {
     font-size: 0.85rem;
-    letter-spacing: 0.05em;
 }
 
 /* Mobile Timeline Overlay */
 .mobile-timeline-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -599,91 +586,39 @@ document.addEventListener('DOMContentLoaded', function() {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .portfolio-page {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-nav {
-        position: relative;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        padding: 6.5rem 1.5rem 2.5rem;
-    }
-
-    .portfolio-content {
-        padding: 0;
-        overflow: hidden;
+        background: #010101;
     }
 
     .portfolio-background-display {
+        display: block;
         min-height: 60vh;
+        background-image: url('https://res.cloudinary.com/dpdq565fr/image/upload/v1772896388/portfolio_page_bg_3_rygqoo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
-/* Mobile Timeline Behavior */
 @media (max-width: 768px) {
-    .mobile-timeline-toggle {
-        display: flex;
-    }
-
-    .mobile-timeline-overlay {
-        display: block;
-    }
-
-    .portfolio-page {
-        position: relative;
-        overflow-x: hidden;
-    }
-
     .portfolio-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 85%;
-        max-width: 320px;
-        height: 100vh;
+        width: 90%;
         padding: 5rem 1.5rem 2rem;
-        border-right: 1px solid rgba(255,255,255,0.08);
-        border-bottom: none;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 999;
-        overflow-y: auto;
-    }
-
-    .portfolio-nav.mobile-open {
-        transform: translateX(0);
-    }
-
-    .portfolio-content {
-        padding: 0;
-        overflow: hidden;
-    }
-
-    .portfolio-background-display {
-        min-height: 100vh;
-        background-position: right center;
     }
 
     .nav-year {
         font-size: clamp(2rem, 5vw, 2.5rem);
     }
+
+    .mobile-timeline-toggle {
+        padding: 0.75rem 1.75rem;
+        gap: 0.4rem;
+    }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
     .mobile-timeline-toggle {
-        bottom: 1.5rem;
-        right: 1.5rem;
-        padding: 0.65rem 1.25rem;
-    }
-
-    .portfolio-nav {
-        width: 90%;
-        padding: 5rem 1.25rem 2rem;
-    }
-
-    .portfolio-content {
-        padding: 0;
+        padding: 0.75rem 1.75rem;
+        gap: 0.4rem;
     }
 }
 </style>
