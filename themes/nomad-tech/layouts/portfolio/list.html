@@ -2,7 +2,6 @@
 {{ $yearGroups := sort (.Pages.GroupByParam "year") "Key" "desc" }}
 <div class="portfolio-page">
     <aside class="portfolio-nav">
-        <div class="nav-title">{{ i18n "timeline_label" | default "Archivo" }}</div>
         <div class="nav-timeline">
             <div class="nav-line"></div>
             {{ range $index, $group := $yearGroups }}
@@ -20,10 +19,6 @@
         {{ $fallbackImage := "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849794/fallback_portrait_u0x6bs.jpg" }}
         {{ range $group := $yearGroups }}
         <div id="year-{{ $group.Key }}" class="portfolio-year-section" data-year="{{ $group.Key }}">
-            <div class="year-header">
-                <p class="year-label">{{ i18n "year_label" | default "Año" }}</p>
-                <h2>{{ $group.Key }}</h2>
-            </div>
             <div class="portfolio-grid">
                 {{ range $group.Pages.ByDate.Reverse }}
                 {{ $image := .Params.featured_image }}
@@ -149,13 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
     gap: 2rem;
 }
 
-.nav-title {
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.6);
-}
-
 .nav-timeline {
     position: relative;
     flex: 1;
@@ -228,32 +216,12 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .portfolio-year-section {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: none;
 }
 
 .portfolio-year-section.active {
     display: block;
-}
-
-.year-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.year-label {
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.5);
-}
-
-.year-header h2 {
-    font-size: clamp(2.5rem, 4vw, 4rem);
-    margin: 0;
-    color: #fff;
 }
 
 .portfolio-grid {
