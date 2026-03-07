@@ -7,9 +7,11 @@ year: "2025"
 location: "París"
 external_url: "https://www.leonyxdavida.com/2025/sobre-altares-y-re-evoluciones"
 tags: ["instalación", "video", "ritual", "sincretismo", "paris"]
-featured_image: ""
+featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850624/sobre_altares_1_jwc5yd.jpg"
 summary: "Instalación que integra video, objetos y gestos rituales, explorando el sincretismo como portal donde las creencias afrodiaspóricas se entrelazan para invocar cuerpos y espíritus pasados, presentes y futuros."
-gallery: []
+gallery:
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850624/sobre_altares_1_jwc5yd.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850624/sobre_altares_2_wlwxxi.jpg"
 ---
 
 Esta instalación que integra video, objetos y gestos rituales, nace del diálogo y relaciones que encontré entre las creencias espirituales negras, los archivos vivos (tradición oral) encontrados aquí, y las huellas/heridas coloniales que persisten y se fortalecen en los monumentos y lugares de París.
