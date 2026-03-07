@@ -17,8 +17,12 @@ gallery:
 
 Performance qui connecte avec les mémoires ancestrales à travers l'étreinte comme acte de guérison collective.
 
+Inspirée par les appels de Francia Márquez à faire du soin une action politique, la pièce active des cercles de soutien où l'étreinte devient outil de dénonciation et de réparation.
+
 Un travail de création communautaire qui explore l'étreinte comme geste politique et spirituel de résistance.
 
-**Direction:** Le'Onyx Da'Vida
+**Interprètes:** Yulián Mosquera, Diasho Carabalí  
+**Direction:** Le'Onyx Da'Vida  
+**Présentations:** Universidad CENDA (Bogotá, 2022); Teatro Konrad Lorenz (Bogotá, 2023); La Fructelería (Bogotá, 2023)
 
 ---

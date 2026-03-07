@@ -17,8 +17,12 @@ gallery:
 
 Performance that connects with ancestral memories through the embrace as an act of collective healing.
 
+A piece inspired by Francia Márquez's calls to turn care into political action, activating circles of mutual holding where the embrace becomes a tool of denunciation and repair.
+
 A community creation work that explores the embrace as a political and spiritual gesture of resistance.
 
-**Direction:** Le'Onyx Da'Vida
+**Performers:** Yulián Mosquera, Diasho Carabalí  
+**Direction:** Le'Onyx Da'Vida  
+**Performances:** Universidad CENDA (Bogotá, 2022); Teatro Konrad Lorenz (Bogotá, 2023); La Fructelería (Bogotá, 2023)
 
 ---

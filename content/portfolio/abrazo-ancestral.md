@@ -17,8 +17,12 @@ gallery:
 
 Performance que conecta con las memorias ancestrales a través del abrazo como acto de sanación colectiva.
 
+Inspirada en los llamados de Francia Márquez a convertir el cuidado en acción política, la pieza activa círculos de contención donde el abrazo se vuelve herramienta de denuncia y reparación.
+
 Un trabajo de creación comunitaria que explora el abrazo como gesto político y espiritual de resistencia.
 
-**Dirección:** Le'Onyx Da'Vida
+**Intérpretes:** Yulián Mosquera, Diasho Carabalí  
+**Dirección:** Le'Onyx Da'Vida  
+**Presentaciones:** Universidad CENDA (Bogotá, 2022); Teatro Konrad Lorenz (Bogotá, 2023); La Fructelería (Bogotá, 2023)
 
 ---
