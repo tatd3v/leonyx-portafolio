@@ -6,9 +6,16 @@ type: portfolio
 year: "2025"
 external_url: "https://www.leonyxdavida.com/2025/lengua-machete"
 tags: ["performance", "oralidad", "liberación", "danza", "ogun"]
-featured_image: ""
+featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/11_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_lkipsy.jpg"
 summary: "Performance que explora la oralidad como herramienta y arma de liberación de los pueblos negros, activando la voz como machete: filo ancestral, político y espiritual capaz de cortar y desmantelar verdades impuestas."
-gallery: []
+gallery:
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/11_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_lkipsy.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772904675/1_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_gzjzy8.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772904111/5_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_eixn7i.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772904112/4_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_ovxxwd.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/7_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_htx5t2.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/8_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_ljayzv.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929824/6_Performances_Museo_dl_Viernes_Negro_RED_GSF_2025_odrlnt.jpg"
 ---
 
 Lengua Machete explora la oralidad como una de las principales herramientas—y armas—de los pueblos negros en sus procesos de liberación.
