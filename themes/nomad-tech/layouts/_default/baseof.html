@@ -15,7 +15,7 @@
     {{ partial "analytics.html" . }}
     {{ end }}
 </head>
-<body>
+<body class="section-{{ .Section | default "home" }} type-{{ .Type | default "page" }}">
     <div class="particles" id="particles"></div>
     {{ partial "header.html" . }}
     <main id="main" role="main">

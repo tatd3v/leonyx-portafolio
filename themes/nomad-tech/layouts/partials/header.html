@@ -10,6 +10,7 @@
                 <span class="hamburger"></span>
             </button>
 
+            {{- $currentPage := . -}}
             <div class="lang-switcher" role="group" aria-label="Language selection">
                 <button class="lang-icon-toggle" id="lang-toggle" aria-expanded="false" aria-label="Language menu">
                     <svg class="lang-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -20,11 +21,22 @@
                 </button>
                 <div class="lang-dropdown" id="lang-dropdown">
                     {{ range .Site.Languages }}
-                    {{- $langPrefix := "" -}}
-                    {{- if ne .Lang "es" -}}
-                        {{- $langPrefix = printf "/%s" .Lang -}}
+                    {{- $href := "" -}}
+                    {{- if eq .Lang $currentPage.Lang -}}
+                        {{- $href = $currentPage.RelPermalink -}}
+                    {{- else -}}
+                        {{- $translations := where $currentPage.Translations "Lang" .Lang -}}
+                        {{- if gt (len $translations) 0 -}}
+                            {{- $href = (index $translations 0).RelPermalink -}}
+                        {{- else -}}
+                            {{- if eq .Lang "es" -}}
+                                {{- $href = "/" -}}
+                            {{- else -}}
+                                {{- $href = printf "/%s/" .Lang -}}
+                            {{- end -}}
+                        {{- end -}}
                     {{- end -}}
-                    <a href="{{ $langPrefix | strings.TrimPrefix "/" | absURL }}" 
+                    <a href="{{ $href }}" 
                        class="lang-link {{ if eq .Lang $.Site.Language.Lang }}active{{ end }}" 
                        aria-label="Switch to {{ .LanguageName }}" 
                        {{ if eq .Lang $.Site.Language.Lang }}aria-current="true"{{ end }}>
