@@ -68,6 +68,11 @@ main {
   }
 }
 
+body.section-portfolio main {
+  opacity: 1;
+  animation: none;
+}
+
 @keyframes fadeInContent {
   from {
     opacity: 0;
@@ -115,8 +120,7 @@ nav {
   font-size: 0.9rem;
 
   @media (max-width: 768px) {
-    gap: 0.2rem;
-    font-size: 0.8rem;
+    display: none;
   }
 }
 
