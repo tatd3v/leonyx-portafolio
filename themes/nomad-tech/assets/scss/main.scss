@@ -61,6 +61,13 @@ main {
   animation-delay: 0.1s;
 }
 
+@media (max-width: 768px) {
+  main {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 @keyframes fadeInContent {
   from {
     opacity: 0;
