@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $scratch := newScratch }}
 {{ range .Site.Params.contact }}
-    {{ $scratch.Set .name .value }}
+{{ $scratch.Set .name .value }}
 {{ end }}
 {{ $email := $scratch.Get "email" | default "leonyxdavida@gmail.com" }}
 {{ $whatsapp := $scratch.Get "whatsapp" | default "+57 321 366 8876" }}
@@ -11,7 +11,8 @@
     <div class="contact-page__overlay" aria-hidden="true"></div>
     <div class="contact-wrapper">
         <div class="contact-hero">
-            <p class="contact-eyebrow">{{ i18n "contactEyebrow" | default "Artista multidisciplinaria / educadora" }}</p>
+            <p class="contact-eyebrow">{{ i18n "contactEyebrow" | default "Artista multidisciplinaria / educadora" }}
+            </p>
             <h1 class="contact-heading">{{ .Title | upper }}</h1>
             <p class="contact-subtitle">{{ .Params.tagline | default (i18n "getInTouch" | default "Co-creemos movimientos, memoria y ritual.") }}</p>
         </div>
@@ -35,8 +36,10 @@
                 <div class="contact-card__header">
                     <span class="contact-card__icon contact-card__icon--whatsapp" aria-hidden="true">
                         <svg viewBox="0 0 24 24" role="presentation" focusable="false">
-                            <path d="M17.47 14.3c-.27-.14-1.63-.8-1.88-.9-.25-.08-.44-.13-.63.14-.19.26-.72.9-.88 1.08-.16.17-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.32-1.57-1.48-1.84-.16-.26-.02-.41.12-.55.13-.13.27-.33.4-.49.13-.17.17-.28.27-.47.09-.2.05-.36-.02-.5-.07-.13-.63-1.56-.86-2.13-.22-.53-.45-.46-.63-.47l-.54-.01c-.19 0-.5.07-.76.33-.27.26-1 1-1 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.23 4.9 4.54.68.29 1.21.47 1.62.6.68.22 1.3.19 1.8.12.55-.08 1.63-.66 1.86-1.29.23-.63.23-1.16.16-1.29-.08-.13-.25-.2-.52-.34z" />
-                            <path d="M12 2a10 10 0 0 0-8.94 14.49L2 22l5.66-1.48A10 10 0 1 0 12 2zm5.84 14.55c-.25.72-1.23 1.25-2.02 1.42-.54.11-1.24.2-3.6-.77-3.02-1.26-4.95-4.36-5.1-4.56-.15-.21-1.22-1.63-1.22-3.11 0-1.48.78-2.2 1.06-2.5.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18 0 .45-.07.7.53.25.6.85 2.1.93 2.25.08.15.13.33.02.53-.11.2-.17.33-.33.5-.16.17-.35.38-.15.74.2.37.9 1.54 1.93 2.5 1.33 1.23 2.44 1.62 2.8 1.8.36.17.57.15.78-.09.21-.23.9-1.05 1.14-1.41.24-.37.48-.31.8-.18.32.12 2.04.96 2.39 1.13.35.17.58.26.67.4.09.15.09.86-.16 1.58z" />
+                            <path
+                                d="M17.47 14.3c-.27-.14-1.63-.8-1.88-.9-.25-.08-.44-.13-.63.14-.19.26-.72.9-.88 1.08-.16.17-.32.2-.59.07-.27-.14-1.12-.41-2.14-1.31-.79-.7-1.32-1.57-1.48-1.84-.16-.26-.02-.41.12-.55.13-.13.27-.33.4-.49.13-.17.17-.28.27-.47.09-.2.05-.36-.02-.5-.07-.13-.63-1.56-.86-2.13-.22-.53-.45-.46-.63-.47l-.54-.01c-.19 0-.5.07-.76.33-.27.26-1 1-1 2.43 0 1.43 1.03 2.81 1.17 3 .14.19 2.02 3.23 4.9 4.54.68.29 1.21.47 1.62.6.68.22 1.3.19 1.8.12.55-.08 1.63-.66 1.86-1.29.23-.63.23-1.16.16-1.29-.08-.13-.25-.2-.52-.34z" />
+                            <path
+                                d="M12 2a10 10 0 0 0-8.94 14.49L2 22l5.66-1.48A10 10 0 1 0 12 2zm5.84 14.55c-.25.72-1.23 1.25-2.02 1.42-.54.11-1.24.2-3.6-.77-3.02-1.26-4.95-4.36-5.1-4.56-.15-.21-1.22-1.63-1.22-3.11 0-1.48.78-2.2 1.06-2.5.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.18 0 .45-.07.7.53.25.6.85 2.1.93 2.25.08.15.13.33.02.53-.11.2-.17.33-.33.5-.16.17-.35.38-.15.74.2.37.9 1.54 1.93 2.5 1.33 1.23 2.44 1.62 2.8 1.8.36.17.57.15.78-.09.21-.23.9-1.05 1.14-1.41.24-.37.48-.31.8-.18.32.12 2.04.96 2.39 1.13.35.17.58.26.67.4.09.15.09.86-.16 1.58z" />
                         </svg>
                     </span>
                     <div class="contact-card__meta">
@@ -44,7 +47,8 @@
                         <p class="contact-card__value">{{ $whatsapp }}</p>
                     </div>
                 </div>
-                <a class="contact-card__button" href="https://wa.me/{{ $cleanWa }}" target="_blank" rel="noopener noreferrer">
+                <a class="contact-card__button" href="https://wa.me/{{ $cleanWa }}" target="_blank"
+                    rel="noopener noreferrer">
                     <span>{{ i18n "messageNow" | default "Escríbeme" }}</span>
                     <span aria-hidden="true">↗</span>
                 </a>
@@ -65,9 +69,7 @@
             </div>
             <div class="contact-detail__visual" aria-hidden="true">
                 <img src="https://res.cloudinary.com/dpdq565fr/image/upload/v1774412419/Monserrate_RicardoBa%C3%A9z_davxun.jpg"
-                     alt="Vista panorámica de Monserrate"
-                     loading="lazy"
-                     class="contact-visual__image" />
+                    alt="Vista panorámica de Monserrate" loading="lazy" crossorigin="anonymous" class="contact-visual__image" />
             </div>
         </section>
 
@@ -76,15 +78,15 @@
                 <h3>{{ i18n "contactQuickMessage" | default "Envía un mensaje rápido" }}</h3>
                 <p>{{ i18n "contactQuickMessageHint" | default "Cuéntame sobre la visión, tiempos y territorio de tu proyecto." }}</p>
             </div>
-            <form class="contact-form__grid" netlify netlify-honeypot="bot-field" name="contact">
-                <input type="hidden" name="form-name" value="contact" />
+            <form class="contact-form__grid" id="contactForm">
+                <input type="hidden" name="bot-field" />
                 <label class="contact-field">
                     <span>Nombre</span>
-                    <input type="text" name="name" required placeholder="Tu nombre" />
+                    <input type="text" name="name" required placeholder="Tu nombre" autocomplete="name" />
                 </label>
                 <label class="contact-field">
                     <span>Proyecto</span>
-                    <select name="project" required>
+                    <select name="project" required autocomplete="off">
                         <option value="colaboracion">Colaboración artística</option>
                         <option value="educacion">Educación / talleres</option>
                         <option value="investigacion">Investigación</option>
@@ -93,7 +95,7 @@
                 </label>
                 <label class="contact-field contact-field--full">
                     <span>Mensaje</span>
-                    <textarea name="message" rows="4" required placeholder="Escribe tu mensaje..."></textarea>
+                    <textarea name="message" rows="4" required placeholder="Escribe tu mensaje..." autocomplete="off"></textarea>
                 </label>
                 <div class="contact-field contact-field--full">
                     <button type="submit" class="contact-submit">{{ i18n "sendMessage" | default "Enviar" }}</button>
@@ -105,20 +107,66 @@
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.contact-card__button[data-copy]').forEach(button => {
-        button.addEventListener('click', () => {
-            const value = button.getAttribute('data-copy');
-            const original = button.innerHTML;
-            navigator.clipboard.writeText(value).then(() => {
-                button.innerHTML = '<span>✓ {{ i18n "copied" | default "Copiado" }}</span>';
-                setTimeout(() => {
-                    button.innerHTML = original;
-                }, 1800);
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.contact-card__button[data-copy]').forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.getAttribute('data-copy');
+                const original = button.innerHTML;
+                navigator.clipboard.writeText(value).then(() => {
+                    button.innerHTML = '<span>✓ {{ i18n "copied" | default "Copiado" }}</span>';
+                    setTimeout(() => {
+                        button.innerHTML = original;
+                    }, 1800);
+                });
             });
         });
+
+        // Contact form handler
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const form = event.target;
+                const data = {
+                    name: form.name.value,
+                    project: form.project.value,
+                    message: form.message.value,
+                    email: form.email?.value || ''
+                };
+
+                // Honeypot check
+                if (form['bot-field'].value) {
+                    return; // silently ignore bot submissions
+                }
+
+                const submitBtn = form.querySelector('.contact-submit');
+                const originalText = submitBtn.textContent;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+
+                try {
+                    const response = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        form.reset();
+                        alert('Tu mensaje fue enviado. ¡Gracias!');
+                    } else {
+                        const err = await response.json();
+                        alert(err.error || 'No se pudo enviar el mensaje. Inténtalo más tarde.');
+                    }
+                } catch (err) {
+                    console.error('Submission error', err);
+                    alert('No se pudo enviar el mensaje. Inténtalo más tarde.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            });
+        }
     });
-});
 </script>
 {{ end }}
-
