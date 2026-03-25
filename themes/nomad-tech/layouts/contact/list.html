@@ -1,53 +1,117 @@
 {{ define "main" }}
+{{ $scratch := newScratch }}
+{{ range .Site.Params.contact }}
+    {{ $scratch.Set .name .value }}
+{{ end }}
+{{ $email := $scratch.Get "email" | default "leonyxdavida@gmail.com" }}
+{{ $whatsapp := $scratch.Get "whatsapp" | default "+57 321 366 8876" }}
+{{ $cleanWa := replace (replace $whatsapp " " "") "+" "" }}
+
 <div class="contact-page">
-    <div class="contact-container">
-        <h1 class="contact-title">{{ .Title }}</h1>
-        <p class="contact-tagline">{{ .Params.tagline | default (i18n "getInTouch" | default "¡Ponte en contacto!") }}</p>
-        
-        <div class="contact-list">
-            {{ range .Site.Params.contact }}
-            <div class="contact-row">
-                <span class="contact-label">{{ .name }}</span>
-                {{ if eq .name "whatsapp" }}
-                    {{ $clean := replace (replace .value " " "") "+" "" }}
-                    <a href="https://wa.me/{{ $clean }}" class="contact-link" target="_blank" rel="noopener noreferrer">{{ .value }}</a>
-                {{ else if eq .name "email" }}
-                    <span class="contact-value contact-email" data-email="{{ .value }}" onclick="copyEmail(this)" style="cursor: pointer;">{{ .value }}</span>
-                {{ else }}
-                    <span class="contact-value">{{ .value }}</span>
-                {{ end }}
-            </div>
-            {{ end }}
+    <div class="contact-page__overlay" aria-hidden="true"></div>
+    <div class="contact-wrapper">
+        <div class="contact-hero">
+            <p class="contact-eyebrow">{{ i18n "contactEyebrow" | default "Artista multidisciplinaria / educadora" }}</p>
+            <h1 class="contact-heading">{{ .Title | upper }}</h1>
+            <p class="contact-subtitle">{{ .Params.tagline | default (i18n "getInTouch" | default "Co-creemos movimientos, memoria y ritual.") }}</p>
         </div>
 
-        {{ if .Site.Params.social }}
-        <div class="contact-footer">
-            <span class="contact-label">{{ i18n "social" | default "Social" }}</span>
-            <a href="{{ (index .Site.Params.social 0).url }}" class="contact-link" target="_blank" rel="noopener noreferrer">
-                {{ (index .Site.Params.social 0).name }}
-            </a>
+        <div class="contact-grid">
+            <article class="contact-card contact-card--email">
+                <div class="contact-card__header">
+                    <span class="contact-card__icon">✉️</span>
+                    <div class="contact-card__meta">
+                        <span class="contact-card__label">{{ i18n "contactEmailLabel" | default "Correo" }}</span>
+                        <p class="contact-card__value">{{ $email }}</p>
+                    </div>
+                </div>
+                <button class="contact-card__button" type="button" data-copy="{{ $email }}">
+                    <span>{{ i18n "copyEmail" | default "Copiar correo" }}</span>
+                    <span aria-hidden="true">⧉</span>
+                </button>
+            </article>
+
+            <article class="contact-card contact-card--whatsapp">
+                <div class="contact-card__header">
+                    <span class="contact-card__icon">💬</span>
+                    <div class="contact-card__meta">
+                        <span class="contact-card__label">WhatsApp</span>
+                        <p class="contact-card__value">{{ $whatsapp }}</p>
+                    </div>
+                </div>
+                <a class="contact-card__button" href="https://wa.me/{{ $cleanWa }}" target="_blank" rel="noopener noreferrer">
+                    <span>{{ i18n "messageNow" | default "Escríbeme" }}</span>
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </article>
         </div>
-        {{ end }}
+
+        <section class="contact-detail">
+            <div class="contact-detail__text">
+                <h2>{{ i18n "contactLocationTitle" | default "Basada en Bogotá, trabajando para el mundo" }}</h2>
+                <p>{{ .Params.description | default "Disponible para colaboraciones internacionales, residencias, investigación y procesos pedagógicos enfocados en memoria, danza y ritual." }}</p>
+                {{ if .Site.Params.social }}
+                <div class="contact-socials">
+                    {{ range first 3 .Site.Params.social }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            <div class="contact-detail__visual" aria-hidden="true">
+                <div class="contact-pulse"></div>
+                <p>Bogotá · Colombia</p>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="contact-form__header">
+                <h3>{{ i18n "contactQuickMessage" | default "Envía un mensaje rápido" }}</h3>
+                <p>{{ i18n "contactQuickMessageHint" | default "Cuéntame sobre la visión, tiempos y territorio de tu proyecto." }}</p>
+            </div>
+            <form class="contact-form__grid" netlify netlify-honeypot="bot-field" name="contact">
+                <input type="hidden" name="form-name" value="contact" />
+                <label class="contact-field">
+                    <span>Nombre</span>
+                    <input type="text" name="name" required placeholder="Tu nombre" />
+                </label>
+                <label class="contact-field">
+                    <span>Proyecto</span>
+                    <select name="project" required>
+                        <option value="colaboracion">Colaboración artística</option>
+                        <option value="educacion">Educación / talleres</option>
+                        <option value="investigacion">Investigación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </label>
+                <label class="contact-field contact-field--full">
+                    <span>Mensaje</span>
+                    <textarea name="message" rows="4" required placeholder="Comparte la intención, tiempos y lugar."></textarea>
+                </label>
+                <div class="contact-field contact-field--full">
+                    <button type="submit" class="contact-submit">{{ i18n "sendMessage" | default "Enviar" }}</button>
+                </div>
+            </form>
+        </section>
+
     </div>
 </div>
 
 <script>
-function copyEmail(element) {
-    const email = element.getAttribute('data-email');
-    const originalText = element.textContent;
-    
-    navigator.clipboard.writeText(email).then(() => {
-        element.textContent = '✓ Copiado!';
-        element.style.color = 'var(--primary-color)';
-        
-        setTimeout(() => {
-            element.textContent = originalText;
-            element.style.color = 'var(--text-primary)';
-        }, 2000);
-    }).catch(err => {
-        console.error('Error copying email:', err);
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.contact-card__button[data-copy]').forEach(button => {
+        button.addEventListener('click', () => {
+            const value = button.getAttribute('data-copy');
+            const original = button.innerHTML;
+            navigator.clipboard.writeText(value).then(() => {
+                button.innerHTML = '<span>✓ {{ i18n "copied" | default "Copiado" }}</span>';
+                setTimeout(() => {
+                    button.innerHTML = original;
+                }, 1800);
+            });
+        });
     });
-}
+});
 </script>
 {{ end }}
 

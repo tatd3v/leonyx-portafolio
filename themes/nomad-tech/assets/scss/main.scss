@@ -108,7 +108,7 @@ body.section-portfolio nav {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .nav-top {
@@ -441,12 +441,6 @@ main {
 // Portfolio section specific padding
 .portfolio-container {
   padding-top: 7rem !important;
-}
-
-section {
-  min-height: 100vh;
-  padding: 0;
-  position: relative;
 }
 
 // Hero section
