@@ -14,33 +14,7 @@ $bio-text: #F2F2F2;
     justify-content: center;
     position: relative;
     background: transparent;
-    
-    // Decorative background brush stroke effect
-    &::before {
-        content: '';
-        position: absolute;
-        top: 10%;
-        left: 5%;
-        width: 200px;
-        height: 200px;
-        background: radial-gradient(circle, rgba($bio-primary, 0.15) 0%, transparent 70%);
-        border-radius: 50%;
-        filter: blur(40px);
-        z-index: 0;
-    }
-    
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 15%;
-        right: 8%;
-        width: 250px;
-        height: 250px;
-        background: radial-gradient(circle, rgba($bio-secondary, 0.12) 0%, transparent 70%);
-        border-radius: 50%;
-        filter: blur(50px);
-        z-index: 0;
-    }
+    z-index: 1;
 }
 
 .about-content {
@@ -55,18 +29,6 @@ $bio-text: #F2F2F2;
     border-left: none !important;
     position: relative;
     z-index: 1;
-    
-    // Artistic diagonal accent
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 150px;
-        height: 150px;
-        background: linear-gradient(135deg, $bio-primary 0%, transparent 60%);
-        opacity: 0.15;
-    }
 }
 
 .terminal-header {
@@ -265,11 +227,6 @@ $bio-text: #F2F2F2;
     
     .about-content {
         border-left-width: 3px;
-        
-        &::before {
-            width: 80px;
-            height: 80px;
-        }
     }
     
     .terminal-header {
