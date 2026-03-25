@@ -104,7 +104,10 @@ class NomadTheme {
       });
     });
 
-    observer.observe(document.querySelector('.hero'));
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      observer.observe(hero);
+    }
   }
 
   createParticles() {
