@@ -62,14 +62,27 @@
                 {{ if .Site.Params.social }}
                 <div class="contact-socials">
                     {{ range first 3 .Site.Params.social }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                        {{ if eq .class "instagram" }}
+                        {{ end }}
+                        {{ .name }}
+                    </a>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                            stroke-width="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor"
+                            stroke-width="2" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
                     {{ end }}
                 </div>
                 {{ end }}
             </div>
             <div class="contact-detail__visual" aria-hidden="true">
                 <img src="https://res.cloudinary.com/dpdq565fr/image/upload/v1774412419/Monserrate_RicardoBa%C3%A9z_davxun.jpg"
-                    alt="Vista panorámica de Monserrate" loading="lazy" crossorigin="anonymous" class="contact-visual__image" />
+                    alt="Vista panorámica de Monserrate" loading="lazy" crossorigin="anonymous"
+                    class="contact-visual__image" />
             </div>
         </section>
 
@@ -78,23 +91,28 @@
                 <h3>{{ i18n "contactQuickMessage" | default "Envía un mensaje rápido" }}</h3>
                 <p>{{ i18n "contactQuickMessageHint" | default "Cuéntame sobre la visión, tiempos y territorio de tu proyecto." }}</p>
             </div>
-            <form class="contact-form__grid" netlify netlify-honeypot="bot-field" name="contact" action="{{ "/contact/success/" | relLangURL }}">
+            <form class="contact-form__grid" netlify netlify-honeypot="bot-field" name="contact" method="POST"
+                action="{{ " /contact/success/" | relLangURL }}">
                 <input type="hidden" name="form-name" value="contact" />
                 <p class="hidden">
-                    <label>{{ i18n "botFieldLabel" | default "No llenes esto si eres humano" }}: <input name="bot-field" /></label>
+                    <label>{{ i18n "botFieldLabel" | default "No llenes esto si eres humano" }}: <input
+                            name="bot-field" /></label>
                 </p>
                 <label class="contact-field">
                     <span>{{ i18n "formNameLabel" | default "Nombre" }}</span>
-                    <input type="text" name="name" required placeholder="{{ i18n "formNamePlaceholder" | default "Tu nombre" }}" autocomplete="name" />
+                    <input type="text" name="name" required placeholder="{{ i18n " formNamePlaceholder" |
+                        default "Tu nombre" }}" autocomplete="name" />
                 </label>
                 <label class="contact-field">
                     <span>{{ i18n "formEmailLabel" | default "Email" }}</span>
-                    <input type="email" name="email" placeholder="{{ i18n "formEmailPlaceholder" | default "tu@email.com" }}" autocomplete="email" />
+                    <input type="email" name="email" placeholder="{{ i18n " formEmailPlaceholder" |
+                        default "tu@email.com" }}" autocomplete="email" />
                 </label>
                 <label class="contact-field">
                     <span>{{ i18n "formProjectLabel" | default "Proyecto" }}</span>
                     <select name="project" required autocomplete="off">
-                        <option value="colaboracion">{{ i18n "optionCollaboration" | default "Colaboración artística" }}</option>
+                        <option value="colaboracion">{{ i18n "optionCollaboration" | default "Colaboración artística" }}
+                        </option>
                         <option value="educacion">{{ i18n "optionEducation" | default "Educación / talleres" }}</option>
                         <option value="investigacion">{{ i18n "optionResearch" | default "Investigación" }}</option>
                         <option value="otro">{{ i18n "optionOther" | default "Otro" }}</option>
@@ -102,7 +120,8 @@
                 </label>
                 <label class="contact-field contact-field--full">
                     <span>{{ i18n "formMessageLabel" | default "Mensaje" }}</span>
-                    <textarea name="message" rows="4" required placeholder="{{ i18n "formMessagePlaceholder" | default "Escribe tu mensaje..." }}" autocomplete="off"></textarea>
+                    <textarea name="message" rows="4" required placeholder="{{ i18n " formMessagePlaceholder" |
+                        default "Escribe tu mensaje..." }}" autocomplete="off"></textarea>
                 </label>
                 <div class="contact-field contact-field--full">
                     <button type="submit" class="contact-submit">{{ i18n "sendMessage" | default "Enviar" }}</button>
@@ -115,6 +134,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Copy email functionality
         document.querySelectorAll('.contact-card__button[data-copy]').forEach(button => {
             button.addEventListener('click', () => {
                 const value = button.getAttribute('data-copy');
@@ -128,54 +148,17 @@
             });
         });
 
-        // Contact form handler (disabled for Netlify)
-        /*
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async (event) => {
-                event.preventDefault();
-                const form = event.target;
-                const data = {
-                    name: form.name.value,
-                    project: form.project.value,
-                    message: form.message.value,
-                    email: form.email?.value || ''
-                };
-
-                // Honeypot check
-                if (form['bot-field'].value) {
-                    return; // silently ignore bot submissions
-                }
-
-                const submitBtn = form.querySelector('.contact-submit');
-                const originalText = submitBtn.textContent;
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Enviando...';
-
-                try {
-                    const response = await fetch('/api/contact', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(data)
-                    });
-
-                    if (response.ok) {
-                        form.reset();
-                        alert('Tu mensaje fue enviado. ¡Gracias!');
-                    } else {
-                        const err = await response.json();
-                        alert(err.error || 'No se pudo enviar el mensaje. Inténtalo más tarde.');
-                    }
-                } catch (err) {
-                    console.error('Submission error', err);
-                    alert('No se pudo enviar el mensaje. Inténtalo más tarde.');
-                } finally {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalText;
-                }
-            });
+        // Local development fallback for form submission
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            const contactForm = document.querySelector('form[name="contact"]');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    setTimeout(() => {
+                        window.location.href = contactForm.getAttribute('action');
+                    }, 1000);
+                });
+            }
         }
-        */
     });
 </script>
 {{ end }}

@@ -1,5 +1,5 @@
 [contactEyebrow]
-other = "Artista multidisciplinaria / educadora"
+other = "Artista multidisciplinarie / educadore"
 
 [getInTouch]
 other = "Co-creemos movimientos, memoria y ritual."
@@ -81,3 +81,6 @@ other = "Investigación"
 
 [optionOther]
 other = "Otro"
+
+[changeLanguage]
+other = "Cambiar idioma"

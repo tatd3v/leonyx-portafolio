@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="contact-page">
+  <div class="contact-page__overlay" aria-hidden="true"></div>
+  <div class="contact-wrapper">
+    <div class="contact-success">
+      <div class="contact-success__card">
+        <!-- Success Icon with Glow -->
+        <div class="contact-success__icon-wrapper">
+          <div class="contact-success__icon-glow"></div>
+          <div class="contact-success__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="contact-success__content">
+          <h1 class="contact-success__title">{{ i18n "formSuccessTitle" | default "¡MENSAJE ENVIADO!" }}</h1>
+          <div class="contact-success__divider"></div>
+          <p class="contact-success__message">{{ i18n "formSuccessMessage" | default "Gracias por escribir. Responderé lo antes posible." }}</p>
+        </div>
+
+        <!-- Action Button -->
+        <div class="contact-success__actions">
+          <a href="{{ "/" | relLangURL }}" class="contact-success__button">
+            <span>{{ i18n "backToPortfolio" | default "Volver al Portfolio" }}</span>
+            <span aria-hidden="true">←</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

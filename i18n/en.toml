@@ -81,3 +81,6 @@ other = "Research"
 
 [optionOther]
 other = "Other"
+
+[changeLanguage]
+other = "Change language"
