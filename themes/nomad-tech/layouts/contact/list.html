@@ -84,25 +84,25 @@
                     <label>{{ i18n "botFieldLabel" | default "No llenes esto si eres humano" }}: <input name="bot-field" /></label>
                 </p>
                 <label class="contact-field">
-                    <span>Nombre</span>
-                    <input type="text" name="name" required placeholder="Tu nombre" autocomplete="name" />
+                    <span>{{ i18n "formNameLabel" | default "Nombre" }}</span>
+                    <input type="text" name="name" required placeholder="{{ i18n "formNamePlaceholder" | default "Tu nombre" }}" autocomplete="name" />
                 </label>
                 <label class="contact-field">
-                    <span>Email</span>
-                    <input type="email" name="email" placeholder="tu@email.com" autocomplete="email" />
+                    <span>{{ i18n "formEmailLabel" | default "Email" }}</span>
+                    <input type="email" name="email" placeholder="{{ i18n "formEmailPlaceholder" | default "tu@email.com" }}" autocomplete="email" />
                 </label>
                 <label class="contact-field">
-                    <span>Proyecto</span>
+                    <span>{{ i18n "formProjectLabel" | default "Proyecto" }}</span>
                     <select name="project" required autocomplete="off">
-                        <option value="colaboracion">Colaboración artística</option>
-                        <option value="educacion">Educación / talleres</option>
-                        <option value="investigacion">Investigación</option>
-                        <option value="otro">Otro</option>
+                        <option value="colaboracion">{{ i18n "optionCollaboration" | default "Colaboración artística" }}</option>
+                        <option value="educacion">{{ i18n "optionEducation" | default "Educación / talleres" }}</option>
+                        <option value="investigacion">{{ i18n "optionResearch" | default "Investigación" }}</option>
+                        <option value="otro">{{ i18n "optionOther" | default "Otro" }}</option>
                     </select>
                 </label>
                 <label class="contact-field contact-field--full">
-                    <span>Mensaje</span>
-                    <textarea name="message" rows="4" required placeholder="Escribe tu mensaje..." autocomplete="off"></textarea>
+                    <span>{{ i18n "formMessageLabel" | default "Mensaje" }}</span>
+                    <textarea name="message" rows="4" required placeholder="{{ i18n "formMessagePlaceholder" | default "Escribe tu mensaje..." }}" autocomplete="off"></textarea>
                 </label>
                 <div class="contact-field contact-field--full">
                     <button type="submit" class="contact-submit">{{ i18n "sendMessage" | default "Enviar" }}</button>

@@ -48,3 +48,36 @@ other = "Encryption active"
 
 [socialNetworks]
 other = "Social Networks"
+
+[formNameLabel]
+other = "Name"
+
+[formEmailLabel]
+other = "Email"
+
+[formProjectLabel]
+other = "Project"
+
+[formMessageLabel]
+other = "Message"
+
+[formNamePlaceholder]
+other = "Your name"
+
+[formEmailPlaceholder]
+other = "your@email.com"
+
+[formMessagePlaceholder]
+other = "Write your message..."
+
+[optionCollaboration]
+other = "Artistic collaboration"
+
+[optionEducation]
+other = "Education / workshops"
+
+[optionResearch]
+other = "Research"
+
+[optionOther]
+other = "Other"

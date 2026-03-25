@@ -48,3 +48,36 @@ other = "Chiffrement actif"
 
 [socialNetworks]
 other = "Réseaux Sociaux"
+
+[formNameLabel]
+other = "Nom"
+
+[formEmailLabel]
+other = "Email"
+
+[formProjectLabel]
+other = "Projet"
+
+[formMessageLabel]
+other = "Message"
+
+[formNamePlaceholder]
+other = "Votre nom"
+
+[formEmailPlaceholder]
+other = "votre@email.com"
+
+[formMessagePlaceholder]
+other = "Écrivez votre message..."
+
+[optionCollaboration]
+other = "Collaboration artistique"
+
+[optionEducation]
+other = "Éducation / ateliers"
+
+[optionResearch]
+other = "Recherche"
+
+[optionOther]
+other = "Autre"
