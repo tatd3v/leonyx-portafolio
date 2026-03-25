@@ -243,6 +243,13 @@ $contact-grid-gap: clamp(1.5rem, 2vw, 2.5rem);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  .hidden {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    visibility: hidden;
+  }
 }
 
 .contact-form__header p {
