@@ -167,7 +167,7 @@ $contact-grid-gap: clamp(1.5rem, 2vw, 2.5rem);
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 0.5rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
 
@@ -216,13 +216,20 @@ $contact-grid-gap: clamp(1.5rem, 2vw, 2.5rem);
 
 @media (max-width: 768px) {
   .contact-detail {
-    gap: $contact-grid-gap;
+    gap: 0;
+    grid-template-columns: 1fr;
   }
 
-  .contact-detail__text,
-  .contact-detail__visual {
-    border-radius: 1.5rem;
+  .contact-detail__text {
+    border-radius: 1.5rem 1.5rem 0 0;
     border: 1px solid var(--glass-border);
+    border-bottom: none;
+  }
+
+  .contact-detail__visual {
+    border-radius: 0 0 1.5rem 1.5rem;
+    border: 1px solid var(--glass-border);
+    border-top: none;
   }
 }
 

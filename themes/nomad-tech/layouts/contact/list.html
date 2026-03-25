@@ -57,16 +57,11 @@
 
         <section class="contact-detail">
             <div class="contact-detail__text">
-                <h2>{{ i18n "contactLocationTitle" | default "Vivo en Colombia, trabajo todo para el mundo." }}</h2>
+                <h2>{{ i18n "contactLocationTitle" | default "Vivo en Colombia, trabajo en todo el mundo." }}</h2>
                 <h3>{{ i18n "socialNetworks" | default "Redes Sociales" }}</h3>
                 {{ if .Site.Params.social }}
                 <div class="contact-socials">
                     {{ range first 3 .Site.Params.social }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-                        {{ if eq .class "instagram" }}
-                        {{ end }}
-                        {{ .name }}
-                    </a>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
                             stroke-width="2" />
@@ -75,6 +70,11 @@
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" />
                     </svg>
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                        {{ if eq .class "instagram" }}
+                        {{ end }}
+                        {{ .name }}
+                    </a>
                     {{ end }}
                 </div>
                 {{ end }}
