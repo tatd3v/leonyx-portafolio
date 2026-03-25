@@ -1,0 +1,50 @@
+[contactEyebrow]
+other = "Multidisciplinary artist / educator"
+
+[getInTouch]
+other = "Let's co-create movements, memory, and ritual."
+
+[contactEmailLabel]
+other = "Email"
+
+[copyEmail]
+other = "Copy email"
+
+[messageNow]
+other = "Message me"
+
+[contactLocationTitle]
+other = "Based in Colombia, working with the world."
+
+[contactQuickMessage]
+other = "Send a quick message"
+
+[contactQuickMessageHint]
+other = "Tell me about the vision, timeline, and territory of your project."
+
+[botFieldLabel]
+other = "Don't fill this if you're human"
+
+[sendMessage]
+other = "Send"
+
+[copied]
+other = "Copied"
+
+[formSuccessTitle]
+other = "MESSAGE SENT!"
+
+[formSuccessMessage]
+other = "Thank you for writing. I'll respond as soon as possible."
+
+[backToPortfolio]
+other = "Back to Portfolio"
+
+[status]
+other = "Status"
+
+[encryptionActive]
+other = "Encryption active"
+
+[socialNetworks]
+other = "Social Networks"

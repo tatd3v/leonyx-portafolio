@@ -11,7 +11,7 @@
     <div class="contact-page__overlay" aria-hidden="true"></div>
     <div class="contact-wrapper">
         <div class="contact-hero">
-            <p class="contact-eyebrow">{{ i18n "contactEyebrow" | default "Artista multidisciplinaria / educadora" }}
+            <p class="contact-eyebrow">{{ i18n "contactEyebrow" | default "Artista multidisciplinarie / educadore" }}
             </p>
             <h1 class="contact-heading">{{ .Title | upper }}</h1>
             <p class="contact-subtitle">{{ .Params.tagline | default (i18n "getInTouch" | default "Co-creemos movimientos, memoria y ritual.") }}</p>
@@ -58,7 +58,7 @@
         <section class="contact-detail">
             <div class="contact-detail__text">
                 <h2>{{ i18n "contactLocationTitle" | default "Vivo en Colombia, trabajo todo para el mundo." }}</h2>
-                <p>{{ .Params.description | default "Disponible para colaboraciones internacionales, residencias, investigación y procesos pedagógicos enfocados en memoria, danza y ritual." }}</p>
+                <h3>{{ i18n "socialNetworks" | default "Redes Sociales" }}</h3>
                 {{ if .Site.Params.social }}
                 <div class="contact-socials">
                     {{ range first 3 .Site.Params.social }}

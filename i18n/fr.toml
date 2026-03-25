@@ -1,0 +1,50 @@
+[contactEyebrow]
+other = "Artiste multidisciplinaire / éducatrice"
+
+[getInTouch]
+other = "Co-créons des mouvements, mémoire et rituel."
+
+[contactEmailLabel]
+other = "Email"
+
+[copyEmail]
+other = "Copier l'email"
+
+[messageNow]
+other = "Envoyez-moi un message"
+
+[contactLocationTitle]
+other = "Basée en Colombie, je travaille avec le monde entier."
+
+[contactQuickMessage]
+other = "Envoyez un message rapide"
+
+[contactQuickMessageHint]
+other = "Parlez-moi de la vision, du calendrier et du territoire de votre projet."
+
+[botFieldLabel]
+other = "Ne remplissez pas ceci si vous êtes humain"
+
+[sendMessage]
+other = "Envoyer"
+
+[copied]
+other = "Copié"
+
+[formSuccessTitle]
+other = "MESSAGE ENVOYÉ!"
+
+[formSuccessMessage]
+other = "Merci pour votre message. Je répondrai dès que possible."
+
+[backToPortfolio]
+other = "Retour au Portfolio"
+
+[status]
+other = "Statut"
+
+[encryptionActive]
+other = "Chiffrement actif"
+
+[socialNetworks]
+other = "Réseaux Sociaux"

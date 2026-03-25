@@ -1,0 +1,50 @@
+[contactEyebrow]
+other = "Artista multidisciplinaria / educadora"
+
+[getInTouch]
+other = "Co-creemos movimientos, memoria y ritual."
+
+[contactEmailLabel]
+other = "Correo"
+
+[copyEmail]
+other = "Copiar correo"
+
+[messageNow]
+other = "Escríbeme"
+
+[contactLocationTitle]
+other = "Vivo en Colombia, trabajo con todo el mundo."
+
+[contactQuickMessage]
+other = "Envía un mensaje rápido"
+
+[contactQuickMessageHint]
+other = "Cuéntame sobre la visión, tiempos y territorio de tu proyecto."
+
+[botFieldLabel]
+other = "No llenes esto si eres humano"
+
+[sendMessage]
+other = "Enviar"
+
+[copied]
+other = "Copiado"
+
+[formSuccessTitle]
+other = "¡MENSAJE ENVIADO!"
+
+[formSuccessMessage]
+other = "Gracias por escribir. Responderé lo antes posible."
+
+[backToPortfolio]
+other = "Volver al Portfolio"
+
+[status]
+other = "Estado"
+
+[encryptionActive]
+other = "Encriptación activa"
+
+[socialNetworks]
+other = "Redes Sociales"
