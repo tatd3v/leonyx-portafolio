@@ -78,7 +78,7 @@
                 <h3>{{ i18n "contactQuickMessage" | default "Envía un mensaje rápido" }}</h3>
                 <p>{{ i18n "contactQuickMessageHint" | default "Cuéntame sobre la visión, tiempos y territorio de tu proyecto." }}</p>
             </div>
-            <form class="contact-form__grid" netlify netlify-honeypot="bot-field" name="contact">
+            <form class="contact-form__grid" netlify netlify-honeypot="bot-field" name="contact" action="{{ "/contact/success/" | relLangURL }}">
                 <input type="hidden" name="form-name" value="contact" />
                 <p class="hidden">
                     <label>{{ i18n "botFieldLabel" | default "No llenes esto si eres humano" }}: <input name="bot-field" /></label>
@@ -86,6 +86,10 @@
                 <label class="contact-field">
                     <span>Nombre</span>
                     <input type="text" name="name" required placeholder="Tu nombre" autocomplete="name" />
+                </label>
+                <label class="contact-field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="tu@email.com" autocomplete="email" />
                 </label>
                 <label class="contact-field">
                     <span>Proyecto</span>
