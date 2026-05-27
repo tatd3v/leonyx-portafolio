@@ -1,5 +1,5 @@
 baseURL = "https://leonyxdavida.com"
-defaultContentLanguage = "es"
+defaultContentLanguage = "fr"
 theme = "nomad-tech"
 
 [pagination]
@@ -10,20 +10,20 @@ theme = "nomad-tech"
   tag = "tags"
 
 [languages]
-  [languages.es]
-    languageCode = "es-ES"
+  [languages.fr]
+    languageCode = "fr-FR"
     contentDir = "content"
-    title = "Le'Onyx Da'Vida - Artista multidisciplinar, profesorx e investigadorx"
+    title = "Le'Onyx Da'Vida – Artiste pluridisciplinaire, enseignant·e et chercheur·e"
     weight = 1
   [languages.en]
     languageCode = "en-US"
     contentDir = "content/en"
     title = "Le'Onyx Da'Vida - Multidisciplinary artist, educator, and researcher"
     weight = 2
-  [languages.fr]
-    languageCode = "fr-FR"
-    contentDir = "content/fr"
-    title = "Le'Onyx Da'Vida – Artiste pluridisciplinaire, enseignant·e et chercheur·e"
+  [languages.es]
+    languageCode = "es-ES"
+    contentDir = "content/es"
+    title = "Le'Onyx Da'Vida - Artista multidisciplinar, profesorx e investigadorx"
     weight = 3
 
 [params]

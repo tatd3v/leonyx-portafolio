@@ -1,13 +1,13 @@
 ---
-title: "Ancestrans ecos que trascienden"
+title: "Échos ancestraux qui transcendent"
 date: 2023-01-01T00:00:00Z
 draft: false
 type: portfolio
 year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/ancestrans-ecos-que-trascienden"
-tags: ["performance", "ancestral", "memoria", "espiritualidad"]
+tags: ["performance", "ancestral", "mémoire", "spiritualité"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821063/ecos_que_transcienden_1_ubs8eh.jpg"
-summary: "Performance ritual que conecta con las memorias ancestrales a través de ecos vibracionales que trascienden el tiempo y el espacio."
+summary: "Performance rituel qui connecte avec les mémoires ancestrales à travers des échos vibrationnels qui transcendent le temps et l'espace."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821063/ecos_que_transcienden_1_ubs8eh.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769821062/ecos_que_transcienden_2_obbams.jpg",
@@ -16,10 +16,10 @@ gallery: [
 ]
 ---
 
-Performance que explora los ecos de las voces ancestrales que resuenan en el presente y trascienden el tiempo.
+Performance qui explore les échos des voix ancestrales qui résonnent dans le présent et transcendent le temps.
 
-Una investigación sobre las memorias colectivas y las energías espirituales que persisten a través de generaciones.
+Une investigation sur les mémoires collectives et les énergies spirituelles qui persistent à travers les générations.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

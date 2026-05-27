@@ -1,12 +1,12 @@
 ---
-title: "Contacto"
-description: "Información de contacto para Le'Onyx Da'Vida"
+title: "Contactez-moi"
+description: "Informations de contact pour Le'Onyx Da'Vida"
 layout: "contact"
 ---
 
-# Contacto
+# Contactez-moi
 
-Conecta con Le'Onyx Da'Vida para colaboraciones artísticas, proyectos comunitarios, o consultas académicas.
+Connectez-vous avec Le'Onyx Da'Vida pour des collaborations artistiques, des projets communautaires, ou des consultations académiques.
 
 ## 📧 Email
 
@@ -23,40 +23,40 @@ Conecta con Le'Onyx Da'Vida para colaboraciones artísticas, proyectos comunitar
 
 <div class="contact-file">
     <div class="file-icon">📱</div>
-    <div class="file-name">Whatsapp</div>
+    <div class="file-name">WhatsApp</div>
     <div class="file-content">
         <a href="tel:+573213668876">+573213668876<span class="external-icon">↗</span></a>
     </div>
 </div>
 
-## 🎭 Áreas de Colaboración
+## 🎭 Domaines de Collaboration
 
-### Artística
-- Performances y danza contemporánea
-- Proyectos de arte comunitario
-- Residencias artísticas
-- Exposiciones y galerías
+### Artistique
+- Performances et danse contemporaine
+- Projets d'art communautaire
+- Résidences artistiques
+- Expositions et galeries
 
-### Académica
-- Conferencias y talleres
-- Investigación colaborativa
-- Publicaciones y escritos
-- Asesorías pedagógicas
+### Académique
+- Conférences et ateliers
+- Recherche collaborative
+- Publications et écrits
+- Conseil pédagogique
 
-### Activismo
-- Proyectos con comunidades afrodescendientes
-- Trabajo con disidencias de género
-- Iniciativas culturales
-- Movimiento AfroNtando
+### Activisme
+- Projets avec les communautés afro-descendantes
+- Travail avec les dissidences de genre
+- Initiatives culturelles
+- Mouvement AfroNtando
 
-## 📍 Ubicación
+## 📍 Localisation
 
-Bogotá, Colombia
-Disponible para proyectos nacionales e internacionales.
+Bogotá, Colombie
+Disponible pour des projets nationaux et internationaux.
 
 ---
 
-*Para consultas profesionales, favor de incluir detalles del proyecto y plazo en el mensaje inicial.*
+*Pour les consultations professionnelles, veuillez inclure les détails du projet et le calendrier dans le message initial.*
 
 <script>
 function copyEmail() {
@@ -64,7 +64,7 @@ function copyEmail() {
     navigator.clipboard.writeText(email).then(function() {
         const emailElement = document.getElementById('contact-email');
         const originalText = emailElement.textContent;
-        emailElement.textContent = '¡Copiado!';
+        emailElement.textContent = 'Copié!';
         setTimeout(function() {
             emailElement.textContent = originalText;
         }, 2000);

@@ -1,13 +1,13 @@
 ---
-title: "Declaración"
-description: "Declaración artística de Le'Onyx Da'Vida"
+title: "Déclaration"
+description: "Déclaration artistique de Le'Onyx Da'Vida"
 type: about
 ---
 
-# Declaración
+# Déclaration
 
-Mi práctica artística parte de mi cuerpo como archivo vivo, en donde latidos de memorias ancestrales, grietas históricas y fuerzas espirituales sobreviven y viven, encarando el mundo desde un accionar artístico-político. Desde la danza, el performance y la experimentación multidisciplinar, asumo el cuerpo no como representación, sino como invocación: un medio de resistencia, de sanación y de construcción colectiva.
+Ma pratique artistique part de mon corps comme archive vivante, où battent des mémoires ancestrales, des fissures historiques et des forces spirituelles qui survivent et vivent, affrontant le monde depuis une action artistico-politique. À travers la danse, la performance et l'expérimentation multidisciplinaire, j'assume le corps non pas comme représentation, mais comme invocation : un moyen de résistance, de guérison et de construction collective.
 
-Desde el trabajo comunitario busco situar las experiencias negras y travestis como ejes de creación y reflexión. Es por eso que mi visión artística y creativa se articula en torno a la espiritualidad, el rito y la memoria encarnada, reconociendo que cada gesto, cada movimiento, es una potencia de acción política y transformadora.
+À travers le travail communautaire, je cherche à situer les expériences noires et travesties comme axes de création et de réflexion. C'est pourquoi ma vision artistique et créative s'articule autour de la spiritualité, du rituel et de la mémoire incarnée, reconnaissant que chaque geste, chaque mouvement, est une puissance d'action politique et transformatrice.
 
-Creo en la posibilidad que tiene el arte como espacio para confrontar la realidad presente y, al mismo tiempo, para imaginar y conjurar otros futuros ya existentes.
+Je crois en la possibilité qu'a l'art comme espace pour confronter la réalité présente et, en même temps, pour imaginer et conjurer d'autres futurs déjà existants.

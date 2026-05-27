@@ -1,8 +1,8 @@
 ---
-title: "Redes Sociales"
-description: "Conéctate conmigo en diferentes plataformas"
+title: "Réseaux Sociaux"
+description: "Connectez-vous avec moi sur différentes plateformes"
 ---
 
-# Sígueme
+# Suivez-moi
 
-Conoce mi trabajo artístico, procesos creativos y proyectos comunitarios a través de mis redes sociales.
+Découvrez mon travail artistique, mes processus créatifs et mes projets communautaires à travers mes réseaux sociaux.

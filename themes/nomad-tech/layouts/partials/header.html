@@ -2,7 +2,7 @@
     <div class="container nav-container">
         <!-- Top Row: Logo, Menu Toggle, and Language Switcher -->
         <div class="nav-top">
-            <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo | default "Le'Onyx" }}</a>
+            <a href="{{ .Site.Home.RelPermalink }}" class="logo" aria-label="{{ .Site.Title }} - Home">{{ .Site.Params.logo | default "Le''Onyx" }}</a>
             
             <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-modal" aria-label="Toggle navigation menu">
                 <span class="hamburger"></span>
@@ -29,17 +29,19 @@
                         {{- if gt (len $translations) 0 -}}
                             {{- $href = (index $translations 0).RelPermalink -}}
                         {{- else -}}
+                            {{- $pagePath := strings.TrimPrefix (printf "/%s/" $currentPage.Lang) $currentPage.RelPermalink -}}
+                            {{- $pagePath = strings.TrimPrefix "/" $pagePath -}}
                             {{- if eq .Lang "es" -}}
-                                {{- $href = "/" -}}
+                                {{- $href = printf "/%s" $pagePath -}}
                             {{- else -}}
-                                {{- $href = printf "/%s/" .Lang -}}
+                                {{- $href = printf "/%s/%s" .Lang $pagePath -}}
                             {{- end -}}
                         {{- end -}}
                     {{- end -}}
                     <a href="{{ $href }}" 
-                       class="lang-link {{ if eq .Lang $.Site.Language.Lang }}active{{ end }}" 
+                       class="lang-link {{ if eq .Lang $currentPage.Lang }}active{{ end }}" 
                        aria-label="Switch to {{ .LanguageName }}" 
-                       {{ if eq .Lang $.Site.Language.Lang }}aria-current="true"{{ end }}>
+                       {{ if eq .Lang $currentPage.Lang }}aria-current="true"{{ end }}>
                         {{- if eq .Lang "es" -}}🇪🇸 Español{{- else if eq .Lang "en" -}}🇺🇸 English{{- else if eq .Lang "fr" -}}🇫🇷 Français{{- else -}}{{ .Lang | upper }}{{- end -}}
                     </a>
                     {{ end }}

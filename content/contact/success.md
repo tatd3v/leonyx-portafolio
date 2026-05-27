@@ -1,4 +1,4 @@
 ---
-title: "Mensaje enviado"
-description: "Tu mensaje ha sido enviado correctamente."
+title: "Message envoyé"
+description: "Votre message a été envoyé avec succès."
 ---

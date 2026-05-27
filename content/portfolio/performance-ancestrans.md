@@ -7,7 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/performance-ancestrans"
 tags: ["performance", "ancestral", "memoria", "ritual"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818358/ancestrans_1_p7b2xo.jpg"
-summary: "Performance ritual que activa el cuerpo como archivo viviente para conectar con memorias y saberes ancestrales manifestados a través del movimiento."
+summary: "Performance rituelle qui active le corps comme archive vivante pour connecter avec des mémoires et savoirs ancestraux manifestés par le mouvement."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818358/ancestrans_1_p7b2xo.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818356/ancestrans_2_pbgn5s.jpg",
@@ -15,10 +15,10 @@ gallery: [
 ]
 ---
 
-Performance que conecta con las memorias y saberes ancestrales a través del cuerpo como archivo viviente.
+Performance qui se connecte aux mémoires et savoirs ancestraux à travers le corps comme archive vivante.
 
-Una exploración de las herencias culturales y espirituales que habitan en nosotros y se manifiestan a través del movimiento.
+Une exploration des héritages culturels et spirituels qui habitent en nous et se manifestent à travers le mouvement.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

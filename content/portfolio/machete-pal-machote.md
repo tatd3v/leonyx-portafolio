@@ -5,9 +5,9 @@ draft: false
 type: portfolio
 year: "2025"
 external_url: "https://www.leonyxdavida.com/2025/machete-pal-machote"
-tags: ["danza", "performance", "trans", "memoria", "ogun", "afrofuturismo"]
+tags: ["danse", "performance", "trans", "mémoire", "ogun", "afrofuturisme"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850334/machete_2_ukoscg.jpg"
-summary: "Danza-performance que conmemora las vidas trans negras asesinadas bajo la violencia del macho, transformando el dolor en acción ritual de memoria, furia y resistencia a través de machetes, fuego y voguing."
+summary: "Danse-performance commémorant les vies trans noires assassinées par la violence patriarcale, transformant le deuil en acte rituel de mémoire, de fureur et de résistance à travers machettes, feu et voguing."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850334/machete_2_ukoscg.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850334/machete_1_nexhi6.jpg"
@@ -26,12 +26,12 @@ gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772850331/machete_16_aevuf3.jpg"
 ---
 
-Machete pal Machote es una pieza de danza–performance que conmemora las vidas trans negras asesinadas bajo la violencia del macho, transformando el dolor en una acción ritual de memoria, furia y resistencia.
+Machete pal Machote est une danse–performance qui commémore les vies de personnes trans noires assassinées par la violence patriarcale, transformant le deuil en un acte rituel de mémoire, de fureur et de résistance.
 
-La obra se activa a través de la danza con un par de machetes y la invocación mediante el fuego y el humo del tabaqueo, convocando fuerzas ancestrales para enfrentar y denunciar las violencias que persisten sobre los cuerpos negros y disidentes de género.
+L'œuvre s'active à travers la danse avec une paire de machettes et par l'invocation via le feu et la fumée de tabac, appelant les forces ancestrales pour confronter et dénoncer les violences qui persistent contre les corps noirs et de genre divers.
 
-Al combinar la danza de Ogun, la estética afrofuturista, el totemismo africano (Benín) y el voguing, la pieza construye un espacio de conmemoración, batalla y afirmación colectiva.
+En combinant la danse d'Ogun, l'esthétique afrofuturiste, le totémisme africain (Bénin) et le voguing, la pièce crée un espace de commémoration, de bataille et d'affirmation collective.
 
-**Dirección y creación:** Le'Onyx Da'Vida
+**Direction et création:** Le'Onyx Da'Vida
 
 ---

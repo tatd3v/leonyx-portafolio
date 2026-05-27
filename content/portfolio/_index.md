@@ -1,5 +1,5 @@
 ---
-title: "Portafolio"
-description: "Proyectos artísticos y creativos"
+title: "Portfolio"
+description: "Projets artistiques et créatifs"
 layout: "portfolio"
 ---

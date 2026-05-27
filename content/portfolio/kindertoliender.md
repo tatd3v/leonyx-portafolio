@@ -7,7 +7,7 @@ year: "2022"
 external_url: "https://www.leonyxdavida.com/2022/kindertoliender"
 tags: ["performance", "infancia", "memoria"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811390/kindertoliender_1_f3hl1q.jpg"
-summary: "Performance experimental que explora cómo los recuerdos de la infancia moldean nuestra identidad presente a través de un viaje por la memoria."
+summary: "Performance expérimentale qui explore comment les souvenirs d'enfance façonnent notre identité présente à travers un voyage dans la mémoire."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811390/kindertoliender_1_f3hl1q.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769811389/kindertoliender_2_niq1ys.jpg",
@@ -18,10 +18,10 @@ gallery: [
 ]
 ---
 
-Reflexión sobre la infancia y la memoria a través del performance experimental.
+Réflexion sur l'enfance et la mémoire à travers la performance expérimentale.
 
-Un viaje por los recuerdos de la niñez y cómo estos moldean nuestra identidad presente.
+Un voyage à travers les souvenirs d'enfance et comment ceux-ci façonnent notre identité présente.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

@@ -1,44 +1,37 @@
 ---
-title: 'Àkókò / Ayé-Òrún'
+title: "Àkókò / Ayé-Òrún"
 date: 2025-01-01T00:00:00Z
 draft: false
 type: portfolio
-year: '2025'
-location: 'París - Bogotá'
-external_url: 'https://www.leonyxdavida.com/2025/akoko-aye-orun'
-tags:
-  [
-    'performance',
-    'ritual',
-    'intergeneracional',
-    'transatlántico',
-    'espiritualidad',
-  ]
-featured_image: 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg'
-summary: 'Performance ritual que conecta París y Bogotá en un presente infinito, donde el cuerpo negro danza entre el fuego y el humo mientras mujeres mayoras entonan alabaos que cruzan el mar.'
+year: "2025"
+location: "Paris - Bogotá"
+external_url: "https://www.leonyxdavida.com/2025/akoko-aye-orun"
+tags: ["performance", "rituel", "intergénérationnel", "transatlantique", "spiritualité"]
+featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg"
+summary: "Performance rituelle reliant Paris et Bogotá dans un présent infini, où le corps noir danse entre le feu et la fumée tandis que des femmes aînées chantent des alabaos qui traversent la mer."
 gallery:
-  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg'
-  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_2_ikf2aw.jpg'
-  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_3_xsnhvm.jpg'
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_1_ubh4kk.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_2_ikf2aw.jpg"
+  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849125/%C3%80k%C3%B3k%C3%B2_3_xsnhvm.jpg"
 ---
 
-## Àkókò / Ayé-Òrún
+**Àkókò / Ayé-Òrún**
 
-_"Todo ocurre al mismo tiempo."_  
+*« Tout se passe en même temps. »*  
 — Denise Ferreira da Silva —
 
-No hay pasado ni futuro: solo cuerpos que se mueven en un constante presente.
+Il n'y a ni passé ni futur : seulement des corps qui se déplacent dans un présent constant.
 
-Desde París, entre el fuego y el humo danzo junto a otras mujeres negras, mientras que en Bogotá, mujeres mayoras entonan alabaos, cantos que abren portales con los espíritus. El canto cruza el mar; nuestros cuerpos lo reciben.
+Depuis Paris, entre le feu et la fumée, je danse aux côtés d'autres femmes noires, tandis qu'à Bogotá, des femmes aînées chantent des alabaos—des chants qui ouvrent des portails vers les esprits. Le chant traverse la mer ; nos corps le reçoivent.
 
-Entre Ayé (la Tierra) y Òrún (el Cielo) se extiende un puente invisible donde las memorias y los gestos se reconocen.
+Entre Ayé (la Terre) et Òrún (le Ciel) s'étend un pont invisible où les mémoires et les gestes se reconnaissent.
 
-Aquí el cuerpo es territorio y portal; la espiritualidad negra se manifiesta como una tecnología de conexión entre geografías, generaciones y mundos.
+Ici, le corps est à la fois territoire et portail ; la spiritualité noire se manifeste comme une technologie de connexion entre géographies, générations et mondes.
 
-Dos lugares, un solo gesto.  
-Un mismo latido entre continentes.
+Deux lieux, un seul geste.  
+Un même battement de cœur entre continents.
 
-**Creación:** Le'Onyx Da'Vida  
-**Lugares:** París - Bogotá
+**Création:** Le'Onyx Da'Vida  
+**Lieux:** Paris - Bogotá
 
 ---

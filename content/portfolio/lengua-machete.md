@@ -1,31 +1,31 @@
 ---
-title: "Lengua Machete"
+title: 'Lengua Machete'
 date: 2025-01-01T00:00:00Z
 draft: false
 type: portfolio
-year: "2025"
-external_url: "https://www.leonyxdavida.com/2025/lengua-machete"
-tags: ["performance", "oralidad", "liberación", "danza", "ogun"]
-featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/11_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_lkipsy.jpg"
-summary: "Performance que explora la oralidad como herramienta y arma de liberación de los pueblos negros, activando la voz como machete: filo ancestral, político y espiritual capaz de cortar y desmantelar verdades impuestas."
+year: '2025'
+external_url: 'https://www.leonyxdavida.com/2025/lengua-machete'
+tags: ['performance', 'oralité', 'libération', 'danse', 'ogun']
+featured_image: 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/11_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_lkipsy.jpg'
+summary: "Performance explorant l'oralité comme outil et arme de libération des peuples noirs, activant la voix comme machette : une lame ancestrale, politique et spirituelle capable de couper et démanteler les vérités imposées."
 gallery:
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/11_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_lkipsy.jpg"
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772904675/1_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_gzjzy8.jpg"
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772904111/5_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_eixn7i.jpg"
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772904112/4_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_ovxxwd.jpg"
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/7_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_htx5t2.jpg"
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/8_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_ljayzv.jpg"
-  - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772929824/6_Performances_Museo_dl_Viernes_Negro_RED_GSF_2025_odrlnt.jpg"
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/11_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_lkipsy.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772904675/1_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_gzjzy8.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772904111/5_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_eixn7i.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772904112/4_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_ovxxwd.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/7_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_htx5t2.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772929167/8_Performances_Museo_del_Viernes_Negro_RED_GSF_2025_1_ljayzv.jpg'
+  - 'https://res.cloudinary.com/dpdq565fr/image/upload/v1772929824/6_Performances_Museo_dl_Viernes_Negro_RED_GSF_2025_odrlnt.jpg'
 ---
 
-Lengua Machete explora la oralidad como una de las principales herramientas—y armas—de los pueblos negros en sus procesos de liberación.
+Lengua Machete explore l'oralité comme l'un des principaux outils—et armes—des peuples noirs dans leurs luttes pour la libération.
 
-La palabra emerge no solo como forma de nombrar la herida y la injusticia, sino como un gesto capaz de cortar, degollar y desmantelar verdades impuestas, sin filtro ni decoro.
+La parole émerge non seulement comme un moyen de nommer la douleur et l'injustice, mais comme une force capable de couper, décapiter et démanteler les vérités imposées—sans filtre, décorum ou retenue.
 
-A través de la danza de Ogun, la estética ritual y la acción performática, el cuerpo-palabra invoca, enuncia y denuncia aquello que necesita ser liberado, activando la voz como machete: filo ancestral, político y espiritual.
+À travers la danse d'Ogun, l'esthétique rituelle et l'action performative, le corps-parole invoque, énonce et dénonce les vérités qui exigent d'être libérées, activant la voix comme machette : une lame ancestrale, politique et spirituelle.
 
-**Machete pal Machote**
+## Machette pour le Macho
 
-**Dirección y creación:** Le'Onyx Da'Vida
+**Direction et création:** Le'Onyx Da'Vida
 
 ---

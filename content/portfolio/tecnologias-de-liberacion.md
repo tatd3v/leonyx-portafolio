@@ -2,12 +2,12 @@
 title: "Te(cn)ologías de liberación"
 date: 2025-01-01T00:00:00Z
 draft: false
-type: portfolio
 year: "2025"
-location: "París"
-tags: ["performance", "video", "ritual", "sincretismo", "colombia", "paris"]
+location: "Paris"
+type: "portfolio"
+tags: ["performance", "vidéo", "rituel", "syncrétisme", "colombie", "paris"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126073/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_1_a9pwis.jpg"
-summary: "Video-performance que explora el sincretismo religioso como tecnología espiritual de resistencia y supervivencia del pueblo negro en Colombia."
+summary: "Vidéo-performance qui explore le syncrétisme religieux comme technologie spirituelle de résistance et de survie pour les communautés noires en Colombie."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126073/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_1_a9pwis.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126072/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_2_zzblea.jpg"
@@ -17,12 +17,12 @@ gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1770126072/te_cn_olog%C3%ADas_de_liberaci%C3%B3n_6_kqghnj.jpg"
 ---
 
-Video-performance que explora el sincretismo religioso como estrategia espiritual y política de supervivencia del pueblo negro en Colombia.
+Vidéo-performance qui explore le syncrétisme religieux comme stratégie spirituelle et politique de survie des communautés noires en Colombie.
 
-A partir de acciones rituales con fuego, hierro y cuerpo, la obra confronta la violencia colonial ejercida mediante la imposición religiosa y el trabajo forzado.
+À travers des actions rituelles impliquant le feu, le fer et le corps, l'œuvre confronte la violence coloniale exercée par l'imposition religieuse et le travail forcé.
 
-Revela cómo las espiritualidades africanas se ocultaron y resistieron bajo imágenes católicas, tensionando la noción lineal del tiempo occidental y proponiendo la espiral como clave de pensamiento animista.
+Elle révèle comment les spiritualités africaines ont été dissimulées et résistées sous les imageries catholiques, défiant la notion linéaire du temps occidental et proposant la spirale comme cadre animiste clé.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---

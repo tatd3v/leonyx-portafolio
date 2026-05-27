@@ -1,48 +1,48 @@
 ---
-title: "IN-Posesiones"
+title: "IN-Possessions"
 date: 2025-01-01T00:00:00Z
 draft: false
 type: portfolio
 year: "2025"
 external_url: "https://www.leonyxdavida.com/2025/in-posesiones"
-tags: ["performance", "video", "urbano", "memoria colonial", "resistencia"]
+tags: ["performance", "vidéo", "urbain", "mémoire coloniale", "résistance"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849414/IN-Posesiones_1_vszvex.jpg"
-summary: "Serie de videos de acciones urbanas donde el cuerpo negro dialoga e irrumpe en espacios emblemáticos cargados de símbolos racistas y memorias coloniales, transformándose en múltiples presencias."
+summary: "Une série d'actions vidéo urbaines où le corps noir dialogue avec et perturbe des espaces emblématiques chargés de symboles racistes et de mémoires coloniales, se transformant en multiples présences."
 gallery:
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849414/IN-Posesiones_1_vszvex.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849414/IN-Posesiones_2_gnsjtq.jpg"
   - "https://res.cloudinary.com/dpdq565fr/image/upload/v1772849553/IN-Posesiones_3_ks39t9.jpg"
 ---
 
-IN-Posesiones es una serie de videos de acciones urbanas donde el cuerpo negro dialoga e irrumpe en espacios emblemáticos de la ciudad cargados de símbolos racistas y memorias coloniales.
+IN-Possessions est une série d'actions vidéo urbaines dans lesquelles le corps noir dialogue avec et perturbe des sites emblématiques de la ville, des espaces chargés de symboles racistes et de mémoires coloniales.
 
-A través del movimiento y la presencia ritual, el cuerpo es poseído por múltiples memorias y, al mismo tiempo, toma posesión del territorio. En este tránsito, el cuerpo negro deja de ser una identidad fija para devenir plural: muchos cuerpos, muchas presencias, muchas posibilidades de habitar la ciudad desde la revelación y la rebelión.
+À travers le mouvement et la présence rituelle, le corps devient possédé par de multiples mémoires tout en prenant simultanément possession du territoire. Dans ce passage, le corps noir cesse d'être une identité fixe et devient pluriel : de nombreux corps, de nombreuses présences, de nombreuses façons d'habiter la ville à travers la révélation et la rébellion.
 
-**En la ciudad**  
-Los espíritus toman posesión de un cuerpo negro  
-El poseído cuerpo negro empieza a tomar posesión de la ciudad  
-El cuerpo negro deja de ser un cuerpo  
-El negro cuerpo deja de ser un negro  
+**Dans la ville**  
+Les esprits prennent possession d'un corps noir  
+Le corps noir possédé commence à prendre possession de la ville  
+Le corps noir cesse d'être un corps  
+Le corps noir cesse d'être noir  
 .  
 .  
 .  
-Deja de ser  
-Un cuerpo negro…  
+Cesse d'être  
+Un corps noir…  
 —  
-Traspasa forma, tiempo y espacio  
+Il transcende la forme, le temps et l'espace  
 —  
-Y se mueve habitando muchos significados,  
-Y se mueve para no guardar silencio,  
-Y se mueve en busca de una revelación; una rebelión
+Et se déplace en habitant de nombreuses significations,  
+Et se déplace pour ne pas garder le silence,  
+Et se déplace à la recherche d'une révélation ; une rébellion
 
-El cuerpo negro deja de ser un cuerpo  
-El negro cuerpo deja de ser un negro  
+Le corps noir cesse d'être un corps  
+Le corps noir cesse d'être noir  
 .  
 .  
 .  
-Ahora es  
-…Muchos cuerpos negros
+Maintenant il est  
+…De nombreux corps noirs
 
-**Dirección y creación:** Le'Onyx Da'Vida
+**Direction et création:** Le'Onyx Da'Vida
 
 ---

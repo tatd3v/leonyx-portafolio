@@ -1,13 +1,13 @@
 ---
-title: "Biografía"
-description: "Artista multidisciplinar, profesorx e investigadorx cuya práctica cruza arte, pedagogía y activismo."
+title: "Biographie"
+description: "Artiste pluridisciplinaire, enseignant·e et chercheur·e dont la pratique croise l'art, la pédagogie et l'activisme."
 type: about
 ---
 
-# Biografía
+# Biographie
 
-Le'Onyx Da'Vida (Bogotá, Colombia) es unx artista multidisciplinar, profesorx e investigadorx cuya práctica se centra en el cruce entre arte, pedagogía y activismo. Su trabajo articula el performance, la danza contemporánea, lo audiovisual y la creación comunitaria, explorando el cuerpo como archivo vivo y como territorio de resistencia frente al racismo, la colonialidad y las violencias de género.
+Le'Onyx Da'Vida (Bogotá, Colombie) est un·e artiste pluridisciplinaire, enseignant·e et chercheur·e dont la pratique se concentre sur l'intersection entre l'art, la pédagogie et l'activisme. Leur travail articule la performance, la danse contemporaine, les arts audiovisuels et la création communautaire, explorant le corps comme archive vivante et territoire de résistance contre le racisme, la colonialité et les violences basées sur le genre.
 
-Es egresadx de la Licenciatura en Educación Artística de la Universidad Distrital Francisco José de Caldas y actualmente finaliza el Programa Profesional de Danza y Dirección Coreográfica en la Corporación CENDA. Además, ha sido becarix del Programa de Liderazgo Martin Luther King de la Embajada de Estados Unidos en alianza con el Centro Colombo Americano, y ha participado en procesos académicos como el Primer Seminario de estudios afrobrasileños y afrocolombianos con la Embajada de Brasil.
+Il/Elle est diplômé·e du programme d'Éducation Artistique de l'Universidad Distrital Francisco José de Caldas et finalise actuellement le programme professionnel de Danse et Direction Chorégraphique à la Corporación CENDA. De plus, il/elle a été boursier·e du Programme de Leadership Martin Luther King de l'Ambassade des États-Unis en alliance avec le Centro Colombo Americano, et a participé à des processus académiques tels que le Premier Séminaire sur les études afro-brésiliennes et afro-colombiennes avec l'Ambassade du Brésil.
 
-Le'Onyx, fundadorx del movimiento AfroNtando, ha desarrollado y dirigido procesos que integran creación artística y trabajo comunitario, dialogando con las experiencias de comunidades afrodescendientes y disidencias de género en Colombia. Su trabajo ha sido reconocido con becas y estímulos como Arte contra la Discriminación Interseccional y Memorias Transformadoras de Paz.
+Le'Onyx, fondateur·e du mouvement AfroNtando, a développé et dirigé des processus qui intègrent la création artistique et le travail communautaire, dialoguant avec les expériences des communautés afro-descendantes et de dissidences de genre en Colombie. Leur travail a été reconnu avec des bourses et des incitations telles que Art contre la Discrimination Intersectionnelle et Mémoires Transformantes de Paix.

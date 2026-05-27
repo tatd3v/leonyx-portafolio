@@ -7,7 +7,7 @@ year: "2023"
 external_url: "https://www.leonyxdavida.com/2023/juju-rituales-negrxsmariks"
 tags: ["performance", "ritual", "negritud", "ancestral"]
 featured_image: "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818175/juju_rituales_negrxsmariks_1_zlbqi3.jpg"
-summary: "Rituales contemporáneos que celebran y reivindican las prácticas espirituales de comunidades negras, conectando raíces africanas con la diáspora."
+summary: "Rituels contemporains qui célèbrent et revendiquent les pratiques spirituelles des communautés noires, reliant les racines africaines à la diaspora."
 gallery: [
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818175/juju_rituales_negrxsmariks_1_zlbqi3.jpg",
   "https://res.cloudinary.com/dpdq565fr/image/upload/v1769818172/juju_rituales_negrxsmariks_2_bamui8.jpg",
@@ -15,10 +15,10 @@ gallery: [
 ]
 ---
 
-Rituales contemporáneos que reivindican y celebran las prácticas espirituales de las comunidades negras y afrodescendientes.
+Rituels contemporains qui revendiquent et célèbrent les pratiques spirituelles des communautés noires et afro-descendantes.
 
-Una exploración de las tradiciones ancestrales a través del performance, conectando con las raíces africanas y la diáspora.
+Une exploration des traditions ancestrales à travers la performance, reliant les racines africaines à la diaspora.
 
-**Dirección:** Le'Onyx Da'Vida
+**Direction:** Le'Onyx Da'Vida
 
 ---
